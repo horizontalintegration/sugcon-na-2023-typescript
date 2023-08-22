@@ -1,0 +1,16 @@
+{
+    "namespace": "sugcon-na-2023-typescript-Content",
+    "references": [ "sugcon-na-2023-typescript" ],
+    "items": {
+        "includes": [
+            {
+                "name": "content",
+                "path": "/sitecore/content/SUGCON"
+            },
+            {
+                "name": "media",
+                "path": "/sitecore/media library/Project/SUGCON"
+            }
+        ]
+    }
+}

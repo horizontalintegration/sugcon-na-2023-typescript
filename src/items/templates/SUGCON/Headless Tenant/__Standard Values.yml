@@ -1,0 +1,27 @@
+﻿---
+ID: "26334abe-2777-499c-bf1e-d3ddac1a45a4"
+Parent: "66377999-0398-449b-bbec-4886a0fe5703"
+Template: "66377999-0398-449b-bbec-4886a0fe5703"
+Path: /sitecore/templates/Project/SUGCON/Headless Tenant/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230822T212709Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ceb98dbf-040f-4bb2-8be8-5de19968580f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230822T212709Z
