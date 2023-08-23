@@ -1,0 +1,26 @@
+﻿---
+ID: "d240c5ff-4a48-42f5-b0e5-f8ea931d58e1"
+Parent: "b762d567-87f5-493c-bb48-0c455d834457"
+Template: "b762d567-87f5-493c-bb48-0c455d834457"
+Path: /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Text Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {0A7AA373-5ED1-4E9B-9678-22D3C5FAF6DF}
+    {B762D567-87F5-493C-BB48-0C455D834457}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071628Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "096c282b-234c-42a8-9638-fe2cbcb1d6ca"

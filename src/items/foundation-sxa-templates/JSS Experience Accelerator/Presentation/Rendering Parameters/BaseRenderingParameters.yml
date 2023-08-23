@@ -1,0 +1,34 @@
+﻿---
+ID: "4247aad4-ebde-4994-998f-e067a51b1fe4"
+Parent: "628fd414-ec4d-4eae-8f2f-cf427af95c6c"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Rendering Parameters/BaseRenderingParameters
+SharedFields:
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: |
+    {D959F476-2A2C-40C6-81F5-FB75342BBFB9}
+    {A9F8A74E-5F7D-4506-8661-B08E7B9A7B91}
+    {FF75632A-03ED-4D31-B42A-1EEE45E5147F}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{896B7B2E-E375-4919-A741-A5C58E090619}"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Base Rendering Parameters
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210520T085236Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "41a4aaa8-2743-4e0e-bb50-67b544de1a9a"

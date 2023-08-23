@@ -1,0 +1,30 @@
+﻿---
+ID: "25f01f50-5534-44f9-b1ba-bcbb60b2d13d"
+Parent: "26fe38b4-40fc-4bb5-a68d-09e96cd254be"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Folders/Partial Design Folder
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/document_selection.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: "{B4544407-E6E1-4050-9983-83D48C2DD8F8}"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{347F77AC-98C0-45D2-BB0B-E51D139A613A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190121T132609Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b47fa510-eb03-4af5-8edd-38081c7ee9c5"

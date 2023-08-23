@@ -1,0 +1,20 @@
+﻿---
+ID: "afe59c97-0e32-426e-87f4-d71e2f9d43b1"
+Parent: "45130bdb-bae3-4edc-aea8-7b68b9d94c7f"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/JSS Experience Accelerator/Page Structure/Rendering Parameters/Container/Styling
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20150717T102015Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "30d8e9c7-13ae-4e60-b8b8-3383b2ee7fd3"

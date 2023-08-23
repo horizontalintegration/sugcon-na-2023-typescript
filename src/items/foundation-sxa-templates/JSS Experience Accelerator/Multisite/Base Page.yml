@@ -1,0 +1,26 @@
+﻿---
+ID: "47151711-26ca-434e-8132-d3e0b7d26683"
+Parent: "b9bd3171-61e3-4824-9c00-7af4c4c8aac9"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Base Page
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/document_text.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: "{3F8A6A5D-7B1A-4566-8CD4-0A50F3030BD8}"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{772B8EBC-80EC-415C-8592-872A669BD9C9}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181113T125731Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "eb853486-ce10-4d86-8aa1-c4b3f49fef9c"

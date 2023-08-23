@@ -1,6 +1,6 @@
 {
-    "namespace": "sugcon-na-2023-typescript-Content",
-    "references": [ "sugcon-na-2023-typescript" ],
+    "namespace": "Content.Sugcon",
+    "references": [ "Project.Sugcon" ],
     "items": {
         "includes": [
             {

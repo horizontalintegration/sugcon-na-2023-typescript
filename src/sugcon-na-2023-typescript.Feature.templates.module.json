@@ -1,0 +1,12 @@
+{
+  "namespace": "Feature.Sugcon",
+  "references": ["Foundation.Sugcon"],
+  "items": {
+    "includes": [
+      {
+        "name": "feature-sxa-templates",
+        "path": "/sitecore/templates/Feature/JSS Experience Accelerator"
+      }
+    ]
+  }
+}

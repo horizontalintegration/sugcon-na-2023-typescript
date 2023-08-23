@@ -1,0 +1,30 @@
+﻿---
+ID: "ca170f6f-5ec2-4e0c-b4bb-c77b7931b168"
+Parent: "b9bd3171-61e3-4824-9c00-7af4c4c8aac9"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Tenant Folder
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/windows.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: "{72F8D6F8-6148-413F-8861-436362393E53}"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{5CE0D6CF-E858-4621-8CD2-33AA8CA686BF}"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Headless Tenant Folder
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181113T102519Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9d127f28-d1c7-44be-be76-0585d760276e"

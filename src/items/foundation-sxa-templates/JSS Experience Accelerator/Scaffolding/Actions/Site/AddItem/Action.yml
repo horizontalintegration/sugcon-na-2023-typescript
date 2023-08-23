@@ -1,0 +1,24 @@
+﻿---
+ID: "96974196-9f70-4727-8b02-dcfbd25f838f"
+Parent: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/AddItem/Action
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Add JSS Website Item
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160624T092756Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4a388bb8-bb93-4900-9a29-599db6f2080c"

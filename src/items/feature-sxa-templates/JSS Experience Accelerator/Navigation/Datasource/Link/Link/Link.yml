@@ -1,0 +1,36 @@
+﻿---
+ID: "68c2a603-f98e-42a3-be2d-dd70598c2a63"
+Parent: "6f42d8cc-85c6-4daa-8e19-2cf741818842"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/JSS Experience Accelerator/Navigation/Datasource/Link/Link/Link
+SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "query:$linkableHomes"
+- ID: "24cb32f0-e364-4f37-b400-0f2899097b5b"
+  Hint: Enable Shared Language Fallback
+  Value: 1
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: General Link
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: Link
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20111206T110700
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9d31a1ba-9af9-43a8-8a3e-22e6c8bd27c8"
+    - ID: "fa622538-0c13-4130-a001-45984241aa00"
+      Hint: Enable Language Fallback
+      Value: 1

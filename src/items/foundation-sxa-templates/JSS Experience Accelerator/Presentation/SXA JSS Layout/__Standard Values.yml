@@ -1,0 +1,24 @@
+﻿---
+ID: "170159d5-5f5e-499a-9ba2-7db9f58a37dd"
+Parent: "e4e11508-04a4-4b0b-a263-5201f811c9cd"
+Template: "e4e11508-04a4-4b0b-a263-5201f811c9cd"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/SXA JSS Layout/__Standard Values
+SharedFields:
+- ID: "a036b2bc-ba04-44f6-a75f-bae6cd242abf"
+  Hint: Path
+  Value: /Views/SXA JSS/SXA JSS Layout.cshtml
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190130T090128Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b6ead378-eda1-4640-a954-274cbcd94d64"

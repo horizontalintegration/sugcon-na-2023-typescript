@@ -1,0 +1,30 @@
+﻿---
+ID: "c71d8566-35c8-49b7-a84d-9d176e9cbd05"
+Parent: "a4265aae-cc8d-493f-ba3f-7755d9b689bb"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/SiteMetadata/Sitemap Settings
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: people/32x32/cube_molecule_preferences.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: "{651BCAD2-F32D-4CB3-9BD4-DB9B895382BF}"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{E66EC406-EF54-40BE-9A86-D32593A7818C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211119T140746Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cf2aaab0-a610-43a5-9cb6-6ce6219c1947"

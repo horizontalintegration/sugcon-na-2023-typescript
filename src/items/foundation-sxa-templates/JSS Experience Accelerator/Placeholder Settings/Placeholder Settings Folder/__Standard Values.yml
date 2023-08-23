@@ -1,0 +1,25 @@
+﻿---
+ID: "3fbc350d-a9b1-4569-a392-ca3a82470ade"
+Parent: "52288e39-7830-4694-b62d-32a54c6ef7ba"
+Template: "52288e39-7830-4694-b62d-32a54c6ef7ba"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Placeholder Settings/Placeholder Settings Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {D2A6884C-04D5-4089-A64E-D27CA9D68D4C}
+    {52288E39-7830-4694-B62D-32A54C6EF7BA}
+- ID: "30d2a0d2-7a60-4f32-86a9-4aa50bfab87b"
+  Hint: TemplateForCreation
+  Value: "{D2A6884C-04D5-4089-A64E-D27CA9D68D4C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170530T090356Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "72e742b9-71c9-4ce0-b4f0-653b48f87d37"

@@ -1,0 +1,13 @@
+{
+  "namespace": "Foundation.Sugcon",
+  "references": ["InitItems"],
+  "items": {
+    "includes": [
+      {
+        "name": "foundation-sxa-templates",
+        "path": "/sitecore/templates/Foundation/JSS Experience Accelerator",
+        "allowedPushOperations": "createOnly"
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+﻿---
+ID: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Parent: "e103fd2f-6e6a-4db5-8603-73f177146c5e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/AddItem
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/navigate_plus.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: |
+    {080FA6F3-A933-4A9B-849E-62EEC1CE5C23}
+    {86A88D69-9A4D-4C0E-8068-ECF04470A8A4}
+    {299CDB15-4745-448A-8078-68D401248EAA}
+    {CD702887-E232-41F8-9FFC-8F70CD8B4B28}
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Add Headless Website Item
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181113T064520Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3b47d75d-bb65-4c02-8f83-3420c3afaad0"

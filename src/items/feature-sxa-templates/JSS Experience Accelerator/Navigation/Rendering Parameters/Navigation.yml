@@ -1,0 +1,36 @@
+﻿---
+ID: "9ce34bf9-5c93-4dff-841d-8f649c2bd6c8"
+Parent: "6cf51503-ff55-4ec5-b234-972611a0be63"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/JSS Experience Accelerator/Navigation/Rendering Parameters/Navigation
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: SXA/16x16/navigation.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: |
+    {4247AAD4-EBDE-4994-998F-E067A51B1FE4}
+    {E6D98F24-D01C-419E-871A-4617125A49ED}
+    {44A022DB-56D3-419A-B43B-E27E4D8E9C41}
+- ID: "9c6106ea-7a5a-48e2-8cad-f0f693b1e2d4"
+  Hint: __Read Only
+  Value: 0
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{DDF7CA89-356A-4AD4-874E-998F28924A21}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211012T120926Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JssImport
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7a54cd31-4d88-4a79-a017-6fe059250434"

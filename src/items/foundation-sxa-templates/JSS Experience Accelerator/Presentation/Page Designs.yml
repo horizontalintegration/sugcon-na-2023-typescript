@@ -1,0 +1,32 @@
+﻿---
+ID: "daaf41fd-96db-4892-be99-f62f16d036c4"
+Parent: "5d622725-336b-4664-8801-ece949454d76"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Page Designs
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/document_chart.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: |
+    {EC7CC4E4-3A6E-4512-808B-691A8B46045E}
+    {71B1F3CD-4460-430F-82EC-9CE310ABCB7C}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{BE7EFE96-B36B-42CF-B0D5-9C5FB19BFF91}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190121T080215Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cbc98e0c-f9ba-49cc-9023-23b1d8bd0ef3"

@@ -1,0 +1,16 @@
+﻿---
+ID: "b9bd3171-61e3-4824-9c00-7af4c4c8aac9"
+Parent: "50937c4f-a531-4cc1-ad92-86bf4163f9c8"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181113T102031Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c44154e9-9114-4a8d-ad16-9def51bfe294"

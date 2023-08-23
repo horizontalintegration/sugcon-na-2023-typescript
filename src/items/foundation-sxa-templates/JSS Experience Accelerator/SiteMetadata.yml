@@ -1,0 +1,20 @@
+﻿---
+ID: "a4265aae-cc8d-493f-ba3f-7755d9b689bb"
+Parent: "50937c4f-a531-4cc1-ad92-86bf4163f9c8"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/SiteMetadata
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220303T133516Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f41e3a85-65de-4049-9ee4-af6fdd7860d6"

@@ -1,0 +1,26 @@
+{
+  "namespace": "Project.Sugcon",
+  "references": [
+    "Feature.Sugcon"
+  ],
+  "items": {
+    "includes": [
+      {
+        "name": "layouts",
+        "path": "/sitecore/layout/Layouts/Project/SUGCON"
+      },
+      {
+        "name": "placeholders",
+        "path": "/sitecore/layout/Placeholder Settings/Project/SUGCON"
+      },
+      {
+        "name": "renderings",
+        "path": "/sitecore/layout/Renderings/Project/SUGCON"
+      },
+      {
+        "name": "project-templates",
+        "path": "/sitecore/templates/Project/SUGCON"
+      }
+    ]
+  }
+}
