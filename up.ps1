@@ -26,6 +26,12 @@ foreach ($topology in $topologyArray)
 if (-not $envCheck) {
     throw "$envCheckVariable does not have a value. Did you run 'init.ps1 -InitEnv'?"
 }
+
+$licenseCheck = Test-Path .\license\license.xml
+if (-not $licenseCheck) {
+    throw "Licence.xml file needs to be added to .\license\license.xml"
+}
+
 Push-Location $workingDirectoryPath
 
 # Build all containers in the Sitecore instance, forcing a pull of latest base containers
