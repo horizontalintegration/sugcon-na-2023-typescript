@@ -2,23 +2,27 @@ import React from 'react';
 import {
   Image as JssImage,
   Link as JssLink,
-  ImageField,
-  Field,
-  LinkField,
+  // ImageField,
+  // Field,
+  // LinkField,
   Text,
   useSitecoreContext,
 } from '@sitecore-jss/sitecore-jss-nextjs';
+import { ComponentProps } from 'lib/component-props';
+import { Media } from 'src/.generated/Feature.JssExperienceAccelerator.model';
 
-interface Fields {
-  Image: ImageField;
-  ImageCaption: Field<string>;
-  TargetUrl: LinkField;
-}
+// interface Fields {
+//   Image: ImageField;
+//   ImageCaption: Field<string>;
+//   TargetUrl: LinkField;
+// }
 
-type ImageProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+// type ImageProps = {
+//   params: { [key: string]: string };
+//   fields: Fields;
+// };
+
+type ImageProps = ComponentProps & Media.Image;
 
 const ImageDefault = (props: ImageProps): JSX.Element => (
   <div className={`component image ${props.params.styles}`.trimEnd()}>
@@ -32,7 +36,7 @@ export const Banner = (props: ImageProps): JSX.Element => {
   const { sitecoreContext } = useSitecoreContext();
   const backgroundStyle = { backgroundImage: `url('${props?.fields?.Image?.value?.src}')` };
   const modifyImageProps = {
-    ...props.fields.Image,
+    ...props.fields?.Image,
     editable: props?.fields?.Image?.editable
       ?.replace(`width="${props?.fields?.Image?.value?.width}"`, 'width="100%"')
       .replace(`height="${props?.fields?.Image?.value?.height}"`, 'height="100%"'),
@@ -52,7 +56,7 @@ export const Default = (props: ImageProps): JSX.Element => {
   const { sitecoreContext } = useSitecoreContext();
 
   if (props.fields) {
-    const Image = () => <JssImage field={props.fields.Image} />;
+    const Image = () => <JssImage field={props.fields?.Image} />;
     const id = props.params.RenderingIdentifier;
 
     return (

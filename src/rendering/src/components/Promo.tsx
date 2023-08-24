@@ -3,22 +3,26 @@ import {
   Image as JssImage,
   Link as JssLink,
   RichText as JssRichText,
-  ImageField,
-  Field,
-  LinkField,
+  // ImageField,
+  // Field,
+  // LinkField,
 } from '@sitecore-jss/sitecore-jss-nextjs';
+import { ComponentProps } from 'lib/component-props';
+import { PageContent } from 'src/.generated/Feature.JssExperienceAccelerator.model';
 
-interface Fields {
-  PromoIcon: ImageField;
-  PromoText: Field<string>;
-  PromoLink: LinkField;
-  PromoText2: Field<string>;
-}
+// interface Fields {
+//   PromoIcon: ImageField;
+//   PromoText: Field<string>;
+//   PromoLink: LinkField;
+//   PromoText2: Field<string>;
+// }
 
-type PromoProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+// type PromoProps = {
+//   params: { [key: string]: string };
+//   fields: Fields;
+// };
+
+type PromoProps = ComponentProps & PageContent.Promo;
 
 const PromoDefaultComponent = (props: PromoProps): JSX.Element => (
   <div className={`component promo ${props.params.styles}`}>

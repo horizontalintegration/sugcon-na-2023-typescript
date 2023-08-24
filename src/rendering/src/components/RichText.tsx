@@ -1,14 +1,18 @@
 import React from 'react';
-import { Field, RichText as JssRichText } from '@sitecore-jss/sitecore-jss-nextjs';
+import { RichText as JssRichText } from '@sitecore-jss/sitecore-jss-nextjs';
+import { PageContent } from 'src/.generated/Feature.JssExperienceAccelerator.model';
+import { ComponentProps } from 'lib/component-props';
 
-interface Fields {
-  Text: Field<string>;
-}
+// interface Fields {
+//   Text: Field<string>;
+// }
 
-export type RichTextProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+// export type RichTextProps = {
+//   params: { [key: string]: string };
+//   fields: Fields;
+// };
+
+export type RichTextProps = ComponentProps & PageContent.Text;
 
 export const Default = (props: RichTextProps): JSX.Element => {
   const text = props.fields ? (
