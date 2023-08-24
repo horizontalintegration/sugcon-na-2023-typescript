@@ -20,7 +20,7 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
             /**
             * Represents the Location field (52c91c75-6698-4701-a8a2-242ace59a8d6).
             */
-            Location: ItemExt[];
+            Location?: ItemExt[];
         }
 
     }
@@ -31,7 +31,7 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant 
             /**
             * Represents the Location field (49ed6c70-37bd-4a23-af04-209806605b7f).
             */
-            Location: ItemExt[];
+            Location?: ItemExt[];
         }
 
     }
@@ -60,7 +60,7 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
             /**
             * Represents the Template field (0916832d-459e-463c-852b-c538476a422d).
             */
-            Template: ItemExt[];
+            Template?: ItemExt[];
         }
 
     }
@@ -71,7 +71,7 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant 
             /**
             * Represents the Template field (67b6641e-309d-4c1e-8e97-63965c7e2c5f).
             */
-            Template: ItemExt[];
+            Template?: ItemExt[];
         }
 
     }
@@ -141,7 +141,7 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
             /**
             * Represents the Analyze allowed controls field (812dedeb-c5bd-471c-9f48-b1ce75d0d4a9).
             */
-            AnalyzeAllowedControls: Field<boolean>;
+            AnalyzeAllowedControls?: Field<boolean>;
 
             /**
             * Represents the App data sources path field (5764d2d4-724d-4313-a81b-9246c911faff).
@@ -156,12 +156,12 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
             /**
             * Represents the Datasource strategy field (f7c6acfb-63f0-4aca-9e44-3133b2b94a5b).
             */
-            DatasourceStrategy: Field<string>;
+            DatasourceStrategy?: Field<string>;
 
             /**
             * Represents the Debug security field (a5c4b74e-993a-40d6-aeab-23bb12abcf0a).
             */
-            DebugSecurity: Field<boolean>;
+            DebugSecurity?: Field<boolean>;
 
             /**
             * Represents the Default workflow field (3af0e329-6d5e-4d8f-9f82-f48265658a3e).
@@ -171,7 +171,7 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
             /**
             * Represents the Deployment secret field (797d2f63-d5c4-4c4c-b21f-d3e250e2ab12).
             */
-            DeploymentSecret: Field<string>;
+            DeploymentSecret?: Field<string>;
 
             /**
             * Represents the Dictionary domain field (0129da3f-8c86-4591-ae32-6ec923413923).
@@ -186,7 +186,7 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
             /**
             * Represents the Filesystem path field (72e83c8d-3578-4e50-b4c0-93a78a1729f2).
             */
-            FilesystemPath: Field<string>;
+            FilesystemPath?: Field<string>;
 
             /**
             * Represents the Folder template field (bde120a5-4cc2-4340-9b63-562a139bf197).
@@ -196,12 +196,12 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
             /**
             * Represents the GraphQL endpoint field (30e0a829-637e-478c-a136-66adb568398d).
             */
-            GraphQLEndpoint: Field<string>;
+            GraphQLEndpoint?: Field<string>;
 
             /**
             * Represents the Import database field (df376030-46e9-4c77-bc05-debefc86e3d5).
             */
-            ImportDatabase: Field<string>;
+            ImportDatabase?: Field<string>;
 
             /**
             * Represents the Import device field (1f14aa04-2868-481f-9247-30dc5c65672c).
@@ -211,12 +211,12 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
             /**
             * Represents the Import language field (04e6b1f3-ae47-4d95-a154-2271075869a9).
             */
-            ImportLanguage: Field<string>;
+            ImportLanguage?: Field<string>;
 
             /**
             * Represents the Import user field (f87f0d81-c32c-4c1d-8caf-67856c3ab06e).
             */
-            ImportUser: Field<string>;
+            ImportUser?: Field<string>;
 
             /**
             * Represents the Layout folder template field (466902a9-6b16-41b1-9d33-7c55094a2713).
@@ -231,7 +231,7 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
             /**
             * Represents the Layout service configuration field (e3259313-387a-41f0-b113-962f14b1aa2b).
             */
-            LayoutServiceConfiguration: Field<string>;
+            LayoutServiceConfiguration?: Field<string>;
 
             /**
             * Represents the Layout template field (e13c1a83-9d60-4530-b318-3a5effcc6338).
@@ -246,12 +246,12 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
             /**
             * Represents the App Name field (3e4f559f-8e59-4405-b50d-619811371f6c).
             */
-            Name: Field<string>;
+            Name?: Field<string>;
 
             /**
             * Represents the Optimize import indexing field (4088f63e-09e5-43fa-ae99-829bd9bdc114).
             */
-            OptimizeImportIndexing: Field<boolean>;
+            OptimizeImportIndexing?: Field<boolean>;
 
             /**
             * Represents the Placeholder settings folder template field (f5594251-f757-429e-a9bd-07f65f6875b9).
@@ -266,7 +266,7 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
             /**
             * Represents the Protect developer items field (b0711df7-724a-4c6c-8d4d-be846de6124c).
             */
-            ProtectDeveloperItems: Field<boolean>;
+            ProtectDeveloperItems?: Field<boolean>;
 
             /**
             * Represents the Renderings folder template field (f5821c4c-226e-4953-8213-c0243826f85f).
@@ -286,47 +286,47 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
             /**
             * Represents the Route data sources path field (414f61dd-02c2-47d1-ba83-dcfbc3071e52).
             */
-            RouteDatasourcesPath: Field<string>;
+            RouteDatasourcesPath?: Field<string>;
 
             /**
             * Represents the Route template name field (300fb7a0-b27f-44dd-9af0-b37a19723e0e).
             */
-            RouteTemplateName: Field<string>;
+            RouteTemplateName?: Field<string>;
 
             /**
             * Represents the Server Bundle field (4a3eeba3-a250-44f4-bd97-6e863cc6f0d5).
             */
-            ServerBundle: Field<string>;
+            ServerBundle?: Field<string>;
 
             /**
             * Represents the Server side rendering engine field (9016141c-ff51-40f2-9135-40f5161b9784).
             */
-            ServerSideRenderingEngine: Field<string>;
+            ServerSideRenderingEngine?: Field<string>;
 
             /**
             * Represents the ServerSideRenderingEngineApplicationUrl field (5e8ed724-126a-4bb7-8106-85c2d1042c9e).
             */
-            ServerSideRenderingEngineApplicationUrl: Field<string>;
+            ServerSideRenderingEngineApplicationUrl?: Field<string>;
 
             /**
             * Represents the ServerSideRenderingEngineEditOnly field (557d5f36-6f2d-4eb6-a8ce-25f30f7b9397).
             */
-            ServerSideRenderingEngineEditOnly: Field<boolean>;
+            ServerSideRenderingEngineEditOnly?: Field<boolean>;
 
             /**
             * Represents the Server side rendering engine endpoint URL field (89849738-34ee-46bc-b525-825f1153189e).
             */
-            ServerSideRenderingEngineEndpointUrl: Field<string>;
+            ServerSideRenderingEngineEndpointUrl?: Field<string>;
 
             /**
             * Represents the Server side rendering function name field (7975673a-aafd-4c5b-96a5-cbcaac500a44).
             */
-            ServerSideRenderingFunctionName: Field<string>;
+            ServerSideRenderingFunctionName?: Field<string>;
 
             /**
             * Represents the Server side rendering worker processes field (6224a1ce-d964-4ee8-8e09-ad2f81e0a2b6).
             */
-            ServerSideRenderingWorkerProcesses: Field<number>;
+            ServerSideRenderingWorkerProcesses?: Field<number>;
 
             /**
             * Represents the Template folder template field (218760c0-8001-4c2d-a8b0-61c128276f96).
@@ -336,7 +336,7 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
             /**
             * Represents the Use language specific layout field (1864e99d-c29a-40bf-96e0-b3e7896a013b).
             */
-            UseLanguageSpecificLayout: Field<boolean>;
+            UseLanguageSpecificLayout?: Field<boolean>;
         }
 
     }
@@ -457,17 +457,17 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding {
             /**
             * Represents the Application name field (3121c257-53cf-464a-b736-98b418876057).
             */
-            AppName: Field<string>;
+            AppName?: Field<string>;
 
             /**
             * Represents the Server side rendering engine application URL field (e32c1801-79b3-4fc1-a9c4-3c6e6c2968ae).
             */
-            ServerSideRenderingEngineApplicationUrl: Field<string>;
+            ServerSideRenderingEngineApplicationUrl?: Field<string>;
 
             /**
             * Represents the Server side rendering engine endpoint URL field (fc76919b-0d7c-4732-865d-2af795fb38a4).
             */
-            ServerSideRenderingEngineEndpointUrl: Field<string>;
+            ServerSideRenderingEngineEndpointUrl?: Field<string>;
         }
 
     }
@@ -488,7 +488,7 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
             /**
             * Represents the Predefined application rendering host field (f57099a3-526a-49f2-aebd-635453e48875).
             */
-            RenderingHost: Field<string>;
+            RenderingHost?: Field<string>;
         }
 
     }
@@ -499,7 +499,7 @@ export namespace Foundation.JssExperienceAccelerator.SiteMetadata {
             /**
             * Represents the Generate sitemap media items field (7f070bc5-5cd4-474f-aa2f-ab2a0a128f00).
             */
-            GenerateSitemapMediaItems: Field<boolean>;
+            GenerateSitemapMediaItems?: Field<boolean>;
         }
 
     }
@@ -510,22 +510,22 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding {
             /**
             * Represents the Enabled field (0d21f818-1938-4cd8-b0a8-a44f73d69367).
             */
-            Enabled: Field<boolean>;
+            Enabled?: Field<boolean>;
 
             /**
             * Represents the Name field (82e64b52-0b8a-4a38-8c78-530c5493814e).
             */
-            Name: Field<string>;
+            Name?: Field<string>;
 
             /**
             * Represents the Site Modules field (c262443b-653d-461d-96c8-7cfaa0ef2b2d).
             */
-            "Site Modules": ItemExt[];
+            "Site Modules"?: ItemExt[];
 
             /**
             * Represents the Tenant Modules field (41ac536a-923a-43f9-ac87-f3993f638125).
             */
-            "Tenant Modules": ItemExt[];
+            "Tenant Modules"?: ItemExt[];
         }
 
     }

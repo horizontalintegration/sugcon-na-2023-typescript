@@ -22,7 +22,7 @@ export namespace Feature.JssExperienceAccelerator.PageStructure.RenderingParamet
             /**
             * Represents the Background image field (6845679d-e298-4e94-96eb-230cb7c3baae).
             */
-            BackgroundImage: ImageField;
+            BackgroundImage?: ImageField;
         }
 
     }
@@ -33,17 +33,17 @@ export namespace Feature.JssExperienceAccelerator.Media {
             /**
             * Represents the Image field (57caf172-ce57-4e48-b3a1-46f8aea71c08).
             */
-            Image: ImageField;
+            Image?: ImageField;
 
             /**
             * Represents the Caption field (4d7b05d0-0300-486f-8f87-57de34a9b793).
             */
-            ImageCaption: Field<string>;
+            ImageCaption?: Field<string>;
 
             /**
             * Represents the URL field (75fbf1b1-e7c5-494b-9633-693909f79425).
             */
-            TargetUrl: LinkField;
+            TargetUrl?: LinkField;
         }
 
     }
@@ -67,7 +67,7 @@ export namespace Feature.JssExperienceAccelerator.Navigation.Datasource {
             /**
             * Represents the Link field (68c2a603-f98e-42a3-be2d-dd70598c2a63).
             */
-            Link: LinkField;
+            Link?: LinkField;
         }
 
     }
@@ -76,7 +76,7 @@ export namespace Feature.JssExperienceAccelerator.Navigation.Datasource {
             /**
             * Represents the Title field (dc9aaee9-fc44-458d-a9fb-bac61d8b0234).
             */
-            Title: Field<string>;
+            Title?: Field<string>;
         }
 
     }
@@ -110,32 +110,32 @@ export namespace Feature.JssExperienceAccelerator.PageContent {
             /**
             * Represents the Image field (f94b9858-c439-4291-863b-757b536c8b65).
             */
-            PromoIcon: ImageField;
+            PromoIcon?: ImageField;
 
             /**
             * Represents the Image 2 field (739c6cc2-0031-463d-9599-13478fd50ee3).
             */
-            PromoIcon2: ImageField;
+            PromoIcon2?: ImageField;
 
             /**
             * Represents the Link field (ef24bed2-46ab-4d53-ad1a-1019935a4e89).
             */
-            PromoLink: LinkField;
+            PromoLink?: LinkField;
 
             /**
             * Represents the Text field (28079f3a-896b-4273-be5f-59d0ebb7cd7d).
             */
-            PromoText: Field<string>;
+            PromoText?: Field<string>;
 
             /**
             * Represents the Text 2 field (1f66862d-a5e3-405f-8e3e-b787b4c39b12).
             */
-            PromoText2: Field<string>;
+            PromoText2?: Field<string>;
 
             /**
             * Represents the Text 3 field (c6e604c3-5371-4e67-83df-a09a5ea66249).
             */
-            PromoText3: Field<string>;
+            PromoText3?: Field<string>;
         }
 
     }
@@ -166,7 +166,7 @@ export namespace Feature.JssExperienceAccelerator.PageContent {
             /**
             * Represents the Text field (729034fc-24f3-40b7-8fa4-fb49d7de20dd).
             */
-            Text: Field<string>;
+            Text?: Field<string>;
         }
 
     }

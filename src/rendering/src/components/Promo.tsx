@@ -47,9 +47,13 @@ export const Default = (props: PromoProps): JSX.Element => {
                 <JssRichText field={props.fields.PromoText} />
               </div>
             </div>
-            <div className="field-promolink">
-              <JssLink field={props.fields.PromoLink} />
-            </div>
+            {props.fields.PromoLink ? (
+              <div className="field-promolink">
+                <JssLink field={props.fields.PromoLink} />
+              </div>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </div>

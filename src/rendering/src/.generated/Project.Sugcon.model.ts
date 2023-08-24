@@ -37,12 +37,12 @@ export namespace Project.Sugcon {
             /**
             * Represents the Content field (1bd4f07a-dfa4-463d-b01b-f9c13ff596fd).
             */
-            Content: Field<string>;
+            Content?: Field<string>;
 
             /**
             * Represents the Title field (4da86130-8d6b-4d4f-8e61-3426ab49905d).
             */
-            Title: Field<string>;
+            Title?: Field<string>;
         }
 
     }

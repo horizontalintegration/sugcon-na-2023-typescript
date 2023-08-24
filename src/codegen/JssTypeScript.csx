@@ -26,6 +26,12 @@ using System.Collections.Generic;
 // BaseTemplates - All known immediate templates implemented by this type (transitive inheritance is not included eg a -> b -> c, will have b but not c for a)
 // AllFields - All fields that make up this template, including all base templates' fields
 
+// If true, all fields will be nullable and will force a null check.  
+// This is recommended because it forces the developer to add null checks to 
+// ensure that even if a template changed or an incorrect template was selected
+// the page will not break completely.
+const bool FORCE_FIELD_NULL_CHECK = true;
+
 Log.Debug($"Emitting TypeScript interfaces for {ConfigurationName}...");
 
 Code.AppendLine($@"
@@ -167,7 +173,7 @@ public string GetFieldCodeName(TemplateFieldCodeGenerationMetadata field, string
     var name = System.Text.RegularExpressions.Regex.IsMatch(field.Name, "[ -]+") ? $"\"{field.Name}{suffix}\"" : field.Name + suffix;
 
     // Item reference fields will return null if it is blank, but all other types will not be null
-    if (GetFieldType(field) == "ItemExt")
+    if (GetFieldType(field) == "ItemExt" || FORCE_FIELD_NULL_CHECK)
     {
         name += "?";
     }
