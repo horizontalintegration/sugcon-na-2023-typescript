@@ -4,9 +4,16 @@
   "items": {
     "includes": [
       {
-        "name": "feature-sxa-templates",
-        "path": "/sitecore/templates/Feature/JSS Experience Accelerator"
+        "name": "Feature-Sxa-Templates",
+        "path": "/sitecore/templates/Feature/JSS Experience Accelerator",
+        "allowedPushOperations": "createOnly"
       }
     ]
+  },
+  "leprechaun": {
+    "configuration": {
+      "@extends": "Sxa.Base",
+      "@name": "Feature.JssExperienceAccelerator"
+    }
   }
 }

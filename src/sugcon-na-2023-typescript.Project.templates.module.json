@@ -18,9 +18,16 @@
         "path": "/sitecore/layout/Renderings/Project/SUGCON"
       },
       {
-        "name": "project-templates",
+        "name": "Project-Sugcon-Templates",
         "path": "/sitecore/templates/Project/SUGCON"
       }
     ]
+  }
+  ,
+  "leprechaun": {
+    "configuration": {
+      "@extends": "Sugcon.Base",
+      "@name": "Project.Sugcon"
+    }
   }
 }
