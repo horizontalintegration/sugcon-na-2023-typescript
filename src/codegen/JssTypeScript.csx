@@ -48,12 +48,12 @@ public string RenderImportStatements()
 
     var currentRootNamespace = Templates.First().RootNamespace;
 
-    localCode.AppendLine($@"// @ts-ignore Prevent noUnusedLocals from triggering an error, we import all core field types to minimize changing to code generation.");
-    localCode.AppendLine(@"import { ItemExt } from ""lib/_.Sitecore.Override""");
-    localCode.AppendLine($@"// @ts-ignore Prevent noUnusedLocals from triggering an error, we import all core field types to minimize changing to code generation.");
-    localCode.AppendLine($@"import {{ ComponentRendering, RouteData, Field, ImageField, FileField, LinkField }} from '@sitecore-jss/sitecore-jss-nextjs';");
-    localCode.AppendLine($@"// @ts-ignore Prevent noUnusedLocals from triggering an error, we import all core field types to minimize changing to code generation.");
-    localCode.AppendLine($@"import {{ ComponentProps }} from '@/lib/component-props';");
+    localCode.AppendLine($@"// eslint-disable-next-line @typescript-eslint/no-unused-vars ");
+    localCode.AppendLine(@"import { ItemExt } from '../lib/_.Sitecore.Override'");    
+    localCode.AppendLine($@"// eslint-disable-next-line @typescript-eslint/no-unused-vars ");
+    localCode.AppendLine($@"import {{ Field, ImageField, FileField, LinkField }} from '@sitecore-jss/sitecore-jss-nextjs';");    
+    localCode.AppendLine($@"// eslint-disable-next-line @typescript-eslint/no-unused-vars ");
+    localCode.AppendLine($@"import {{ ComponentProps }} from '../lib/component-props';");
 
     foreach (var template in GetBaseTemplates(Templates))
     {
@@ -73,6 +73,8 @@ public string RenderTemplates()
 {
     var localCode = new System.Text.StringBuilder();
 
+    var nsAliases = new HashSet<string>();
+    var rootNs = Templates.FirstOrDefault()?.RootNamespace;
     // Render the Item mappings
     var oldNamespace = "";
     foreach (var template in Templates)
@@ -82,20 +84,18 @@ public string RenderTemplates()
             if (!string.IsNullOrWhiteSpace(oldNamespace))
             {
                 localCode.AppendLine($@"}}");
+                var aliasNs = oldNamespace.Replace(template.RootNamespace + ".", "");
+                var aliasRoot = aliasNs.Split(".").First();
+                nsAliases.Add(aliasRoot);
             }
             localCode.AppendLine($@"export namespace {template.Namespace} {{");
             oldNamespace = template.Namespace;
         }
 
         localCode.AppendLine($@"    export type {template.CodeName} = {RenderBaseInterfaces(template)}{{");
-        if (IsRenderingParameters(template))
-        {
-            localCode.AppendLine($@"        {RenderInterfaceParamsFields(template)}");
-        }
-        else
-        {
-            localCode.AppendLine($@"        {RenderInterfaceFields(template)}");
-        }
+        
+        localCode.AppendLine($@"        {RenderInterfaceFields(template)}");
+        
         localCode.AppendLine($@"    }}");
     }
     if (Templates.Any())
@@ -103,22 +103,18 @@ public string RenderTemplates()
         localCode.AppendLine($@"}}");
     }
 
+    localCode.AppendLine($@"// Namespace aliases.  If this doesn't work, ensure `""isolatedModules"": false` is set in `tsconfig.json`. ");
+
+    foreach(var alias in nsAliases) {
+        localCode.AppendLine($@"export import {alias} = {rootNs}.{alias};");
+    }
+   
     return localCode.ToString();
 }
 
 public string RenderBaseInterfaces(TemplateCodeGenerationMetadata template)
 {
-    var bases = new System.Collections.Generic.List<string>(template.BaseTemplates.Count + 1);
-
-    // At this time, we don't have sitecore standard fields for components
-    if (IsBaseComponent(template) || IsBaseCard(template))
-    {
-        bases.Add("ComponentProps");
-    }
-    else if (IsBaseElement(template))
-    {
-        bases.Add("ItemExt");
-    }
+    var bases = new System.Collections.Generic.List<string>(template.BaseTemplates.Count);
 
     foreach (var baseTemplate in template.BaseTemplates)
     {
@@ -277,24 +273,4 @@ public List<TemplateCodeGenerationMetadata> GetBaseTemplates(IEnumerable<Templat
     }
 
     return foundTemplates;
-}
-
-public bool IsRenderingParameters(TemplateCodeGenerationMetadata template)
-{
-    return IsOrInheritsFromTemplate(template, "d24bb6f7-6088-4cbf-a4cc-5746e8ae78a9");
-}
-
-public bool IsBaseComponent(TemplateCodeGenerationMetadata template)
-{
-    return template.Id == System.Guid.Parse("{b61a1d20-9ee5-4ccb-9e0d-24a97e58d293}");
-}
-
-public bool IsBaseCard(TemplateCodeGenerationMetadata template)
-{
-    return template.Id == System.Guid.Parse("{c153ec5e-57b3-4354-b86a-c2a8ad172b96}");
-}
-
-public bool IsBaseElement(TemplateCodeGenerationMetadata template)
-{
-    return template.Id == System.Guid.Parse("{17dc7cee-994d-4dc7-80bc-357ef53c3708}");
 }

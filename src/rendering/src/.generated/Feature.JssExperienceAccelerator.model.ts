@@ -7,12 +7,12 @@
  * </auto-generated>
  */
 
-// @ts-ignore Prevent noUnusedLocals from triggering an error, we import all core field types to minimize changing to code generation.
-import { ItemExt } from "lib/_.Sitecore.Override"
-// @ts-ignore Prevent noUnusedLocals from triggering an error, we import all core field types to minimize changing to code generation.
-import { ComponentRendering, RouteData, Field, ImageField, FileField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
-// @ts-ignore Prevent noUnusedLocals from triggering an error, we import all core field types to minimize changing to code generation.
-import { ComponentProps } from '@/lib/component-props';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+import { ItemExt } from '../lib/_.Sitecore.Override'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+import { Field, ImageField, FileField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+import { ComponentProps } from '../lib/component-props';
 import { Foundation } from "./Foundation.JssExperienceAccelerator.model"
 
 export namespace Feature.JssExperienceAccelerator.PageStructure.RenderingParameters {
@@ -182,5 +182,10 @@ export namespace Feature.JssExperienceAccelerator.PageContent.RenderingParameter
 
     }
 }
+// Namespace aliases.  If this doesn't work, ensure `"isolatedModules": false` is set in `tsconfig.json`. 
+export import PageStructure = Feature.JssExperienceAccelerator.PageStructure;
+export import Media = Feature.JssExperienceAccelerator.Media;
+export import Navigation = Feature.JssExperienceAccelerator.Navigation;
+export import PageContent = Feature.JssExperienceAccelerator.PageContent;
 
 

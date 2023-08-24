@@ -7,29 +7,29 @@
  * </auto-generated>
  */
 
-// @ts-ignore Prevent noUnusedLocals from triggering an error, we import all core field types to minimize changing to code generation.
-import { ItemExt } from "lib/_.Sitecore.Override"
-// @ts-ignore Prevent noUnusedLocals from triggering an error, we import all core field types to minimize changing to code generation.
-import { ComponentRendering, RouteData, Field, ImageField, FileField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
-// @ts-ignore Prevent noUnusedLocals from triggering an error, we import all core field types to minimize changing to code generation.
-import { ComponentProps } from '@/lib/component-props';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+import { ItemExt } from '../lib/_.Sitecore.Override'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+import { Field, ImageField, FileField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+import { ComponentProps } from '../lib/component-props';
 
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
+export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
     export type AddItem = {
         fields?: { 
             /**
-            * Represents the Location field (49ed6c70-37bd-4a23-af04-209806605b7f).
+            * Represents the Location field (52c91c75-6698-4701-a8a2-242ace59a8d6).
             */
             Location: ItemExt[];
         }
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
+export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
     export type AddItem = {
         fields?: { 
             /**
-            * Represents the Location field (52c91c75-6698-4701-a8a2-242ace59a8d6).
+            * Represents the Location field (49ed6c70-37bd-4a23-af04-209806605b7f).
             */
             Location: ItemExt[];
         }
@@ -75,12 +75,14 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant 
         }
 
     }
+}
+export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
     export type ExecuteScript = {
         fields?: {         }
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
+export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
     export type ExecuteScript = {
         fields?: {         }
 
@@ -117,13 +119,13 @@ export namespace Foundation.JssExperienceAccelerator.HeadlessVariants {
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
+export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
     export type InputValidationStep = {
         fields?: {         }
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
+export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
     export type InputValidationStep = {
         fields?: {         }
 
@@ -395,12 +397,6 @@ export namespace Foundation.JssExperienceAccelerator.PlaceholderSettings {
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
-    export type PostDeleteStep = {
-        fields?: {         }
-
-    }
-}
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
     export type PostDeleteStep = {
         fields?: {         }
@@ -408,7 +404,7 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
-    export type PostSetupStep = {
+    export type PostDeleteStep = {
         fields?: {         }
 
     }
@@ -420,7 +416,7 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
-    export type PreDeleteStep = {
+    export type PostSetupStep = {
         fields?: {         }
 
     }
@@ -432,12 +428,18 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
+    export type PreDeleteStep = {
+        fields?: {         }
+
+    }
+}
+export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
     export type PreDeleteValidationStep = {
         fields?: {         }
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
+export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
     export type PreDeleteValidationStep = {
         fields?: {         }
 
@@ -550,5 +552,12 @@ export namespace Foundation.JssExperienceAccelerator.Multisite.Base {
 
     }
 }
+// Namespace aliases.  If this doesn't work, ensure `"isolatedModules": false` is set in `tsconfig.json`. 
+export import Scaffolding = Foundation.JssExperienceAccelerator.Scaffolding;
+export import Presentation = Foundation.JssExperienceAccelerator.Presentation;
+export import Multisite = Foundation.JssExperienceAccelerator.Multisite;
+export import HeadlessVariants = Foundation.JssExperienceAccelerator.HeadlessVariants;
+export import PlaceholderSettings = Foundation.JssExperienceAccelerator.PlaceholderSettings;
+export import SiteMetadata = Foundation.JssExperienceAccelerator.SiteMetadata;
 
 
