@@ -1,5 +1,5 @@
 {
-  "namespace": "Foundation.Sugcon",
+  "namespace": "Foundation.JssExperienceAccelerator",
   "references": ["InitItems"],
   "items": {
     "includes": [

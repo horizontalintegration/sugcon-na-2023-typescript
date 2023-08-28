@@ -1,0 +1,18 @@
+{
+  "namespace": "Feature.Sugcon",
+  "references": ["InitItems"],
+  "items": {
+    "includes": [
+      {
+        "name": "Feature-Sugcon-Templates",
+        "path": "/sitecore/templates/Feature/SUGCON"
+      }
+    ]
+  },
+  "leprechaun": {
+    "configuration": {
+      "@extends": "Sugcon.Base",
+      "@name": "Feature.Sugcon"
+    }
+  }
+}

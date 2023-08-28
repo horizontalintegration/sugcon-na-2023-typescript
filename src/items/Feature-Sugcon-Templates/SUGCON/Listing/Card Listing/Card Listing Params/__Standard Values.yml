@@ -1,0 +1,23 @@
+﻿---
+ID: "194f4cf2-6b92-4d8a-9c10-b0c80407de11"
+Parent: "2f4b70d0-231d-4b39-9b6b-f4d82f6ef4ae"
+Template: "2f4b70d0-231d-4b39-9b6b-f4d82f6ef4ae"
+Path: /sitecore/templates/Feature/SUGCON/Listing/Card Listing/Card Listing Params/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230828T183513Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fbe9beea-feff-468c-9ce1-688b16c79bdd"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230828T183513Z

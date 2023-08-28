@@ -15,5 +15,6 @@
     <PackageReference Update="Sitecore.LayoutService" Version="9.0.*" />
     <PackageReference Update="Sitecore.Assemblies.Platform" Version="$(PlatformVersion)" />
     <PackageReference Update="Sitecore.Assemblies.SitecoreHeadlessServicesServer" Version="21.0.*" />
+    <PackageReference Update="Sitecore.XA.JSS.Foundation.Presentation" Version="10.3.0" />
   </ItemGroup>
 </Project>

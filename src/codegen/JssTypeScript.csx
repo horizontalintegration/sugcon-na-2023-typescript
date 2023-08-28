@@ -55,9 +55,9 @@ public string RenderImportStatements()
     var currentRootNamespace = Templates.First().RootNamespace;
 
     localCode.AppendLine($@"// eslint-disable-next-line @typescript-eslint/no-unused-vars ");
-    localCode.AppendLine(@"import { ItemExt } from '../lib/_.Sitecore.Override'");    
+    localCode.AppendLine(@"import { ItemExt } from '../lib/_.Sitecore.Override'");
     localCode.AppendLine($@"// eslint-disable-next-line @typescript-eslint/no-unused-vars ");
-    localCode.AppendLine($@"import {{ Field, ImageField, FileField, LinkField }} from '@sitecore-jss/sitecore-jss-nextjs';");    
+    localCode.AppendLine($@"import {{ Field, ImageField, FileField, LinkField }} from '@sitecore-jss/sitecore-jss-nextjs';");
     localCode.AppendLine($@"// eslint-disable-next-line @typescript-eslint/no-unused-vars ");
     localCode.AppendLine($@"import {{ ComponentProps }} from '../lib/component-props';");
 
@@ -98,11 +98,28 @@ public string RenderTemplates()
             oldNamespace = template.Namespace;
         }
 
-        localCode.AppendLine($@"    export type {template.CodeName} = {RenderBaseInterfaces(template)}{{");
-        
-        localCode.AppendLine($@"        {RenderInterfaceFields(template)}");
-        
-        localCode.AppendLine($@"    }}");
+        if (IsRenderingParam(template))
+        {
+            localCode.AppendLine($@"    export class {template.CodeName}Class {RenderBaseClasses(template)} {{");
+
+            localCode.AppendLine($@"            constructor(public params: Record<string, string>) {{
+                {(template.BaseTemplates.Any() ? "super(params);" : "")}
+            }}");
+
+            localCode.AppendLine($@"        {RenderParamsFields(template)}");
+
+            localCode.AppendLine($@"    }}");
+
+        }
+        else
+        {
+            localCode.AppendLine($@"    export type {template.CodeName} = {RenderBaseInterfaces(template)} {{");            
+
+            localCode.AppendLine($@"        {RenderInterfaceFields(template)}");
+
+            localCode.AppendLine($@"    }}");
+        }
+
     }
     if (Templates.Any())
     {
@@ -111,10 +128,11 @@ public string RenderTemplates()
 
     localCode.AppendLine($@"// Namespace aliases.  If this doesn't work, ensure `""isolatedModules"": false` is set in `tsconfig.json`. ");
 
-    foreach(var alias in nsAliases) {
+    foreach (var alias in nsAliases)
+    {
         localCode.AppendLine($@"export import {alias} = {rootNs}.{alias};");
     }
-   
+
     return localCode.ToString();
 }
 
@@ -131,6 +149,18 @@ public string RenderBaseInterfaces(TemplateCodeGenerationMetadata template)
     return bases.Any() ? $"{string.Join(" & ", bases)} & " : "";
 }
 
+public string RenderBaseClasses(TemplateCodeGenerationMetadata template)
+{
+    var bases = new System.Collections.Generic.List<string>(template.BaseTemplates.Count);
+
+    foreach (var baseTemplate in template.BaseTemplates)
+    {
+        bases.Add($@"
+        {baseTemplate.Namespace}.{baseTemplate.CodeName}Class");
+    }
+
+    return bases.Any() ? $"extends {string.Join(", ", bases)}" : "";
+}
 public string RenderInterfaceFields(TemplateCodeGenerationMetadata template)
 {
     var localCode = new System.Text.StringBuilder();
@@ -142,7 +172,15 @@ public string RenderInterfaceFields(TemplateCodeGenerationMetadata template)
             /**
             * {field.HelpText}
             */
-            {GetFieldCodeName(field)}: {GetFieldType(field)};");
+            {GetFieldCodeName(field)}{GetNullable(field)}: {GetFieldType(field)};");
+    }
+    if (IncludeChildren(template))
+    {
+        fieldsCode.AppendLine($@"
+            /**
+            * Child items
+            */
+            children : ItemExt[];");
     }
     localCode.AppendLine($@"fields?: {{ {fieldsCode}        }}");
 
@@ -150,10 +188,18 @@ public string RenderInterfaceFields(TemplateCodeGenerationMetadata template)
 }
 
 
-public string RenderInterfaceParamsFields(TemplateCodeGenerationMetadata template)
+public string RenderParamsFields(TemplateCodeGenerationMetadata template)
 {
     var localCode = new System.Text.StringBuilder();
 
+//   export class CardListingParamsClass {
+//     constructor(private params: Record<string, string>) {}
+
+//     public get cardsPerRow() {
+//       const value = this.params['cardsPerRow'];
+//       return parseInt(value);
+//     }
+//   }
     // Rendering parameters are always strings
     foreach (var field in template.OwnFields)
     {
@@ -161,7 +207,13 @@ public string RenderInterfaceParamsFields(TemplateCodeGenerationMetadata templat
             /**
             * {field.HelpText}
             */
-            {GetFieldCodeName(field)}: string;");
+            public get {GetFieldCodeName(field)}() {{
+                const value = this.params.{GetFieldCodeName(field)};
+                if (!value) {{
+                    return null;
+                }}
+                return {GetParseMethod(field)};
+            }}");
     }
 
     return localCode.ToString();
@@ -172,12 +224,17 @@ public string GetFieldCodeName(TemplateFieldCodeGenerationMetadata field, string
     // Check if field name needs to be quoted and add quotes as needed
     var name = System.Text.RegularExpressions.Regex.IsMatch(field.Name, "[ -]+") ? $"\"{field.Name}{suffix}\"" : field.Name + suffix;
 
-    // Item reference fields will return null if it is blank, but all other types will not be null
+    return name;
+}
+
+public string GetNullable(TemplateFieldCodeGenerationMetadata field)
+{
+    // Item reference fields will return null if it is blank, but all other types will not be null    
     if (GetFieldType(field) == "ItemExt" || FORCE_FIELD_NULL_CHECK)
     {
-        name += "?";
+        return "?";
     }
-    return name;
+    return "";
 }
 
 public string GetFieldType(TemplateFieldCodeGenerationMetadata field)
@@ -242,6 +299,61 @@ public string GetFieldType(TemplateFieldCodeGenerationMetadata field)
     }
 }
 
+
+public string GetParseMethod(TemplateFieldCodeGenerationMetadata field)
+{
+    switch (field.Type.ToLower())
+    {
+        //case "tristate":
+        //    return "TriState";
+        case "checkbox":
+            return "value?.toLowerCase() === 'true' || value?.toLowerCase() === '1'";
+        case "date":
+        case "datetime":
+            return $@"new Date(value.substring(0, 4) 
+    + '-' + value.substring(4, 6)
+    + '-' + value.substring(6, 11)
+    + ':' + value.substring(11, 13)
+    + ':' + value.substring(13, 16))";
+
+        case "number":
+            return "parseFloat(value)";
+
+        case "integer":
+            return "parseInt(value)";
+
+        case "multiroot treelist":
+        case "multilist with search":
+        case "treelist":
+        case "treelistex":
+        case "treelist descriptive":
+        case "checklist":
+        case "multilist":
+            return "value.split('|')";
+        case "grouped droplink":
+        case "droplink":
+        case "lookup":
+        case "droptree":
+        case "reference":
+        case "tree":
+        case "file":
+        case "image":
+        case "rich text":
+        case "html":
+        case "general link":
+        case "single-line text":
+        case "multi-line text":
+        case "frame":
+        case "text":
+        case "memo":
+        case "droplist":
+        case "grouped droplist":
+        case "valuelookup":
+        default:
+            return "value";
+    }
+}
+
 public bool IsOrInheritsFromTemplate(TemplateCodeGenerationMetadata template, string templateId)
 {
     var isTemplate = template.Id == System.Guid.Parse(templateId);
@@ -279,4 +391,13 @@ public List<TemplateCodeGenerationMetadata> GetBaseTemplates(IEnumerable<Templat
     }
 
     return foundTemplates;
+}
+
+public bool IncludeChildren(TemplateCodeGenerationMetadata template)
+{
+    return template.Id == System.Guid.Parse("{75848221-862F-48ED-83D1-AF13ED1C2CD7}");
+}
+public bool IsRenderingParam(TemplateCodeGenerationMetadata template)
+{
+    return IsOrInheritsFromTemplate(template, "{0CD007DD-B31D-4E56-91D7-FBD7D55330B3}");
 }

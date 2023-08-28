@@ -17,7 +17,7 @@ import { Foundation } from "./Foundation.JssExperienceAccelerator.model"
 
 export namespace Feature.JssExperienceAccelerator.PageStructure.RenderingParameters {
     export type Container = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters & {
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: { 
             /**
             * Represents the Background image field (6845679d-e298-4e94-96eb-230cb7c3baae).
@@ -28,7 +28,7 @@ export namespace Feature.JssExperienceAccelerator.PageStructure.RenderingParamet
     }
 }
 export namespace Feature.JssExperienceAccelerator.Media {
-    export type Image = {
+    export type Image =  {
         fields?: { 
             /**
             * Represents the Image field (57caf172-ce57-4e48-b3a1-46f8aea71c08).
@@ -50,19 +50,19 @@ export namespace Feature.JssExperienceAccelerator.Media {
 }
 export namespace Feature.JssExperienceAccelerator.Media.RenderingParameters {
     export type Image = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters & {
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
 
     }
 }
 export namespace Feature.JssExperienceAccelerator.Media {
-    export type ImageFolder = {
+    export type ImageFolder =  {
         fields?: {         }
 
     }
 }
 export namespace Feature.JssExperienceAccelerator.Navigation.Datasource {
-    export type Link = {
+    export type Link =  {
         fields?: { 
             /**
             * Represents the Link field (68c2a603-f98e-42a3-be2d-dd70598c2a63).
@@ -71,7 +71,7 @@ export namespace Feature.JssExperienceAccelerator.Navigation.Datasource {
         }
 
     }
-    export type LinkList = {
+    export type LinkList =  {
         fields?: { 
             /**
             * Represents the Title field (dc9aaee9-fc44-458d-a9fb-bac61d8b0234).
@@ -80,32 +80,32 @@ export namespace Feature.JssExperienceAccelerator.Navigation.Datasource {
         }
 
     }
-    export type LinkListFolder = {
+    export type LinkListFolder =  {
         fields?: {         }
 
     }
 }
 export namespace Feature.JssExperienceAccelerator.Navigation.RenderingParameters {
     export type LinkList = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters & {
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
 
     }
     export type Navigation = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters & {
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
 
     }
 }
 export namespace Feature.JssExperienceAccelerator.PageContent.RenderingParameters {
     export type PageContent = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters & {
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
 
     }
 }
 export namespace Feature.JssExperienceAccelerator.PageContent {
-    export type Promo = {
+    export type Promo =  {
         fields?: { 
             /**
             * Represents the Image field (f94b9858-c439-4291-863b-757b536c8b65).
@@ -142,26 +142,26 @@ export namespace Feature.JssExperienceAccelerator.PageContent {
 }
 export namespace Feature.JssExperienceAccelerator.PageContent.RenderingParameters {
     export type Promo = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters & {
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
 
     }
 }
 export namespace Feature.JssExperienceAccelerator.PageContent {
-    export type PromoFolder = {
+    export type PromoFolder =  {
         fields?: {         }
 
     }
 }
 export namespace Feature.JssExperienceAccelerator.PageContent.RenderingParameters {
     export type RichText = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters & {
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
 
     }
 }
 export namespace Feature.JssExperienceAccelerator.PageContent {
-    export type Text = {
+    export type Text =  {
         fields?: { 
             /**
             * Represents the Text field (729034fc-24f3-40b7-8fa4-fb49d7de20dd).
@@ -170,14 +170,14 @@ export namespace Feature.JssExperienceAccelerator.PageContent {
         }
 
     }
-    export type TextFolder = {
+    export type TextFolder =  {
         fields?: {         }
 
     }
 }
 export namespace Feature.JssExperienceAccelerator.PageContent.RenderingParameters {
     export type Title = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters & {
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
 
     }

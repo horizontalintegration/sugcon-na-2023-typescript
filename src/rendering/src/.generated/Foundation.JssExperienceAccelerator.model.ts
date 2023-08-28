@@ -15,7 +15,7 @@ import { Field, ImageField, FileField, LinkField } from '@sitecore-jss/sitecore-
 import { ComponentProps } from '../lib/component-props';
 
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
-    export type AddItem = {
+    export type AddItem =  {
         fields?: { 
             /**
             * Represents the Location field (52c91c75-6698-4701-a8a2-242ace59a8d6).
@@ -26,7 +26,7 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
-    export type AddItem = {
+    export type AddItem =  {
         fields?: { 
             /**
             * Represents the Location field (49ed6c70-37bd-4a23-af04-209806605b7f).
@@ -37,25 +37,25 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation.AvailableRenderings {
-    export type AvailableRenderingsFolder = {
+    export type AvailableRenderingsFolder =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Multisite {
-    export type BasePage = {
+    export type BasePage =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation.RenderingParameters {
-    export type BaseRenderingParameters = {
+    export type BaseRenderingParameters =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
-    export type EditSiteItem = {
+    export type EditSiteItem =  {
         fields?: { 
             /**
             * Represents the Template field (0916832d-459e-463c-852b-c538476a422d).
@@ -66,7 +66,7 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
-    export type EditTenantTemplate = {
+    export type EditTenantTemplate =  {
         fields?: { 
             /**
             * Represents the Template field (67b6641e-309d-4c1e-8e97-63965c7e2c5f).
@@ -77,66 +77,66 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
-    export type ExecuteScript = {
+    export type ExecuteScript =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
-    export type ExecuteScript = {
+    export type ExecuteScript =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Multisite {
-    export type HeadlessSite = {
+    export type HeadlessSite =  {
         fields?: {         }
 
     }
     export type HeadlessTenant = 
-        Foundation.JssExperienceAccelerator.Multisite.Base.BaseJssTenant & {
+        Foundation.JssExperienceAccelerator.Multisite.Base.BaseJssTenant &  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Roots {
-    export type HeadlessSiteSetupRoot = {
+    export type HeadlessSiteSetupRoot =  {
         fields?: {         }
 
     }
-    export type HeadlessTenantSetupRoot = {
+    export type HeadlessTenantSetupRoot =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.HeadlessVariants {
-    export type HeadlessVariants = {
+    export type HeadlessVariants =  {
         fields?: {         }
 
     }
-    export type HeadlessVariantsGrouping = {
+    export type HeadlessVariantsGrouping =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
-    export type InputValidationStep = {
+    export type InputValidationStep =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
-    export type InputValidationStep = {
+    export type InputValidationStep =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Multisite {
-    export type JssData = {
+    export type JssData =  {
         fields?: {         }
 
     }
-    export type JssSettings = {
+    export type JssSettings =  {
         fields?: { 
             /**
             * Represents the Analyze allowed controls field (812dedeb-c5bd-471c-9f48-b1ce75d0d4a9).
@@ -340,119 +340,119 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
         }
 
     }
-    export type JssSiteFolder = {
+    export type JssSiteFolder =  {
         fields?: {         }
 
     }
-    export type JssSiteGrouping = {
+    export type JssSiteGrouping =  {
         fields?: {         }
 
     }
-    export type JssTenantFolder = {
+    export type JssTenantFolder =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation {
-    export type PageDesign = {
+    export type PageDesign =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation.Folders {
-    export type PageDesignFolder = {
+    export type PageDesignFolder =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation {
-    export type PageDesigns = {
+    export type PageDesigns =  {
         fields?: {         }
 
     }
-    export type PartialDesign = {
+    export type PartialDesign =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation.Folders {
-    export type PartialDesignFolder = {
+    export type PartialDesignFolder =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation {
-    export type PartialDesigns = {
+    export type PartialDesigns =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.PlaceholderSettings {
-    export type Placeholder = {
+    export type Placeholder =  {
         fields?: {         }
 
     }
-    export type PlaceholderSettingsFolder = {
-        fields?: {         }
-
-    }
-}
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
-    export type PostDeleteStep = {
-        fields?: {         }
-
-    }
-}
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
-    export type PostDeleteStep = {
+    export type PlaceholderSettingsFolder =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
-    export type PostSetupStep = {
+    export type PostDeleteStep =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
-    export type PostSetupStep = {
+    export type PostDeleteStep =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
-    export type PreDeleteStep = {
+    export type PostSetupStep =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
-    export type PreDeleteStep = {
+    export type PostSetupStep =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
-    export type PreDeleteValidationStep = {
+    export type PreDeleteStep =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
-    export type PreDeleteValidationStep = {
+    export type PreDeleteStep =  {
+        fields?: {         }
+
+    }
+}
+export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
+    export type PreDeleteValidationStep =  {
+        fields?: {         }
+
+    }
+}
+export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
+    export type PreDeleteValidationStep =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation {
-    export type Presentation = {
+    export type Presentation =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding {
-    export type RenderingHost = {
+    export type RenderingHost =  {
         fields?: { 
             /**
             * Represents the Application name field (3121c257-53cf-464a-b736-98b418876057).
@@ -473,17 +473,17 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding {
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation {
-    export type SxaJssLayout = {
+    export type SxaJssLayout =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Multisite {
-    export type SharedSitesSettings = {
+    export type SharedSitesSettings =  {
         fields?: {         }
 
     }
-    export type Site = {
+    export type Site =  {
         fields?: { 
             /**
             * Represents the Predefined application rendering host field (f57099a3-526a-49f2-aebd-635453e48875).
@@ -494,7 +494,7 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
     }
 }
 export namespace Foundation.JssExperienceAccelerator.SiteMetadata {
-    export type SitemapSettings = {
+    export type SitemapSettings =  {
         fields?: { 
             /**
             * Represents the Generate sitemap media items field (7f070bc5-5cd4-474f-aa2f-ab2a0a128f00).
@@ -505,7 +505,7 @@ export namespace Foundation.JssExperienceAccelerator.SiteMetadata {
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding {
-    export type SolutionTemplate = {
+    export type SolutionTemplate =  {
         fields?: { 
             /**
             * Represents the Enabled field (0d21f818-1938-4cd8-b0a8-a44f73d69367).
@@ -531,13 +531,13 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding {
     }
 }
 export namespace Foundation.JssExperienceAccelerator.HeadlessVariants {
-    export type VariantDefinition = {
+    export type VariantDefinition =  {
         fields?: {         }
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Multisite.Base {
-    export type BaseJssTenant = {
+    export type BaseJssTenant =  {
         fields?: { 
             /**
             * Represents the PlaceholderSettingsFolder field (102b58da-2a86-4953-b3cd-c9f91256b657).

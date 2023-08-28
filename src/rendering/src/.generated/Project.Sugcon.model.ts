@@ -17,22 +17,22 @@ import { Foundation } from "./Foundation.JssExperienceAccelerator.model"
 
 export namespace Project.Sugcon {
     export type HeadlessSite = 
-        Foundation.JssExperienceAccelerator.Multisite.HeadlessSite & {
+        Foundation.JssExperienceAccelerator.Multisite.HeadlessSite &  {
         fields?: {         }
 
     }
     export type HeadlessTenant = 
-        Foundation.JssExperienceAccelerator.Multisite.HeadlessTenant & {
+        Foundation.JssExperienceAccelerator.Multisite.HeadlessTenant &  {
         fields?: {         }
 
     }
     export type JssSettings = 
-        Foundation.JssExperienceAccelerator.Multisite.JssSettings & {
+        Foundation.JssExperienceAccelerator.Multisite.JssSettings &  {
         fields?: {         }
 
     }
     export type Page = 
-        Foundation.JssExperienceAccelerator.Multisite.BasePage & {
+        Foundation.JssExperienceAccelerator.Multisite.BasePage &  {
         fields?: { 
             /**
             * Represents the Content field (1bd4f07a-dfa4-463d-b01b-f9c13ff596fd).
@@ -47,22 +47,22 @@ export namespace Project.Sugcon {
 
     }
     export type PageDesignFolder = 
-        Foundation.JssExperienceAccelerator.Presentation.Folders.PageDesignFolder & {
+        Foundation.JssExperienceAccelerator.Presentation.Folders.PageDesignFolder &  {
         fields?: {         }
 
     }
     export type PageDesigns = 
-        Foundation.JssExperienceAccelerator.Presentation.PageDesigns & {
+        Foundation.JssExperienceAccelerator.Presentation.PageDesigns &  {
         fields?: {         }
 
     }
     export type PartialDesignFolder = 
-        Foundation.JssExperienceAccelerator.Presentation.Folders.PartialDesignFolder & {
+        Foundation.JssExperienceAccelerator.Presentation.Folders.PartialDesignFolder &  {
         fields?: {         }
 
     }
     export type PartialDesigns = 
-        Foundation.JssExperienceAccelerator.Presentation.PartialDesigns & {
+        Foundation.JssExperienceAccelerator.Presentation.PartialDesigns &  {
         fields?: {         }
 
     }

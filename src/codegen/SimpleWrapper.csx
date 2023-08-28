@@ -13,7 +13,7 @@ public string RenderTemplates()
             baseInterfaceStr = $" : {baseInterfaces}";
         }
         localCode.AppendLine($@"
-namespace Horizontal.Foundation.Orm.Models.{template.Namespace}
+namespace Platform.Models.Generated.{template.Namespace}
 {{
 	[GeneratedCode(""Leprechaun"", ""2.0.0.0"")]
 	public interface I{template.CodeName}Item{baseInterfaceStr}
@@ -57,7 +57,7 @@ public string GetBaseInterfaces(TemplateCodeGenerationMetadata template)
 
     foreach (var baseTemplate in template.BaseTemplates)
     {
-        bases.Add($"global::Horizontal.Foundation.Orm.Models.{baseTemplate.Namespace}.I{baseTemplate.CodeName}Item");
+        bases.Add($"global::Platform.Models.Generated.{baseTemplate.Namespace}.I{baseTemplate.CodeName}Item");
     }
 
     return string.Join(", ", bases);
