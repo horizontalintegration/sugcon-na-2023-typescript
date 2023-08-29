@@ -32,6 +32,15 @@ export namespace Foundation.Sugcon.Utility {
         }
 
     }
+    export type RenderWithChildrenJson =  {
+        
+            /**
+            * Child items
+            */
+            children : ItemExt[];
+
+
+    }
 }
 // Namespace aliases.  If this doesn't work, ensure `"isolatedModules": false` is set in `tsconfig.json`. 
 export import Base = Foundation.Sugcon.Base;

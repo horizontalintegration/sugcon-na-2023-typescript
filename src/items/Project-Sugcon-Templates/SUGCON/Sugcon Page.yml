@@ -2,7 +2,7 @@
 ID: "4a51367f-bff4-4468-93c0-9227ae60c4a5"
 Parent: "acb71204-8472-45a1-89af-984dcb7bbbeb"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Project/SUGCON/Page
+Path: /sitecore/templates/Project/SUGCON/Sugcon Page
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon

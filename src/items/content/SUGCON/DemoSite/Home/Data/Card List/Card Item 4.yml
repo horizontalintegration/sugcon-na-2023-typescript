@@ -1,8 +1,8 @@
 ﻿---
-ID: "dd2c8bbe-76aa-4b31-b91c-aef6e9e980b4"
+ID: "5a2a8965-8f65-4af9-9852-7af135245705"
 Parent: "a3fccbb2-c131-494e-b341-979645ff0740"
 Template: "dbaeefbe-0c61-423b-ba96-98b58614c2a2"
-Path: /sitecore/content/SUGCON/DemoSite/Home/Page 4/Data/Card List/Card Item 3
+Path: /sitecore/content/SUGCON/DemoSite/Home/Data/Card List/Card Item 4
 Languages:
 - Language: en
   Versions:
@@ -10,21 +10,17 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20230828T223316Z
-    - ID: "7a5b4674-7a28-42fe-8f8e-e86c5dcbd049"
-      Hint: cta
-      Value: |
-        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{E070314F-7392-47F0-8CD4-B525CFD2BA22}" />
+      Value: 20230828T223321Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c9cee151-d52d-48a5-8ea5-f141e0276926"
+      Value: "cfc216cf-8bf8-4d52-aaf2-3e7223b24c84"
     - ID: "9cafa07d-4fdb-4741-90da-f7b1392458c8"
       Hint: headline
-      Value: Card Item 3
+      Value: Card Item 4
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230828T223411Z
+      Value: 20230828T223321Z

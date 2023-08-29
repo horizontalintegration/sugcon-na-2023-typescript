@@ -24,6 +24,17 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
         }
 
     }
+    export type AddItemJson =  {
+        
+            /**
+            * Represents the Location field (52c91c75-6698-4701-a8a2-242ace59a8d6).
+            */
+            Location?: {
+                jsonValue: ItemExt[]
+            };
+
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
     export type AddItem =  {
@@ -35,10 +46,25 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant 
         }
 
     }
+    export type AddItemJson =  {
+        
+            /**
+            * Represents the Location field (49ed6c70-37bd-4a23-af04-209806605b7f).
+            */
+            Location?: {
+                jsonValue: ItemExt[]
+            };
+
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation.AvailableRenderings {
     export type AvailableRenderingsFolder =  {
         fields?: {         }
+
+    }
+    export type AvailableRenderingsFolderJson =  {
+        
 
     }
 }
@@ -47,10 +73,18 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
         fields?: {         }
 
     }
+    export type BasePageJson =  {
+        
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation.RenderingParameters {
     export type BaseRenderingParameters =  {
         fields?: {         }
+
+    }
+    export type BaseRenderingParametersJson =  {
+        
 
     }
 }
@@ -64,6 +98,17 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
         }
 
     }
+    export type EditSiteItemJson =  {
+        
+            /**
+            * Represents the Template field (0916832d-459e-463c-852b-c538476a422d).
+            */
+            Template?: {
+                jsonValue: ItemExt[]
+            };
+
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
     export type EditTenantTemplate =  {
@@ -75,16 +120,35 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant 
         }
 
     }
+    export type EditTenantTemplateJson =  {
+        
+            /**
+            * Represents the Template field (67b6641e-309d-4c1e-8e97-63965c7e2c5f).
+            */
+            Template?: {
+                jsonValue: ItemExt[]
+            };
+
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
     export type ExecuteScript =  {
         fields?: {         }
 
     }
+    export type ExecuteScriptJson =  {
+        
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
     export type ExecuteScript =  {
         fields?: {         }
+
+    }
+    export type ExecuteScriptJson =  {
+        
 
     }
 }
@@ -93,9 +157,18 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
         fields?: {         }
 
     }
+    export type HeadlessSiteJson =  {
+        
+
+    }
     export type HeadlessTenant = 
         Foundation.JssExperienceAccelerator.Multisite.Base.BaseJssTenant &  {
         fields?: {         }
+
+    }
+    export type HeadlessTenantJson = 
+        Foundation.JssExperienceAccelerator.Multisite.Base.BaseJssTenantJson &  {
+        
 
     }
 }
@@ -104,8 +177,16 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Roots {
         fields?: {         }
 
     }
+    export type HeadlessSiteSetupRootJson =  {
+        
+
+    }
     export type HeadlessTenantSetupRoot =  {
         fields?: {         }
+
+    }
+    export type HeadlessTenantSetupRootJson =  {
+        
 
     }
 }
@@ -114,8 +195,16 @@ export namespace Foundation.JssExperienceAccelerator.HeadlessVariants {
         fields?: {         }
 
     }
+    export type HeadlessVariantsJson =  {
+        
+
+    }
     export type HeadlessVariantsGrouping =  {
         fields?: {         }
+
+    }
+    export type HeadlessVariantsGroupingJson =  {
+        
 
     }
 }
@@ -124,16 +213,28 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
         fields?: {         }
 
     }
+    export type InputValidationStepJson =  {
+        
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
     export type InputValidationStep =  {
         fields?: {         }
 
     }
+    export type InputValidationStepJson =  {
+        
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Multisite {
     export type JssData =  {
         fields?: {         }
+
+    }
+    export type JssDataJson =  {
+        
 
     }
     export type JssSettings =  {
@@ -340,16 +441,312 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
         }
 
     }
+    export type JssSettingsJson =  {
+        
+            /**
+            * Represents the Analyze allowed controls field (812dedeb-c5bd-471c-9f48-b1ce75d0d4a9).
+            */
+            AnalyzeAllowedControls?: {
+                jsonValue: Field<boolean>
+            };
+
+            /**
+            * Represents the App data sources path field (5764d2d4-724d-4313-a81b-9246c911faff).
+            */
+            AppDatasourcesPath?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the App template field (32ce6bbe-4217-46e5-9335-42793884cbe3).
+            */
+            AppTemplate?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Datasource strategy field (f7c6acfb-63f0-4aca-9e44-3133b2b94a5b).
+            */
+            DatasourceStrategy?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Debug security field (a5c4b74e-993a-40d6-aeab-23bb12abcf0a).
+            */
+            DebugSecurity?: {
+                jsonValue: Field<boolean>
+            };
+
+            /**
+            * Represents the Default workflow field (3af0e329-6d5e-4d8f-9f82-f48265658a3e).
+            */
+            DefaultWorkflow?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Deployment secret field (797d2f63-d5c4-4c4c-b21f-d3e250e2ab12).
+            */
+            DeploymentSecret?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Dictionary domain field (0129da3f-8c86-4591-ae32-6ec923413923).
+            */
+            DictionaryDomain?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Dictionary path field (a7bbad73-b933-49ff-95c8-1c269cb35e7c).
+            */
+            DictionaryPath?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Filesystem path field (72e83c8d-3578-4e50-b4c0-93a78a1729f2).
+            */
+            FilesystemPath?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Folder template field (bde120a5-4cc2-4340-9b63-562a139bf197).
+            */
+            FolderTemplate?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the GraphQL endpoint field (30e0a829-637e-478c-a136-66adb568398d).
+            */
+            GraphQLEndpoint?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Import database field (df376030-46e9-4c77-bc05-debefc86e3d5).
+            */
+            ImportDatabase?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Import device field (1f14aa04-2868-481f-9247-30dc5c65672c).
+            */
+            ImportDevice?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Import language field (04e6b1f3-ae47-4d95-a154-2271075869a9).
+            */
+            ImportLanguage?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Import user field (f87f0d81-c32c-4c1d-8caf-67856c3ab06e).
+            */
+            ImportUser?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Layout folder template field (466902a9-6b16-41b1-9d33-7c55094a2713).
+            */
+            LayoutFolderTemplate?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Layout path field (c8d002f9-9518-4c5e-9baa-6617e13f0797).
+            */
+            LayoutPath?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Layout service configuration field (e3259313-387a-41f0-b113-962f14b1aa2b).
+            */
+            LayoutServiceConfiguration?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Layout template field (e13c1a83-9d60-4530-b318-3a5effcc6338).
+            */
+            LayoutTemplate?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Media Library folder template field (1cc82067-2b48-442a-a352-453d56a49d93).
+            */
+            MediaLibraryFolderTemplate?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the App Name field (3e4f559f-8e59-4405-b50d-619811371f6c).
+            */
+            Name?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Optimize import indexing field (4088f63e-09e5-43fa-ae99-829bd9bdc114).
+            */
+            OptimizeImportIndexing?: {
+                jsonValue: Field<boolean>
+            };
+
+            /**
+            * Represents the Placeholder settings folder template field (f5594251-f757-429e-a9bd-07f65f6875b9).
+            */
+            PlaceholderSettingsFolderTemplate?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Placeholders path field (5ca117eb-8782-4a4f-9f2f-30de31fc2e34).
+            */
+            PlaceholdersPath?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Protect developer items field (b0711df7-724a-4c6c-8d4d-be846de6124c).
+            */
+            ProtectDeveloperItems?: {
+                jsonValue: Field<boolean>
+            };
+
+            /**
+            * Represents the Renderings folder template field (f5821c4c-226e-4953-8213-c0243826f85f).
+            */
+            RenderingsFolderTemplate?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Renderings path field (f29428d5-1285-48b8-a884-44057965829a).
+            */
+            RenderingsPath?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Route base template field (396af2f6-fe48-4fd4-a7e2-3da13ef977eb).
+            */
+            RouteBaseTemplate?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Route data sources path field (414f61dd-02c2-47d1-ba83-dcfbc3071e52).
+            */
+            RouteDatasourcesPath?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Route template name field (300fb7a0-b27f-44dd-9af0-b37a19723e0e).
+            */
+            RouteTemplateName?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Server Bundle field (4a3eeba3-a250-44f4-bd97-6e863cc6f0d5).
+            */
+            ServerBundle?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Server side rendering engine field (9016141c-ff51-40f2-9135-40f5161b9784).
+            */
+            ServerSideRenderingEngine?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the ServerSideRenderingEngineApplicationUrl field (5e8ed724-126a-4bb7-8106-85c2d1042c9e).
+            */
+            ServerSideRenderingEngineApplicationUrl?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the ServerSideRenderingEngineEditOnly field (557d5f36-6f2d-4eb6-a8ce-25f30f7b9397).
+            */
+            ServerSideRenderingEngineEditOnly?: {
+                jsonValue: Field<boolean>
+            };
+
+            /**
+            * Represents the Server side rendering engine endpoint URL field (89849738-34ee-46bc-b525-825f1153189e).
+            */
+            ServerSideRenderingEngineEndpointUrl?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Server side rendering function name field (7975673a-aafd-4c5b-96a5-cbcaac500a44).
+            */
+            ServerSideRenderingFunctionName?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Server side rendering worker processes field (6224a1ce-d964-4ee8-8e09-ad2f81e0a2b6).
+            */
+            ServerSideRenderingWorkerProcesses?: {
+                jsonValue: Field<number>
+            };
+
+            /**
+            * Represents the Template folder template field (218760c0-8001-4c2d-a8b0-61c128276f96).
+            */
+            TemplateFolderTemplate?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Use language specific layout field (1864e99d-c29a-40bf-96e0-b3e7896a013b).
+            */
+            UseLanguageSpecificLayout?: {
+                jsonValue: Field<boolean>
+            };
+
+
+    }
     export type JssSiteFolder =  {
         fields?: {         }
+
+    }
+    export type JssSiteFolderJson =  {
+        
 
     }
     export type JssSiteGrouping =  {
         fields?: {         }
 
     }
+    export type JssSiteGroupingJson =  {
+        
+
+    }
     export type JssTenantFolder =  {
         fields?: {         }
+
+    }
+    export type JssTenantFolderJson =  {
+        
 
     }
 }
@@ -358,10 +755,18 @@ export namespace Foundation.JssExperienceAccelerator.Presentation {
         fields?: {         }
 
     }
+    export type PageDesignJson =  {
+        
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation.Folders {
     export type PageDesignFolder =  {
         fields?: {         }
+
+    }
+    export type PageDesignFolderJson =  {
+        
 
     }
 }
@@ -370,8 +775,16 @@ export namespace Foundation.JssExperienceAccelerator.Presentation {
         fields?: {         }
 
     }
+    export type PageDesignsJson =  {
+        
+
+    }
     export type PartialDesign =  {
         fields?: {         }
+
+    }
+    export type PartialDesignJson =  {
+        
 
     }
 }
@@ -380,10 +793,18 @@ export namespace Foundation.JssExperienceAccelerator.Presentation.Folders {
         fields?: {         }
 
     }
+    export type PartialDesignFolderJson =  {
+        
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation {
     export type PartialDesigns =  {
         fields?: {         }
+
+    }
+    export type PartialDesignsJson =  {
+        
 
     }
 }
@@ -392,20 +813,36 @@ export namespace Foundation.JssExperienceAccelerator.PlaceholderSettings {
         fields?: {         }
 
     }
+    export type PlaceholderJson =  {
+        
+
+    }
     export type PlaceholderSettingsFolder =  {
         fields?: {         }
 
     }
+    export type PlaceholderSettingsFolderJson =  {
+        
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
     export type PostDeleteStep =  {
         fields?: {         }
 
     }
+    export type PostDeleteStepJson =  {
+        
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
     export type PostDeleteStep =  {
         fields?: {         }
+
+    }
+    export type PostDeleteStepJson =  {
+        
 
     }
 }
@@ -414,16 +851,28 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
         fields?: {         }
 
     }
+    export type PostSetupStepJson =  {
+        
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
     export type PostSetupStep =  {
         fields?: {         }
 
     }
+    export type PostSetupStepJson =  {
+        
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
     export type PreDeleteStep =  {
         fields?: {         }
+
+    }
+    export type PreDeleteStepJson =  {
+        
 
     }
 }
@@ -432,22 +881,38 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant 
         fields?: {         }
 
     }
+    export type PreDeleteStepJson =  {
+        
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
     export type PreDeleteValidationStep =  {
         fields?: {         }
 
     }
+    export type PreDeleteValidationStepJson =  {
+        
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
     export type PreDeleteValidationStep =  {
         fields?: {         }
+
+    }
+    export type PreDeleteValidationStepJson =  {
+        
 
     }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation {
     export type Presentation =  {
         fields?: {         }
+
+    }
+    export type PresentationJson =  {
+        
 
     }
 }
@@ -471,16 +936,49 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding {
         }
 
     }
+    export type RenderingHostJson =  {
+        
+            /**
+            * Represents the Application name field (3121c257-53cf-464a-b736-98b418876057).
+            */
+            AppName?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Server side rendering engine application URL field (e32c1801-79b3-4fc1-a9c4-3c6e6c2968ae).
+            */
+            ServerSideRenderingEngineApplicationUrl?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Server side rendering engine endpoint URL field (fc76919b-0d7c-4732-865d-2af795fb38a4).
+            */
+            ServerSideRenderingEngineEndpointUrl?: {
+                jsonValue: Field<string>
+            };
+
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Presentation {
     export type SxaJssLayout =  {
         fields?: {         }
 
     }
+    export type SxaJssLayoutJson =  {
+        
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.Multisite {
     export type SharedSitesSettings =  {
         fields?: {         }
+
+    }
+    export type SharedSitesSettingsJson =  {
+        
 
     }
     export type Site =  {
@@ -492,6 +990,17 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
         }
 
     }
+    export type SiteJson =  {
+        
+            /**
+            * Represents the Predefined application rendering host field (f57099a3-526a-49f2-aebd-635453e48875).
+            */
+            RenderingHost?: {
+                jsonValue: Field<string>
+            };
+
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.SiteMetadata {
     export type SitemapSettings =  {
@@ -501,6 +1010,17 @@ export namespace Foundation.JssExperienceAccelerator.SiteMetadata {
             */
             GenerateSitemapMediaItems?: Field<boolean>;
         }
+
+    }
+    export type SitemapSettingsJson =  {
+        
+            /**
+            * Represents the Generate sitemap media items field (7f070bc5-5cd4-474f-aa2f-ab2a0a128f00).
+            */
+            GenerateSitemapMediaItems?: {
+                jsonValue: Field<boolean>
+            };
+
 
     }
 }
@@ -529,10 +1049,46 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding {
         }
 
     }
+    export type SolutionTemplateJson =  {
+        
+            /**
+            * Represents the Enabled field (0d21f818-1938-4cd8-b0a8-a44f73d69367).
+            */
+            Enabled?: {
+                jsonValue: Field<boolean>
+            };
+
+            /**
+            * Represents the Name field (82e64b52-0b8a-4a38-8c78-530c5493814e).
+            */
+            Name?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Site Modules field (c262443b-653d-461d-96c8-7cfaa0ef2b2d).
+            */
+            "Site Modules"?: {
+                jsonValue: ItemExt[]
+            };
+
+            /**
+            * Represents the Tenant Modules field (41ac536a-923a-43f9-ac87-f3993f638125).
+            */
+            "Tenant Modules"?: {
+                jsonValue: ItemExt[]
+            };
+
+
+    }
 }
 export namespace Foundation.JssExperienceAccelerator.HeadlessVariants {
     export type VariantDefinition =  {
         fields?: {         }
+
+    }
+    export type VariantDefinitionJson =  {
+        
 
     }
 }
@@ -549,6 +1105,24 @@ export namespace Foundation.JssExperienceAccelerator.Multisite.Base {
             */
             RenderingsFolder?: ItemExt;
         }
+
+    }
+    export type BaseJssTenantJson =  {
+        
+            /**
+            * Represents the PlaceholderSettingsFolder field (102b58da-2a86-4953-b3cd-c9f91256b657).
+            */
+            PlaceholderSettingsFolder?: {
+                jsonValue: ItemExt
+            };
+
+            /**
+            * Represents the Renderings location field (853b245f-53e4-4ebe-bab5-299f9de314b6).
+            */
+            RenderingsFolder?: {
+                jsonValue: ItemExt
+            };
+
 
     }
 }

@@ -35,6 +35,31 @@ export namespace Feature.Sugcon.Listing.CardListing {
         }
 
     }
+    export type CardItemJson =  {
+        
+            /**
+            * Represents the CTA field (7a5b4674-7a28-42fe-8f8e-e86c5dcbd049).
+            */
+            cta?: {
+                jsonValue: LinkField
+            };
+
+            /**
+            * Represents the Headline field (9cafa07d-4fdb-4741-90da-f7b1392458c8).
+            */
+            headline?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Image field (af087590-b739-434a-b9c2-954bd816ae59).
+            */
+            image?: {
+                jsonValue: ImageField
+            };
+
+
+    }
     export type CardListing = 
         Foundation.Sugcon.Utility.RenderWithChildren &  {
         fields?: { 
@@ -43,6 +68,18 @@ export namespace Feature.Sugcon.Listing.CardListing {
             */
             headline?: Field<string>;
         }
+
+    }
+    export type CardListingJson = 
+        Foundation.Sugcon.Utility.RenderWithChildrenJson &  {
+        
+            /**
+            * Represents the Headline field (639981f4-6eb4-4f0c-b309-50476ee79b3e).
+            */
+            headline?: {
+                jsonValue: Field<string>
+            };
+
 
     }
     export class CardListingParamsClass extends 
@@ -94,10 +131,33 @@ export namespace Feature.Sugcon.Listing.PageListing {
     export type PageListing =  {
         fields?: { 
             /**
-            * Represents the Pages field (e74c3459-d157-4210-ad64-978d04a5fa3f).
+            * Represents the levels field (ce387c4e-2018-4d19-ba73-d043825b0f74).
             */
-            pages?: ItemExt[];
+            levels?: Field<number>;
+
+            /**
+            * Represents the Root Page field (e74c3459-d157-4210-ad64-978d04a5fa3f).
+            */
+            rootPage?: ItemExt;
         }
+
+    }
+    export type PageListingJson =  {
+        
+            /**
+            * Represents the levels field (ce387c4e-2018-4d19-ba73-d043825b0f74).
+            */
+            levels?: {
+                jsonValue: Field<number>
+            };
+
+            /**
+            * Represents the Root Page field (e74c3459-d157-4210-ad64-978d04a5fa3f).
+            */
+            rootPage?: {
+                jsonValue: ItemExt
+            };
+
 
     }
 }

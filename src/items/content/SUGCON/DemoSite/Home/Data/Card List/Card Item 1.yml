@@ -1,14 +1,8 @@
 ﻿---
-ID: "dcd756d0-bb83-4852-8f60-35df49fc96cb"
-Parent: "4a51367f-bff4-4468-93c0-9227ae60c4a5"
-Template: "4a51367f-bff4-4468-93c0-9227ae60c4a5"
-Path: /sitecore/templates/Project/SUGCON/Page/__Standard Values
-SharedFields:
-- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
-  Hint: __Masters
-  Value: |
-    {4A51367F-BFF4-4468-93C0-9227AE60C4A5}
-    {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
+ID: "5d06dd89-75ec-4626-9790-54da9dae4cf7"
+Parent: "a3fccbb2-c131-494e-b341-979645ff0740"
+Template: "dbaeefbe-0c61-423b-ba96-98b58614c2a2"
+Path: /sitecore/content/SUGCON/DemoSite/Home/Data/Card List/Card Item 1
 Languages:
 - Language: en
   Versions:
@@ -16,10 +10,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20230822T212709Z
-    - ID: "4da86130-8d6b-4d4f-8e61-3426ab49905d"
-      Hint: Title
-      Value: $name
+      Value: 20230828T183707Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -30,11 +21,18 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3e932c59-9624-4d67-9982-c367f503d983"
+      Value: "e0899fcb-77fa-4ea3-b0ee-8208d5bd851d"
+    - ID: "9cafa07d-4fdb-4741-90da-f7b1392458c8"
+      Hint: headline
+      Value: Card 1
+    - ID: "af087590-b739-434a-b9c2-954bd816ae59"
+      Hint: image
+      Value: |
+        <image mediaid="{04DAD0FD-DB66-4070-881F-17264CA257E1}" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230822T212711Z
+      Value: 20230828T223337Z

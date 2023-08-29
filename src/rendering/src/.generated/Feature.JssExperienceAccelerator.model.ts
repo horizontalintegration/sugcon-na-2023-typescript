@@ -26,6 +26,18 @@ export namespace Feature.JssExperienceAccelerator.PageStructure.RenderingParamet
         }
 
     }
+    export type ContainerJson = 
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+        
+            /**
+            * Represents the Background image field (6845679d-e298-4e94-96eb-230cb7c3baae).
+            */
+            BackgroundImage?: {
+                jsonValue: ImageField
+            };
+
+
+    }
 }
 export namespace Feature.JssExperienceAccelerator.Media {
     export type Image =  {
@@ -47,6 +59,31 @@ export namespace Feature.JssExperienceAccelerator.Media {
         }
 
     }
+    export type ImageJson =  {
+        
+            /**
+            * Represents the Image field (57caf172-ce57-4e48-b3a1-46f8aea71c08).
+            */
+            Image?: {
+                jsonValue: ImageField
+            };
+
+            /**
+            * Represents the Caption field (4d7b05d0-0300-486f-8f87-57de34a9b793).
+            */
+            ImageCaption?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the URL field (75fbf1b1-e7c5-494b-9633-693909f79425).
+            */
+            TargetUrl?: {
+                jsonValue: LinkField
+            };
+
+
+    }
 }
 export namespace Feature.JssExperienceAccelerator.Media.RenderingParameters {
     export type Image = 
@@ -54,10 +91,19 @@ export namespace Feature.JssExperienceAccelerator.Media.RenderingParameters {
         fields?: {         }
 
     }
+    export type ImageJson = 
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+        
+
+    }
 }
 export namespace Feature.JssExperienceAccelerator.Media {
     export type ImageFolder =  {
         fields?: {         }
+
+    }
+    export type ImageFolderJson =  {
+        
 
     }
 }
@@ -71,6 +117,17 @@ export namespace Feature.JssExperienceAccelerator.Navigation.Datasource {
         }
 
     }
+    export type LinkJson =  {
+        
+            /**
+            * Represents the Link field (68c2a603-f98e-42a3-be2d-dd70598c2a63).
+            */
+            Link?: {
+                jsonValue: LinkField
+            };
+
+
+    }
     export type LinkList =  {
         fields?: { 
             /**
@@ -80,8 +137,23 @@ export namespace Feature.JssExperienceAccelerator.Navigation.Datasource {
         }
 
     }
+    export type LinkListJson =  {
+        
+            /**
+            * Represents the Title field (dc9aaee9-fc44-458d-a9fb-bac61d8b0234).
+            */
+            Title?: {
+                jsonValue: Field<string>
+            };
+
+
+    }
     export type LinkListFolder =  {
         fields?: {         }
+
+    }
+    export type LinkListFolderJson =  {
+        
 
     }
 }
@@ -91,9 +163,19 @@ export namespace Feature.JssExperienceAccelerator.Navigation.RenderingParameters
         fields?: {         }
 
     }
+    export type LinkListJson = 
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+        
+
+    }
     export type Navigation = 
         Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
+
+    }
+    export type NavigationJson = 
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+        
 
     }
 }
@@ -101,6 +183,11 @@ export namespace Feature.JssExperienceAccelerator.PageContent.RenderingParameter
     export type PageContent = 
         Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
+
+    }
+    export type PageContentJson = 
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+        
 
     }
 }
@@ -139,11 +226,62 @@ export namespace Feature.JssExperienceAccelerator.PageContent {
         }
 
     }
+    export type PromoJson =  {
+        
+            /**
+            * Represents the Image field (f94b9858-c439-4291-863b-757b536c8b65).
+            */
+            PromoIcon?: {
+                jsonValue: ImageField
+            };
+
+            /**
+            * Represents the Image 2 field (739c6cc2-0031-463d-9599-13478fd50ee3).
+            */
+            PromoIcon2?: {
+                jsonValue: ImageField
+            };
+
+            /**
+            * Represents the Link field (ef24bed2-46ab-4d53-ad1a-1019935a4e89).
+            */
+            PromoLink?: {
+                jsonValue: LinkField
+            };
+
+            /**
+            * Represents the Text field (28079f3a-896b-4273-be5f-59d0ebb7cd7d).
+            */
+            PromoText?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Text 2 field (1f66862d-a5e3-405f-8e3e-b787b4c39b12).
+            */
+            PromoText2?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the Text 3 field (c6e604c3-5371-4e67-83df-a09a5ea66249).
+            */
+            PromoText3?: {
+                jsonValue: Field<string>
+            };
+
+
+    }
 }
 export namespace Feature.JssExperienceAccelerator.PageContent.RenderingParameters {
     export type Promo = 
         Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
+
+    }
+    export type PromoJson = 
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+        
 
     }
 }
@@ -152,11 +290,20 @@ export namespace Feature.JssExperienceAccelerator.PageContent {
         fields?: {         }
 
     }
+    export type PromoFolderJson =  {
+        
+
+    }
 }
 export namespace Feature.JssExperienceAccelerator.PageContent.RenderingParameters {
     export type RichText = 
         Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
+
+    }
+    export type RichTextJson = 
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+        
 
     }
 }
@@ -170,8 +317,23 @@ export namespace Feature.JssExperienceAccelerator.PageContent {
         }
 
     }
+    export type TextJson =  {
+        
+            /**
+            * Represents the Text field (729034fc-24f3-40b7-8fa4-fb49d7de20dd).
+            */
+            Text?: {
+                jsonValue: Field<string>
+            };
+
+
+    }
     export type TextFolder =  {
         fields?: {         }
+
+    }
+    export type TextFolderJson =  {
+        
 
     }
 }
@@ -179,6 +341,11 @@ export namespace Feature.JssExperienceAccelerator.PageContent.RenderingParameter
     export type Title = 
         Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
+
+    }
+    export type TitleJson = 
+        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+        
 
     }
 }

@@ -113,9 +113,15 @@ public string RenderTemplates()
         }
         else
         {
-            localCode.AppendLine($@"    export type {template.CodeName} = {RenderBaseInterfaces(template)} {{");            
+            localCode.AppendLine($@"    export type {template.CodeName} = {RenderBaseInterfaces(template)} {{");
 
             localCode.AppendLine($@"        {RenderInterfaceFields(template)}");
+
+            localCode.AppendLine($@"    }}");
+
+            localCode.AppendLine($@"    export type {template.CodeName}Json = {RenderBaseInterfaces(template, "Json")} {{");
+
+            localCode.AppendLine($@"        {RenderInterfaceFields(template, true)}");
 
             localCode.AppendLine($@"    }}");
         }
@@ -136,14 +142,14 @@ public string RenderTemplates()
     return localCode.ToString();
 }
 
-public string RenderBaseInterfaces(TemplateCodeGenerationMetadata template)
+public string RenderBaseInterfaces(TemplateCodeGenerationMetadata template, string suffix = "")
 {
     var bases = new System.Collections.Generic.List<string>(template.BaseTemplates.Count);
 
     foreach (var baseTemplate in template.BaseTemplates)
     {
         bases.Add($@"
-        {baseTemplate.Namespace}.{baseTemplate.CodeName}");
+        {baseTemplate.Namespace}.{baseTemplate.CodeName}{suffix}");
     }
 
     return bases.Any() ? $"{string.Join(" & ", bases)} & " : "";
@@ -161,18 +167,26 @@ public string RenderBaseClasses(TemplateCodeGenerationMetadata template)
 
     return bases.Any() ? $"extends {string.Join(", ", bases)}" : "";
 }
-public string RenderInterfaceFields(TemplateCodeGenerationMetadata template)
+public string RenderInterfaceFields(TemplateCodeGenerationMetadata template, bool useJsonValue = false)
 {
     var localCode = new System.Text.StringBuilder();
 
     var fieldsCode = new System.Text.StringBuilder();
     foreach (var field in template.OwnFields)
     {
+        var fieldType = GetFieldType(field);
+
+        if (useJsonValue)
+        {
+            fieldType = $@"{{
+                jsonValue: {fieldType}
+            }}";
+        }
         fieldsCode.AppendLine($@"
             /**
             * {field.HelpText}
             */
-            {GetFieldCodeName(field)}{GetNullable(field)}: {GetFieldType(field)};");
+            {GetFieldCodeName(field)}{GetNullable(field)}: {fieldType};");
     }
     if (IncludeChildren(template))
     {
@@ -182,7 +196,15 @@ public string RenderInterfaceFields(TemplateCodeGenerationMetadata template)
             */
             children : ItemExt[];");
     }
-    localCode.AppendLine($@"fields?: {{ {fieldsCode}        }}");
+    if (useJsonValue)
+    {
+        localCode.AppendLine($@"{fieldsCode}");
+    }
+    else
+    {
+        localCode.AppendLine($@"fields?: {{ {fieldsCode}        }}");
+    }
+
 
     return localCode.ToString();
 }
@@ -192,14 +214,14 @@ public string RenderParamsFields(TemplateCodeGenerationMetadata template)
 {
     var localCode = new System.Text.StringBuilder();
 
-//   export class CardListingParamsClass {
-//     constructor(private params: Record<string, string>) {}
+    //   export class CardListingParamsClass {
+    //     constructor(private params: Record<string, string>) {}
 
-//     public get cardsPerRow() {
-//       const value = this.params['cardsPerRow'];
-//       return parseInt(value);
-//     }
-//   }
+    //     public get cardsPerRow() {
+    //       const value = this.params['cardsPerRow'];
+    //       return parseInt(value);
+    //     }
+    //   }
     // Rendering parameters are always strings
     foreach (var field in template.OwnFields)
     {

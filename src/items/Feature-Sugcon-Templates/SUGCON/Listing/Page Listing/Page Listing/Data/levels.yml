@@ -1,26 +1,27 @@
 ﻿---
-ID: "1bd4f07a-dfa4-463d-b01b-f9c13ff596fd"
-Parent: "058322e5-68e5-4773-94d9-3ea48717857b"
+ID: "ce387c4e-2018-4d19-ba73-d043825b0f74"
+Parent: "aeec9bd9-dadc-417a-9729-fd1953ea8f00"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Project/SUGCON/Page/Content/Content
+Path: /sitecore/templates/Feature/SUGCON/Listing/Page Listing/Page Listing/Data/levels
 SharedFields:
-- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
-  Hint: Source
-  Value: "query:$xaRichTextProfile"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Rich Text
+  Value: Integer
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 1
+  Value: 200
 Languages:
 - Language: en
+  Fields:
+  - ID: "9541e67d-ce8c-4225-803d-33f7f29f09ef"
+    Hint: __Short description
+    Value: The number of levels to fetch.  Max is 3
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20230822T212710Z
+      Value: 20230828T234353Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -31,11 +32,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d657eb0b-5df5-4351-971c-a2bef450e26d"
+      Value: "28db59ad-c747-4f2a-a3c5-ec26f6683b02"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230822T212711Z
+      Value: 20230828T234438Z

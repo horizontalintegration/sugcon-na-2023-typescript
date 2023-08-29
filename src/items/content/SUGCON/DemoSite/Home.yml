@@ -22,12 +22,23 @@ Languages:
         <r xmlns:p="p" xmlns:s="s"
           p:p="1">
           <d
-            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+            s:l="{F27A14D9-9644-432D-8456-24522CA73A2C}">
             <r
-              uid="{20F276BC-BF52-467C-BD5D-DC8BB9AAC922}"
-              s:id="{1DEB067F-0BB1-405E-94F5-2ABB537A6160}"
-              s:par="GridParameters={7465D855-992E-4DC2-9855-A03250DFA74B}&amp;FieldNames={AA4192F4-6049-4AEB-8B46-FCB8B4EEF91E}&amp;Styles&amp;NavigationRoot&amp;LevelFrom={1BB88840-5FB3-4353-AD8D-81136F6FF75A}&amp;LevelTo={A59325BB-5A27-46F9-8110-9D499715F3BE}&amp;Filter&amp;Flattened&amp;AddRoot&amp;CacheClearingBehavior=Clear on publish"
-              s:ph="headless-header" />
+              uid="{5CEF4097-57C0-4578-AEFF-B8B81404D5CF}"
+              p:before="*"
+              s:ds="local:/Data/Page Listing"
+              s:id="{BC271EBC-AD0D-4723-8307-207071A3A964}"
+              s:par="CacheClearingBehavior=Clear on publish"
+              s:ph="headless-main" />
+            <r
+              uid="{61C4E9D2-225E-4711-85DC-A4C9FEF447AC}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/Card List"
+              s:id="{A2879E69-714F-4761-9BA0-9C5F5E0BEFDB}"
+              s:par="cardsPerRow=2&amp;testDate=20230828T214100Z&amp;testImage=%3Cimage%20mediaid%3D%22%7B04DAD0FD-DB66-4070-881F-17264CA257E1%7D%22%20%2F%3E"
+              s:ph="headless-main"
+              s:ccb="Clear on publish" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
@@ -49,11 +60,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f3b3d098-c3a4-4a42-9afa-96fe815a9daf"
+      Value: "0f02caca-32f1-4ecb-99f4-c5326cb2e2bb"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230822T220309Z
+      Value: 20230828T234706Z

@@ -17,3 +17,16 @@ export type ItemExt = Item & {
   templateName?: string;
   fields?: ItemExtFields;
 };
+
+export type GqlItemExt = {
+  id: string;
+  url?: { path?: string };
+  templateId?: string;
+  templateName?: string;
+};
+
+export type GqlChildren<T> = {
+  children: {
+    results: T[];
+  };
+};
