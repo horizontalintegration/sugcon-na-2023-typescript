@@ -18,8 +18,11 @@ export type ItemExt = Item & {
   fields?: ItemExtFields;
 };
 
+/**
+ * All fields are optional because we don't know if they are being pulled in.
+ */
 export type GqlItemExt = {
-  id: string;
+  id?: string;
   url?: { path?: string };
   templateId?: string;
   templateName?: string;

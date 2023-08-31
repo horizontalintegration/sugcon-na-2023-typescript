@@ -25,15 +25,6 @@ public string RenderTemplates()
 {
     var localCode = new System.Text.StringBuilder();
 
-    // return string.Join(",", Templates.Select(template => $@"
-    //     {template.CodeName} : ""{template.Id.ToString("N").ToUpperInvariant()}"""));
-    // foreach (var template in Templates)
-    // {
-    //    localCode.AppendLine($@"
-    //    {template.CodeName} : ""{template.Id.ToString("N").ToUpperInvariant()}""");
-    // }
-
-
     // Render the Item mappings
     var oldNamespace = "";
     foreach (var template in Templates)
@@ -45,12 +36,12 @@ public string RenderTemplates()
                 localCode.AppendLine($@"
 }}");
             }
-            localCode.AppendLine($@"export namespace {GetRoot()}.Constants.{template.Namespace} {{");
+            localCode.AppendLine($@"export namespace {GetShortNameSpace(template)}.Constants {{");
             oldNamespace = template.Namespace;
         }
 
         localCode.Append($@"
-    export const {template.CodeName}Ids = {{
+    export const {template.CodeName} = {{
         TemplateId: ""{template.Id}"",
     ");
         localCode.Append($@"
@@ -93,4 +84,15 @@ public List<TemplateCodeGenerationMetadata> GetBaseTemplates(IEnumerable<Templat
     }
 
     return foundTemplates;
+}
+
+
+public string GetShortNameSpace(TemplateCodeGenerationMetadata template)
+{    
+    var shortNameSpace = template.RelativeNamespace;
+    
+    if(string.IsNullOrWhiteSpace(shortNameSpace)) {
+        return template.Namespace;
+    }
+    return shortNameSpace;
 }
