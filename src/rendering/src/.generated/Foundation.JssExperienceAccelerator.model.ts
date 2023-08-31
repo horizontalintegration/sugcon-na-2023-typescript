@@ -7,14 +7,30 @@
  * </auto-generated>
  */
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { ItemExt } from '../lib/_.Sitecore.Override'
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { Field, ImageField, FileField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { ComponentProps } from '../lib/component-props';
+// @ts-ignore 
+import { Scaffolding as FoundationJssExperienceAcceleratorScaffolding } from "./Foundation.JssExperienceAccelerator.model"
+// @ts-ignore 
+import { Presentation as FoundationJssExperienceAcceleratorPresentation } from "./Foundation.JssExperienceAccelerator.model"
+// @ts-ignore 
+import { Multisite as FoundationJssExperienceAcceleratorMultisite } from "./Foundation.JssExperienceAccelerator.model"
+// @ts-ignore 
+import { HeadlessVariants as FoundationJssExperienceAcceleratorHeadlessVariants } from "./Foundation.JssExperienceAccelerator.model"
+// @ts-ignore 
+import { PlaceholderSettings as FoundationJssExperienceAcceleratorPlaceholderSettings } from "./Foundation.JssExperienceAccelerator.model"
+// @ts-ignore 
+import { SiteMetadata as FoundationJssExperienceAcceleratorSiteMetadata } from "./Foundation.JssExperienceAccelerator.model"
 
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
+export namespace Scaffolding.Actions.Site {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/AddItem
+    */
     export type AddItem =  {
         fields?: { 
             /**
@@ -24,6 +40,10 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/AddItem
+    */
     export type AddItemJson =  {
         
             /**
@@ -36,7 +56,11 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
+export namespace Scaffolding.Actions.Tenant {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/AddItem
+    */
     export type AddItem =  {
         fields?: { 
             /**
@@ -46,6 +70,10 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant 
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/AddItem
+    */
     export type AddItemJson =  {
         
             /**
@@ -58,37 +86,65 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant 
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Presentation.AvailableRenderings {
+export namespace Presentation.AvailableRenderings {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Available Renderings/Available Renderings Folder
+    */
     export type AvailableRenderingsFolder =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Available Renderings/Available Renderings Folder
+    */
     export type AvailableRenderingsFolderJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Multisite {
+export namespace Multisite {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Base Page
+    */
     export type BasePage =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Base Page
+    */
     export type BasePageJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Presentation.RenderingParameters {
+export namespace Presentation.RenderingParameters {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Rendering Parameters/BaseRenderingParameters
+    */
     export type BaseRenderingParameters =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Rendering Parameters/BaseRenderingParameters
+    */
     export type BaseRenderingParametersJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
+export namespace Scaffolding.Actions.Site {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/EditSiteItem
+    */
     export type EditSiteItem =  {
         fields?: { 
             /**
@@ -98,6 +154,10 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/EditSiteItem
+    */
     export type EditSiteItemJson =  {
         
             /**
@@ -110,7 +170,11 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
+export namespace Scaffolding.Actions.Tenant {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/EditTenantTemplate
+    */
     export type EditTenantTemplate =  {
         fields?: { 
             /**
@@ -120,6 +184,10 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant 
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/EditTenantTemplate
+    */
     export type EditTenantTemplateJson =  {
         
             /**
@@ -132,111 +200,201 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant 
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
+export namespace Scaffolding.Actions.Site {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/ExecuteScript
+    */
     export type ExecuteScript =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/ExecuteScript
+    */
     export type ExecuteScriptJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
+export namespace Scaffolding.Actions.Tenant {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/ExecuteScript
+    */
     export type ExecuteScript =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/ExecuteScript
+    */
     export type ExecuteScriptJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Multisite {
+export namespace Multisite {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Headless Site
+    */
     export type HeadlessSite =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Headless Site
+    */
     export type HeadlessSiteJson =  {
         
 
     }
-    export type HeadlessTenant = 
-        Foundation.JssExperienceAccelerator.Multisite.Base.BaseJssTenant &  {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Headless Tenant
+    */
+    export type HeadlessTenant = FoundationJssExperienceAcceleratorMultisite.Base.BaseJssTenant &  {
         fields?: {         }
 
     }
-    export type HeadlessTenantJson = 
-        Foundation.JssExperienceAccelerator.Multisite.Base.BaseJssTenantJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Headless Tenant
+    */
+    export type HeadlessTenantJson = FoundationJssExperienceAcceleratorMultisite.Base.BaseJssTenantJson &  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Roots {
+export namespace Scaffolding.Roots {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Roots/HeadlessSiteSetupRoot
+    */
     export type HeadlessSiteSetupRoot =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Roots/HeadlessSiteSetupRoot
+    */
     export type HeadlessSiteSetupRootJson =  {
         
 
     }
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Roots/HeadlessTenantSetupRoot
+    */
     export type HeadlessTenantSetupRoot =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Roots/HeadlessTenantSetupRoot
+    */
     export type HeadlessTenantSetupRootJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.HeadlessVariants {
+export namespace HeadlessVariants {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Headless Variants/HeadlessVariants
+    */
     export type HeadlessVariants =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Headless Variants/HeadlessVariants
+    */
     export type HeadlessVariantsJson =  {
         
 
     }
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Headless Variants/HeadlessVariantsGrouping
+    */
     export type HeadlessVariantsGrouping =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Headless Variants/HeadlessVariantsGrouping
+    */
     export type HeadlessVariantsGroupingJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
+export namespace Scaffolding.Actions.Site {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/InputValidationStep
+    */
     export type InputValidationStep =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/InputValidationStep
+    */
     export type InputValidationStepJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
+export namespace Scaffolding.Actions.Tenant {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/InputValidationStep
+    */
     export type InputValidationStep =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/InputValidationStep
+    */
     export type InputValidationStepJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Multisite {
+export namespace Multisite {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Data
+    */
     export type JssData =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Data
+    */
     export type JssDataJson =  {
         
 
     }
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Settings
+    */
     export type JssSettings =  {
         fields?: { 
             /**
@@ -441,6 +599,10 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Settings
+    */
     export type JssSettingsJson =  {
         
             /**
@@ -725,198 +887,362 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
 
 
     }
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Site Folder
+    */
     export type JssSiteFolder =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Site Folder
+    */
     export type JssSiteFolderJson =  {
         
 
     }
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Site Grouping
+    */
     export type JssSiteGrouping =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Site Grouping
+    */
     export type JssSiteGroupingJson =  {
         
 
     }
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Tenant Folder
+    */
     export type JssTenantFolder =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Tenant Folder
+    */
     export type JssTenantFolderJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Presentation {
+export namespace Presentation {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Page Design
+    */
     export type PageDesign =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Page Design
+    */
     export type PageDesignJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Presentation.Folders {
+export namespace Presentation.Folders {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Folders/Page Design Folder
+    */
     export type PageDesignFolder =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Folders/Page Design Folder
+    */
     export type PageDesignFolderJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Presentation {
+export namespace Presentation {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Page Designs
+    */
     export type PageDesigns =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Page Designs
+    */
     export type PageDesignsJson =  {
         
 
     }
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Partial Design
+    */
     export type PartialDesign =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Partial Design
+    */
     export type PartialDesignJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Presentation.Folders {
+export namespace Presentation.Folders {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Folders/Partial Design Folder
+    */
     export type PartialDesignFolder =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Folders/Partial Design Folder
+    */
     export type PartialDesignFolderJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Presentation {
+export namespace Presentation {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Partial Designs
+    */
     export type PartialDesigns =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Partial Designs
+    */
     export type PartialDesignsJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.PlaceholderSettings {
+export namespace PlaceholderSettings {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Placeholder Settings/Placeholder
+    */
     export type Placeholder =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Placeholder Settings/Placeholder
+    */
     export type PlaceholderJson =  {
         
 
     }
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Placeholder Settings/Placeholder Settings Folder
+    */
     export type PlaceholderSettingsFolder =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Placeholder Settings/Placeholder Settings Folder
+    */
     export type PlaceholderSettingsFolderJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
+export namespace Scaffolding.Actions.Site {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/PostDeleteStep
+    */
     export type PostDeleteStep =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/PostDeleteStep
+    */
     export type PostDeleteStepJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
+export namespace Scaffolding.Actions.Tenant {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/PostDeleteStep
+    */
     export type PostDeleteStep =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/PostDeleteStep
+    */
     export type PostDeleteStepJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
+export namespace Scaffolding.Actions.Site {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/PostSetupStep
+    */
     export type PostSetupStep =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/PostSetupStep
+    */
     export type PostSetupStepJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
+export namespace Scaffolding.Actions.Tenant {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/PostSetupStep
+    */
     export type PostSetupStep =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/PostSetupStep
+    */
     export type PostSetupStepJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
+export namespace Scaffolding.Actions.Site {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/PreDeleteStep
+    */
     export type PreDeleteStep =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/PreDeleteStep
+    */
     export type PreDeleteStepJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
+export namespace Scaffolding.Actions.Tenant {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/PreDeleteStep
+    */
     export type PreDeleteStep =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/PreDeleteStep
+    */
     export type PreDeleteStepJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Site {
+export namespace Scaffolding.Actions.Site {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/PreDeleteValidationStep
+    */
     export type PreDeleteValidationStep =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Site/PreDeleteValidationStep
+    */
     export type PreDeleteValidationStepJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding.Actions.Tenant {
+export namespace Scaffolding.Actions.Tenant {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/PreDeleteValidationStep
+    */
     export type PreDeleteValidationStep =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Actions/Tenant/PreDeleteValidationStep
+    */
     export type PreDeleteValidationStepJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Presentation {
+export namespace Presentation {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Presentation
+    */
     export type Presentation =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Presentation
+    */
     export type PresentationJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding {
+export namespace Scaffolding {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/RenderingHost
+    */
     export type RenderingHost =  {
         fields?: { 
             /**
@@ -936,6 +1262,10 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/RenderingHost
+    */
     export type RenderingHostJson =  {
         
             /**
@@ -962,25 +1292,45 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding {
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Presentation {
+export namespace Presentation {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/SXA JSS Layout
+    */
     export type SxaJssLayout =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/SXA JSS Layout
+    */
     export type SxaJssLayoutJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Multisite {
+export namespace Multisite {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Shared Sites Settings
+    */
     export type SharedSitesSettings =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Shared Sites Settings
+    */
     export type SharedSitesSettingsJson =  {
         
 
     }
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Site
+    */
     export type Site =  {
         fields?: { 
             /**
@@ -990,6 +1340,10 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Site
+    */
     export type SiteJson =  {
         
             /**
@@ -1002,7 +1356,11 @@ export namespace Foundation.JssExperienceAccelerator.Multisite {
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.SiteMetadata {
+export namespace SiteMetadata {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/SiteMetadata/Sitemap Settings
+    */
     export type SitemapSettings =  {
         fields?: { 
             /**
@@ -1012,6 +1370,10 @@ export namespace Foundation.JssExperienceAccelerator.SiteMetadata {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/SiteMetadata/Sitemap Settings
+    */
     export type SitemapSettingsJson =  {
         
             /**
@@ -1024,7 +1386,11 @@ export namespace Foundation.JssExperienceAccelerator.SiteMetadata {
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Scaffolding {
+export namespace Scaffolding {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Solution template
+    */
     export type SolutionTemplate =  {
         fields?: { 
             /**
@@ -1049,6 +1415,10 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Solution template
+    */
     export type SolutionTemplateJson =  {
         
             /**
@@ -1082,17 +1452,29 @@ export namespace Foundation.JssExperienceAccelerator.Scaffolding {
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.HeadlessVariants {
+export namespace HeadlessVariants {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Headless Variants/Variant Definition
+    */
     export type VariantDefinition =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Headless Variants/Variant Definition
+    */
     export type VariantDefinitionJson =  {
         
 
     }
 }
-export namespace Foundation.JssExperienceAccelerator.Multisite.Base {
+export namespace Multisite.Base {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Base/_Base JSS Tenant
+    */
     export type BaseJssTenant =  {
         fields?: { 
             /**
@@ -1107,6 +1489,10 @@ export namespace Foundation.JssExperienceAccelerator.Multisite.Base {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Base/_Base JSS Tenant
+    */
     export type BaseJssTenantJson =  {
         
             /**
@@ -1126,12 +1512,5 @@ export namespace Foundation.JssExperienceAccelerator.Multisite.Base {
 
     }
 }
-// Namespace aliases.  If this doesn't work, ensure `"isolatedModules": false` is set in `tsconfig.json`. 
-export import Scaffolding = Foundation.JssExperienceAccelerator.Scaffolding;
-export import Presentation = Foundation.JssExperienceAccelerator.Presentation;
-export import Multisite = Foundation.JssExperienceAccelerator.Multisite;
-export import HeadlessVariants = Foundation.JssExperienceAccelerator.HeadlessVariants;
-export import PlaceholderSettings = Foundation.JssExperienceAccelerator.PlaceholderSettings;
-export import SiteMetadata = Foundation.JssExperienceAccelerator.SiteMetadata;
 
 

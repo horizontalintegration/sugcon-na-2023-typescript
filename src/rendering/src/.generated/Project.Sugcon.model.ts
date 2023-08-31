@@ -7,87 +7,137 @@
  * </auto-generated>
  */
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { ItemExt } from '../lib/_.Sitecore.Override'
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { Field, ImageField, FileField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { ComponentProps } from '../lib/component-props';
-import { Foundation } from "./Foundation.JssExperienceAccelerator.model"
+// @ts-ignore 
+import { Project as ProjectSugconProject } from "./Project.Sugcon.model"
+// @ts-ignore 
+import { Multisite as FoundationJssExperienceAcceleratorMultisite } from "./Foundation.JssExperienceAccelerator.model"
+// @ts-ignore 
+import { Presentation as FoundationJssExperienceAcceleratorPresentation } from "./Foundation.JssExperienceAccelerator.model"
 
 export namespace Project.Sugcon {
-    export type HeadlessSite = 
-        Foundation.JssExperienceAccelerator.Multisite.HeadlessSite &  {
+
+    /**
+    * Represents the template /sitecore/templates/Project/SUGCON/Headless Site
+    */
+    export type HeadlessSite = FoundationJssExperienceAcceleratorMultisite.HeadlessSite &  {
         fields?: {         }
 
     }
-    export type HeadlessSiteJson = 
-        Foundation.JssExperienceAccelerator.Multisite.HeadlessSiteJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Project/SUGCON/Headless Site
+    */
+    export type HeadlessSiteJson = FoundationJssExperienceAcceleratorMultisite.HeadlessSiteJson &  {
         
 
     }
-    export type HeadlessTenant = 
-        Foundation.JssExperienceAccelerator.Multisite.HeadlessTenant &  {
+
+    /**
+    * Represents the template /sitecore/templates/Project/SUGCON/Headless Tenant
+    */
+    export type HeadlessTenant = FoundationJssExperienceAcceleratorMultisite.HeadlessTenant &  {
         fields?: {         }
 
     }
-    export type HeadlessTenantJson = 
-        Foundation.JssExperienceAccelerator.Multisite.HeadlessTenantJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Project/SUGCON/Headless Tenant
+    */
+    export type HeadlessTenantJson = FoundationJssExperienceAcceleratorMultisite.HeadlessTenantJson &  {
         
 
     }
-    export type JssSettings = 
-        Foundation.JssExperienceAccelerator.Multisite.JssSettings &  {
+
+    /**
+    * Represents the template /sitecore/templates/Project/SUGCON/JSS Settings
+    */
+    export type JssSettings = FoundationJssExperienceAcceleratorMultisite.JssSettings &  {
         fields?: {         }
 
     }
-    export type JssSettingsJson = 
-        Foundation.JssExperienceAccelerator.Multisite.JssSettingsJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Project/SUGCON/JSS Settings
+    */
+    export type JssSettingsJson = FoundationJssExperienceAcceleratorMultisite.JssSettingsJson &  {
         
 
     }
-    export type PageDesignFolder = 
-        Foundation.JssExperienceAccelerator.Presentation.Folders.PageDesignFolder &  {
+
+    /**
+    * Represents the template /sitecore/templates/Project/SUGCON/Page Design Folder
+    */
+    export type PageDesignFolder = FoundationJssExperienceAcceleratorPresentation.Folders.PageDesignFolder &  {
         fields?: {         }
 
     }
-    export type PageDesignFolderJson = 
-        Foundation.JssExperienceAccelerator.Presentation.Folders.PageDesignFolderJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Project/SUGCON/Page Design Folder
+    */
+    export type PageDesignFolderJson = FoundationJssExperienceAcceleratorPresentation.Folders.PageDesignFolderJson &  {
         
 
     }
-    export type PageDesigns = 
-        Foundation.JssExperienceAccelerator.Presentation.PageDesigns &  {
+
+    /**
+    * Represents the template /sitecore/templates/Project/SUGCON/Page Designs
+    */
+    export type PageDesigns = FoundationJssExperienceAcceleratorPresentation.PageDesigns &  {
         fields?: {         }
 
     }
-    export type PageDesignsJson = 
-        Foundation.JssExperienceAccelerator.Presentation.PageDesignsJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Project/SUGCON/Page Designs
+    */
+    export type PageDesignsJson = FoundationJssExperienceAcceleratorPresentation.PageDesignsJson &  {
         
 
     }
-    export type PartialDesignFolder = 
-        Foundation.JssExperienceAccelerator.Presentation.Folders.PartialDesignFolder &  {
+
+    /**
+    * Represents the template /sitecore/templates/Project/SUGCON/Partial Design Folder
+    */
+    export type PartialDesignFolder = FoundationJssExperienceAcceleratorPresentation.Folders.PartialDesignFolder &  {
         fields?: {         }
 
     }
-    export type PartialDesignFolderJson = 
-        Foundation.JssExperienceAccelerator.Presentation.Folders.PartialDesignFolderJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Project/SUGCON/Partial Design Folder
+    */
+    export type PartialDesignFolderJson = FoundationJssExperienceAcceleratorPresentation.Folders.PartialDesignFolderJson &  {
         
 
     }
-    export type PartialDesigns = 
-        Foundation.JssExperienceAccelerator.Presentation.PartialDesigns &  {
+
+    /**
+    * Represents the template /sitecore/templates/Project/SUGCON/Partial Designs
+    */
+    export type PartialDesigns = FoundationJssExperienceAcceleratorPresentation.PartialDesigns &  {
         fields?: {         }
 
     }
-    export type PartialDesignsJson = 
-        Foundation.JssExperienceAccelerator.Presentation.PartialDesignsJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Project/SUGCON/Partial Designs
+    */
+    export type PartialDesignsJson = FoundationJssExperienceAcceleratorPresentation.PartialDesignsJson &  {
         
 
     }
-    export type SugconPage = 
-        Foundation.JssExperienceAccelerator.Multisite.BasePage &  {
+
+    /**
+    * Represents the template /sitecore/templates/Project/SUGCON/Sugcon Page
+    */
+    export type SugconPage = FoundationJssExperienceAcceleratorMultisite.BasePage &  {
         fields?: { 
             /**
             * Represents the Content field (1bd4f07a-dfa4-463d-b01b-f9c13ff596fd).
@@ -101,8 +151,11 @@ export namespace Project.Sugcon {
         }
 
     }
-    export type SugconPageJson = 
-        Foundation.JssExperienceAccelerator.Multisite.BasePageJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Project/SUGCON/Sugcon Page
+    */
+    export type SugconPageJson = FoundationJssExperienceAcceleratorMultisite.BasePageJson &  {
         
             /**
             * Represents the Content field (1bd4f07a-dfa4-463d-b01b-f9c13ff596fd).
@@ -121,6 +174,5 @@ export namespace Project.Sugcon {
 
     }
 }
-// Namespace aliases.  If this doesn't work, ensure `"isolatedModules": false` is set in `tsconfig.json`. 
 
 

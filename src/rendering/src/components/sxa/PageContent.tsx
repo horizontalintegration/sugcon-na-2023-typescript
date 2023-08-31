@@ -15,7 +15,7 @@ import { Project } from 'src/.generated/Project.Sugcon.model';
 //   params: { [key: string]: string };
 //   fields: Fields;
 // };
-type PageContentProps = ComponentProps & Project.Sugcon.Page;
+type PageContentProps = ComponentProps & Project.Sugcon.SugconPage;
 
 type ComponentContentProps = {
   id: string;
@@ -52,7 +52,7 @@ export const Default = (props: PageContentProps): JSX.Element => {
   //     ? props.fields.Content
   //     : sitecoreContext?.route?.fields?.Content
   // ) as RichTextField;
-  const route = sitecoreContext.route as Project.Sugcon.Page;
+  const route = sitecoreContext.route as Project.Sugcon.SugconPage;
   const field = props.fields?.Content ?? route?.fields?.Content;
 
   return (

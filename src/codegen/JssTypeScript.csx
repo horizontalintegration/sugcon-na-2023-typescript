@@ -52,34 +52,34 @@ public string RenderImportStatements()
 
     var foundModules = new System.Collections.Generic.HashSet<string>();
 
-    var currentRootNamespace = Templates.First().RootNamespace;
-
-    localCode.AppendLine($@"// eslint-disable-next-line @typescript-eslint/no-unused-vars ");
+    localCode.AppendLine($@"// @ts-ignore ");
     localCode.AppendLine(@"import { ItemExt } from '../lib/_.Sitecore.Override'");
-    localCode.AppendLine($@"// eslint-disable-next-line @typescript-eslint/no-unused-vars ");
+    localCode.AppendLine($@"// @ts-ignore ");
     localCode.AppendLine($@"import {{ Field, ImageField, FileField, LinkField }} from '@sitecore-jss/sitecore-jss-nextjs';");
-    localCode.AppendLine($@"// eslint-disable-next-line @typescript-eslint/no-unused-vars ");
+    localCode.AppendLine($@"// @ts-ignore ");
     localCode.AppendLine($@"import {{ ComponentProps }} from '../lib/component-props';");
 
     foreach (var template in GetBaseTemplates(Templates))
     {
-        if (template.RootNamespace != currentRootNamespace && !foundModules.Contains(template.RootNamespace))
+        var shortNameSpaceRoot = GetShortNameSpaceRoot(template);
+        if (!foundModules.Contains(shortNameSpaceRoot))
         {
-            foundModules.Add(template.RootNamespace);
-            var split = ((string)template.RootNamespace).Split('.');
+            foundModules.Add(shortNameSpaceRoot);
+            var split = template.RootNamespace.Split('.');
             var layer = split[0];
             var module = split[1];
-            localCode.AppendLine($@"import {{ {layer} }} from ""./{layer}.{module}.model""");
+            localCode.AppendLine($@"// @ts-ignore ");
+            localCode.AppendLine($@"import {{ {shortNameSpaceRoot} as {GetNameSpaceAlias(template)} }} from ""./{layer}.{module}.model""");
         }
     }
 
     return localCode.ToString();
 }
+
 public string RenderTemplates()
 {
     var localCode = new System.Text.StringBuilder();
 
-    var nsAliases = new HashSet<string>();
     var rootNs = Templates.FirstOrDefault()?.RootNamespace;
     // Render the Item mappings
     var oldNamespace = "";
@@ -87,42 +87,46 @@ public string RenderTemplates()
     {
         if (template.Namespace != oldNamespace)
         {
+            // Close the old namespace so we can start a new one.
             if (!string.IsNullOrWhiteSpace(oldNamespace))
             {
                 localCode.AppendLine($@"}}");
-                var aliasNs = oldNamespace.Replace(template.RootNamespace + ".", "");
-                var aliasRoot = aliasNs.Split(".").First();
-                nsAliases.Add(aliasRoot);
             }
-            localCode.AppendLine($@"export namespace {template.Namespace} {{");
+
+            localCode.AppendLine($@"export namespace {GetShortNameSpace(template)} {{");
             oldNamespace = template.Namespace;
         }
 
         if (IsRenderingParam(template))
         {
-            localCode.AppendLine($@"    export class {template.CodeName}Class {RenderBaseClasses(template)} {{");
-
+            localCode.AppendLine($@"
+    /**
+    * Class to wrap the rendering parameter {template.Path}
+    * This will automatically parse the string rendering parameters into the appropriate types (where possible)
+    */
+    export class {template.CodeName}Class {RenderBaseClasses(template)} {{");
             localCode.AppendLine($@"            constructor(public params: Record<string, string>) {{
                 {(template.BaseTemplates.Any() ? "super(params);" : "")}
             }}");
-
             localCode.AppendLine($@"        {RenderParamsFields(template)}");
-
             localCode.AppendLine($@"    }}");
-
         }
         else
         {
-            localCode.AppendLine($@"    export type {template.CodeName} = {RenderBaseInterfaces(template)} {{");
-
+            localCode.AppendLine($@"
+    /**
+    * Represents the template {template.Path}
+    */
+    export type {template.CodeName} = {RenderBaseInterfaces(template)} {{");
             localCode.AppendLine($@"        {RenderInterfaceFields(template)}");
-
             localCode.AppendLine($@"    }}");
-
-            localCode.AppendLine($@"    export type {template.CodeName}Json = {RenderBaseInterfaces(template, "Json")} {{");
-
+            
+            localCode.AppendLine($@"
+    /**
+    * Represents the GraphQL template {template.Path}
+    */
+    export type {template.CodeName}Json = {RenderBaseInterfaces(template, "Json")} {{");
             localCode.AppendLine($@"        {RenderInterfaceFields(template, true)}");
-
             localCode.AppendLine($@"    }}");
         }
 
@@ -130,13 +134,6 @@ public string RenderTemplates()
     if (Templates.Any())
     {
         localCode.AppendLine($@"}}");
-    }
-
-    localCode.AppendLine($@"// Namespace aliases.  If this doesn't work, ensure `""isolatedModules"": false` is set in `tsconfig.json`. ");
-
-    foreach (var alias in nsAliases)
-    {
-        localCode.AppendLine($@"export import {alias} = {rootNs}.{alias};");
     }
 
     return localCode.ToString();
@@ -148,11 +145,10 @@ public string RenderBaseInterfaces(TemplateCodeGenerationMetadata template, stri
 
     foreach (var baseTemplate in template.BaseTemplates)
     {
-        bases.Add($@"
-        {baseTemplate.Namespace}.{baseTemplate.CodeName}{suffix}");
+        bases.Add(GetAliasedFullCodeName(baseTemplate, suffix));
     }
 
-    return bases.Any() ? $"{string.Join(" & ", bases)} & " : "";
+    return bases.Any() ? $"{string.Join(" & " + System.Environment.NewLine, bases)} & " : "";
 }
 
 public string RenderBaseClasses(TemplateCodeGenerationMetadata template)
@@ -160,12 +156,11 @@ public string RenderBaseClasses(TemplateCodeGenerationMetadata template)
     var bases = new System.Collections.Generic.List<string>(template.BaseTemplates.Count);
 
     foreach (var baseTemplate in template.BaseTemplates)
-    {
-        bases.Add($@"
-        {baseTemplate.Namespace}.{baseTemplate.CodeName}Class");
+    {        
+        bases.Add(GetAliasedFullCodeName(baseTemplate, "Class"));
     }
 
-    return bases.Any() ? $"extends {string.Join(", ", bases)}" : "";
+    return bases.Any() ? $"extends {string.Join(", " + System.Environment.NewLine, bases)}" : "";
 }
 public string RenderInterfaceFields(TemplateCodeGenerationMetadata template, bool useJsonValue = false)
 {
@@ -214,14 +209,6 @@ public string RenderParamsFields(TemplateCodeGenerationMetadata template)
 {
     var localCode = new System.Text.StringBuilder();
 
-    //   export class CardListingParamsClass {
-    //     constructor(private params: Record<string, string>) {}
-
-    //     public get cardsPerRow() {
-    //       const value = this.params['cardsPerRow'];
-    //       return parseInt(value);
-    //     }
-    //   }
     // Rendering parameters are always strings
     foreach (var field in template.OwnFields)
     {
@@ -241,11 +228,16 @@ public string RenderParamsFields(TemplateCodeGenerationMetadata template)
     return localCode.ToString();
 }
 
+public string GetAliasedFullCodeName(TemplateCodeGenerationMetadata template, string suffix = "")
+{
+    var nameSpace = template.RelativeNamespace.Replace(GetShortNameSpaceRoot(template), GetNameSpaceAlias(template));
+    return $@"{nameSpace}.{template.CodeName}{suffix}";
+}
+
 public string GetFieldCodeName(TemplateFieldCodeGenerationMetadata field, string suffix = "")
 {
     // Check if field name needs to be quoted and add quotes as needed
     var name = System.Text.RegularExpressions.Regex.IsMatch(field.Name, "[ -]+") ? $"\"{field.Name}{suffix}\"" : field.Name + suffix;
-
     return name;
 }
 
@@ -374,6 +366,33 @@ public string GetParseMethod(TemplateFieldCodeGenerationMetadata field)
         default:
             return "value";
     }
+}
+
+public string GetNameSpaceAlias(TemplateCodeGenerationMetadata template)
+{    
+    var split = template.RootNamespace.Split('.');
+    var layer = split[0];
+    var module = split[1];
+        
+    var currNamespace = GetShortNameSpaceRoot(template);
+
+    return $@"{layer}{module}{currNamespace}";
+}
+
+public string GetShortNameSpaceRoot(TemplateCodeGenerationMetadata template)
+{    
+    var currNamespace = GetShortNameSpace(template).Split('.').First();
+    return currNamespace;
+}
+
+public string GetShortNameSpace(TemplateCodeGenerationMetadata template)
+{    
+    var shortNameSpace = template.RelativeNamespace;
+    
+    if(string.IsNullOrWhiteSpace(shortNameSpace)) {
+        return template.Namespace;
+    }
+    return shortNameSpace;
 }
 
 public bool IsOrInheritsFromTemplate(TemplateCodeGenerationMetadata template, string templateId)

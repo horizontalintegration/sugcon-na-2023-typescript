@@ -7,15 +7,24 @@
  * </auto-generated>
  */
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { ItemExt } from '../lib/_.Sitecore.Override'
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { Field, ImageField, FileField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { ComponentProps } from '../lib/component-props';
-import { Foundation } from "./Foundation.Sugcon.model"
+// @ts-ignore 
+import { Listing as FeatureSugconListing } from "./Feature.Sugcon.model"
+// @ts-ignore 
+import { Utility as FoundationSugconUtility } from "./Foundation.Sugcon.model"
+// @ts-ignore 
+import { Base as FoundationSugconBase } from "./Foundation.Sugcon.model"
 
-export namespace Feature.Sugcon.Listing.CardListing {
+export namespace Listing.CardListing {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/SUGCON/Listing/Card Listing/Card Item
+    */
     export type CardItem =  {
         fields?: { 
             /**
@@ -35,6 +44,10 @@ export namespace Feature.Sugcon.Listing.CardListing {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/SUGCON/Listing/Card Listing/Card Item
+    */
     export type CardItemJson =  {
         
             /**
@@ -60,8 +73,11 @@ export namespace Feature.Sugcon.Listing.CardListing {
 
 
     }
-    export type CardListing = 
-        Foundation.Sugcon.Utility.RenderWithChildren &  {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/SUGCON/Listing/Card Listing/Card Listing
+    */
+    export type CardListing = FoundationSugconUtility.RenderWithChildren &  {
         fields?: { 
             /**
             * Represents the Headline field (639981f4-6eb4-4f0c-b309-50476ee79b3e).
@@ -70,8 +86,11 @@ export namespace Feature.Sugcon.Listing.CardListing {
         }
 
     }
-    export type CardListingJson = 
-        Foundation.Sugcon.Utility.RenderWithChildrenJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/SUGCON/Listing/Card Listing/Card Listing
+    */
+    export type CardListingJson = FoundationSugconUtility.RenderWithChildrenJson &  {
         
             /**
             * Represents the Headline field (639981f4-6eb4-4f0c-b309-50476ee79b3e).
@@ -82,8 +101,12 @@ export namespace Feature.Sugcon.Listing.CardListing {
 
 
     }
-    export class CardListingParamsClass extends 
-        Foundation.Sugcon.Base.BaseRenderingParamsClass {
+
+    /**
+    * Class to wrap the rendering parameter /sitecore/templates/Feature/SUGCON/Listing/Card Listing/Card Listing Params
+    * This will automatically parse the string rendering parameters into the appropriate types (where possible)
+    */
+    export class CardListingParamsClass extends FoundationSugconBase.BaseRenderingParamsClass {
             constructor(public params: Record<string, string>) {
                 super(params);
             }
@@ -127,7 +150,11 @@ export namespace Feature.Sugcon.Listing.CardListing {
 
     }
 }
-export namespace Feature.Sugcon.Listing.PageListing {
+export namespace Listing.PageListing {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/SUGCON/Listing/Page Listing/Page Listing
+    */
     export type PageListing =  {
         fields?: { 
             /**
@@ -142,6 +169,10 @@ export namespace Feature.Sugcon.Listing.PageListing {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/SUGCON/Listing/Page Listing/Page Listing
+    */
     export type PageListingJson =  {
         
             /**
@@ -161,7 +192,5 @@ export namespace Feature.Sugcon.Listing.PageListing {
 
     }
 }
-// Namespace aliases.  If this doesn't work, ensure `"isolatedModules": false` is set in `tsconfig.json`. 
-export import Listing = Feature.Sugcon.Listing;
 
 

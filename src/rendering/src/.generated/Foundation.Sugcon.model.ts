@@ -7,14 +7,23 @@
  * </auto-generated>
  */
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { ItemExt } from '../lib/_.Sitecore.Override'
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { Field, ImageField, FileField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { ComponentProps } from '../lib/component-props';
+// @ts-ignore 
+import { Base as FoundationSugconBase } from "./Foundation.Sugcon.model"
+// @ts-ignore 
+import { Utility as FoundationSugconUtility } from "./Foundation.Sugcon.model"
 
-export namespace Foundation.Sugcon.Base {
+export namespace Base {
+
+    /**
+    * Class to wrap the rendering parameter /sitecore/templates/Foundation/SUGCON/Base/_Base Rendering Params
+    * This will automatically parse the string rendering parameters into the appropriate types (where possible)
+    */
     export class BaseRenderingParamsClass  {
             constructor(public params: Record<string, string>) {
                 
@@ -22,7 +31,11 @@ export namespace Foundation.Sugcon.Base {
         
     }
 }
-export namespace Foundation.Sugcon.Utility {
+export namespace Utility {
+
+    /**
+    * Represents the template /sitecore/templates/Foundation/SUGCON/Utility/_RenderWithChildren
+    */
     export type RenderWithChildren =  {
         fields?: { 
             /**
@@ -32,6 +45,10 @@ export namespace Foundation.Sugcon.Utility {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Foundation/SUGCON/Utility/_RenderWithChildren
+    */
     export type RenderWithChildrenJson =  {
         
             /**
@@ -42,7 +59,5 @@ export namespace Foundation.Sugcon.Utility {
 
     }
 }
-// Namespace aliases.  If this doesn't work, ensure `"isolatedModules": false` is set in `tsconfig.json`. 
-export import Base = Foundation.Sugcon.Base;
 
 

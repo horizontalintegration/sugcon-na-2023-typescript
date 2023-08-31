@@ -7,17 +7,29 @@
  * </auto-generated>
  */
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { ItemExt } from '../lib/_.Sitecore.Override'
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { Field, ImageField, FileField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars 
+// @ts-ignore 
 import { ComponentProps } from '../lib/component-props';
-import { Foundation } from "./Foundation.JssExperienceAccelerator.model"
+// @ts-ignore 
+import { PageStructure as FeatureJssExperienceAcceleratorPageStructure } from "./Feature.JssExperienceAccelerator.model"
+// @ts-ignore 
+import { Presentation as FoundationJssExperienceAcceleratorPresentation } from "./Foundation.JssExperienceAccelerator.model"
+// @ts-ignore 
+import { Media as FeatureJssExperienceAcceleratorMedia } from "./Feature.JssExperienceAccelerator.model"
+// @ts-ignore 
+import { Navigation as FeatureJssExperienceAcceleratorNavigation } from "./Feature.JssExperienceAccelerator.model"
+// @ts-ignore 
+import { PageContent as FeatureJssExperienceAcceleratorPageContent } from "./Feature.JssExperienceAccelerator.model"
 
-export namespace Feature.JssExperienceAccelerator.PageStructure.RenderingParameters {
-    export type Container = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
+export namespace PageStructure.RenderingParameters {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Page Structure/Rendering Parameters/Container
+    */
+    export type Container = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: { 
             /**
             * Represents the Background image field (6845679d-e298-4e94-96eb-230cb7c3baae).
@@ -26,8 +38,11 @@ export namespace Feature.JssExperienceAccelerator.PageStructure.RenderingParamet
         }
 
     }
-    export type ContainerJson = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Page Structure/Rendering Parameters/Container
+    */
+    export type ContainerJson = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParametersJson &  {
         
             /**
             * Represents the Background image field (6845679d-e298-4e94-96eb-230cb7c3baae).
@@ -39,7 +54,11 @@ export namespace Feature.JssExperienceAccelerator.PageStructure.RenderingParamet
 
     }
 }
-export namespace Feature.JssExperienceAccelerator.Media {
+export namespace Media {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Media/Image
+    */
     export type Image =  {
         fields?: { 
             /**
@@ -59,6 +78,10 @@ export namespace Feature.JssExperienceAccelerator.Media {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Media/Image
+    */
     export type ImageJson =  {
         
             /**
@@ -85,29 +108,47 @@ export namespace Feature.JssExperienceAccelerator.Media {
 
     }
 }
-export namespace Feature.JssExperienceAccelerator.Media.RenderingParameters {
-    export type Image = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
+export namespace Media.RenderingParameters {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Media/Rendering Parameters/Image
+    */
+    export type Image = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
 
     }
-    export type ImageJson = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Media/Rendering Parameters/Image
+    */
+    export type ImageJson = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParametersJson &  {
         
 
     }
 }
-export namespace Feature.JssExperienceAccelerator.Media {
+export namespace Media {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Media/Image Folder
+    */
     export type ImageFolder =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Media/Image Folder
+    */
     export type ImageFolderJson =  {
         
 
     }
 }
-export namespace Feature.JssExperienceAccelerator.Navigation.Datasource {
+export namespace Navigation.Datasource {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Navigation/Datasource/Link
+    */
     export type Link =  {
         fields?: { 
             /**
@@ -117,6 +158,10 @@ export namespace Feature.JssExperienceAccelerator.Navigation.Datasource {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Navigation/Datasource/Link
+    */
     export type LinkJson =  {
         
             /**
@@ -128,6 +173,10 @@ export namespace Feature.JssExperienceAccelerator.Navigation.Datasource {
 
 
     }
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Navigation/Datasource/Link List
+    */
     export type LinkList =  {
         fields?: { 
             /**
@@ -137,6 +186,10 @@ export namespace Feature.JssExperienceAccelerator.Navigation.Datasource {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Navigation/Datasource/Link List
+    */
     export type LinkListJson =  {
         
             /**
@@ -148,50 +201,80 @@ export namespace Feature.JssExperienceAccelerator.Navigation.Datasource {
 
 
     }
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Navigation/Datasource/Link List Folder
+    */
     export type LinkListFolder =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Navigation/Datasource/Link List Folder
+    */
     export type LinkListFolderJson =  {
         
 
     }
 }
-export namespace Feature.JssExperienceAccelerator.Navigation.RenderingParameters {
-    export type LinkList = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
+export namespace Navigation.RenderingParameters {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Navigation/Rendering Parameters/LinkList
+    */
+    export type LinkList = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
 
     }
-    export type LinkListJson = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Navigation/Rendering Parameters/LinkList
+    */
+    export type LinkListJson = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParametersJson &  {
         
 
     }
-    export type Navigation = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Navigation/Rendering Parameters/Navigation
+    */
+    export type Navigation = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
 
     }
-    export type NavigationJson = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Navigation/Rendering Parameters/Navigation
+    */
+    export type NavigationJson = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParametersJson &  {
         
 
     }
 }
-export namespace Feature.JssExperienceAccelerator.PageContent.RenderingParameters {
-    export type PageContent = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
+export namespace PageContent.RenderingParameters {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Rendering Parameters/Page Content
+    */
+    export type PageContent = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
 
     }
-    export type PageContentJson = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Rendering Parameters/Page Content
+    */
+    export type PageContentJson = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParametersJson &  {
         
 
     }
 }
-export namespace Feature.JssExperienceAccelerator.PageContent {
+export namespace PageContent {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Promo
+    */
     export type Promo =  {
         fields?: { 
             /**
@@ -226,6 +309,10 @@ export namespace Feature.JssExperienceAccelerator.PageContent {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Promo
+    */
     export type PromoJson =  {
         
             /**
@@ -273,41 +360,65 @@ export namespace Feature.JssExperienceAccelerator.PageContent {
 
     }
 }
-export namespace Feature.JssExperienceAccelerator.PageContent.RenderingParameters {
-    export type Promo = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
+export namespace PageContent.RenderingParameters {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Rendering Parameters/Promo
+    */
+    export type Promo = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
 
     }
-    export type PromoJson = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Rendering Parameters/Promo
+    */
+    export type PromoJson = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParametersJson &  {
         
 
     }
 }
-export namespace Feature.JssExperienceAccelerator.PageContent {
+export namespace PageContent {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Promo Folder
+    */
     export type PromoFolder =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Promo Folder
+    */
     export type PromoFolderJson =  {
         
 
     }
 }
-export namespace Feature.JssExperienceAccelerator.PageContent.RenderingParameters {
-    export type RichText = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
+export namespace PageContent.RenderingParameters {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Rendering Parameters/Rich Text
+    */
+    export type RichText = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
 
     }
-    export type RichTextJson = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Rendering Parameters/Rich Text
+    */
+    export type RichTextJson = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParametersJson &  {
         
 
     }
 }
-export namespace Feature.JssExperienceAccelerator.PageContent {
+export namespace PageContent {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Text
+    */
     export type Text =  {
         fields?: { 
             /**
@@ -317,6 +428,10 @@ export namespace Feature.JssExperienceAccelerator.PageContent {
         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Text
+    */
     export type TextJson =  {
         
             /**
@@ -328,31 +443,40 @@ export namespace Feature.JssExperienceAccelerator.PageContent {
 
 
     }
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Text Folder
+    */
     export type TextFolder =  {
         fields?: {         }
 
     }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Text Folder
+    */
     export type TextFolderJson =  {
         
 
     }
 }
-export namespace Feature.JssExperienceAccelerator.PageContent.RenderingParameters {
-    export type Title = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParameters &  {
+export namespace PageContent.RenderingParameters {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Rendering Parameters/Title
+    */
+    export type Title = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: {         }
 
     }
-    export type TitleJson = 
-        Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.BaseRenderingParametersJson &  {
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Rendering Parameters/Title
+    */
+    export type TitleJson = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParametersJson &  {
         
 
     }
 }
-// Namespace aliases.  If this doesn't work, ensure `"isolatedModules": false` is set in `tsconfig.json`. 
-export import PageStructure = Feature.JssExperienceAccelerator.PageStructure;
-export import Media = Feature.JssExperienceAccelerator.Media;
-export import Navigation = Feature.JssExperienceAccelerator.Navigation;
-export import PageContent = Feature.JssExperienceAccelerator.PageContent;
 
 
