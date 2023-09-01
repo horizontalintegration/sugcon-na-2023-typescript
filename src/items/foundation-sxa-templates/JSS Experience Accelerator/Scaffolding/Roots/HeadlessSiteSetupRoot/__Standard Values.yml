@@ -1,0 +1,32 @@
+﻿---
+ID: "34da4137-522b-47b2-8b1d-86168d044d83"
+Parent: "bed31d6f-d968-45a9-b54e-12d7f977d861"
+Template: "bed31d6f-d968-45a9-b54e-12d7f977d861"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Roots/HeadlessSiteSetupRoot/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {3AEA335C-D06D-45B1-841A-CBC8D2D1CE40}
+    {F040DB03-87FE-4E10-AE40-53C63175E31B}
+    {BC9BB684-36DF-4285-888B-D8B4D87B10DE}
+    {9EDED2F7-F847-4893-8A0B-F69E7FCF3593}
+    {8FF2FEBF-F6D2-461D-9ED3-8B0CB5D9D86F}
+    {408FD8AB-1667-440B-A605-1370DDF0A51F}
+    {52510F54-9EC5-464C-B075-EF44B5C2F96B}
+    {B2085789-5385-4138-83F0-96F3767CB156}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160627T072319Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4ec42cf2-6609-4937-a70b-ce1fe39fe3b6"

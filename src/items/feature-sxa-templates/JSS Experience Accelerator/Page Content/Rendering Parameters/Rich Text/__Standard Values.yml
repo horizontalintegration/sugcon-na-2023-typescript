@@ -1,0 +1,24 @@
+﻿---
+ID: "9f1a4278-031f-4f5c-8af5-d1f47f78da09"
+Parent: "0f3b7336-6112-418c-8bba-b0526f3887ce"
+Template: "0f3b7336-6112-418c-8bba-b0526f3887ce"
+Path: /sitecore/templates/Feature/JSS Experience Accelerator/Page Content/Rendering Parameters/Rich Text/__Standard Values
+SharedFields:
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211012T120926Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JssImport
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "982bca5c-3882-426a-895d-56dfaec94818"

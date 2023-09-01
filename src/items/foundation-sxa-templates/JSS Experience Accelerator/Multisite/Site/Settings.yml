@@ -1,0 +1,20 @@
+﻿---
+ID: "07983406-2144-4597-a256-82ed7a0f429c"
+Parent: "e46f3af2-39fa-4866-a157-7017c4b2a40c"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Site/Settings
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220718T103953Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e8a32a6c-fe49-486d-b069-deafdd6c360c"

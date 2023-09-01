@@ -1,0 +1,118 @@
+﻿---
+ID: "db4e113a-caa6-4697-b5ad-b49a74cf43ef"
+Parent: "ec848505-d30c-4bdc-a0aa-7cc9d320085e"
+Template: "ec848505-d30c-4bdc-a0aa-7cc9d320085e"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Settings/__Standard Values
+SharedFields:
+- ID: "0129da3f-8c86-4591-ae32-6ec923413923"
+  Hint: DictionaryDomain
+  Value: $name Dictionary
+- ID: "04e6b1f3-ae47-4d95-a154-2271075869a9"
+  Hint: ImportLanguage
+  Value: en
+- ID: "1864e99d-c29a-40bf-96e0-b3e7896a013b"
+  Hint: UseLanguageSpecificLayout
+  Value: 0
+- ID: "1cc82067-2b48-442a-a352-453d56a49d93"
+  Hint: MediaLibraryFolderTemplate
+  Value: "{FE5DD826-48C6-436D-B87A-7C4210C7413B}"
+- ID: "1f14aa04-2868-481f-9247-30dc5c65672c"
+  Hint: ImportDevice
+  Value: "{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+- ID: "218760c0-8001-4c2d-a8b0-61c128276f96"
+  Hint: TemplateFolderTemplate
+  Value: "{0437FEE2-44C9-46A6-ABE9-28858D9FEE8C}"
+- ID: "300fb7a0-b27f-44dd-9af0-b37a19723e0e"
+  Hint: RouteTemplateName
+  Value: $name Route
+- ID: "30e0a829-637e-478c-a136-66adb568398d"
+  Hint: GraphQLEndpoint
+  Value: /sitecore/api/graph/edge
+- ID: "32ce6bbe-4217-46e5-9335-42793884cbe3"
+  Hint: AppTemplate
+  Value: "{9ED66404-64C9-4122-90E1-869CB3CEA566}"
+- ID: "396af2f6-fe48-4fd4-a7e2-3da13ef977eb"
+  Hint: RouteBaseTemplate
+  Value: "{47151711-26CA-434E-8132-D3E0B7D26683}"
+- ID: "3af0e329-6d5e-4d8f-9f82-f48265658a3e"
+  Hint: DefaultWorkflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+- ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
+  Hint: Name
+  Value: $name
+- ID: "4088f63e-09e5-43fa-ae99-829bd9bdc114"
+  Hint: OptimizeImportIndexing
+  Value: 1
+- ID: "414f61dd-02c2-47d1-ba83-dcfbc3071e52"
+  Hint: RouteDatasourcesPath
+  Value: Page Data
+- ID: "466902a9-6b16-41b1-9d33-7c55094a2713"
+  Hint: LayoutFolderTemplate
+  Value: "{93227C5D-4FEF-474D-94C0-F252EC8E8219}"
+- ID: "4a3eeba3-a250-44f4-bd97-6e863cc6f0d5"
+  Hint: ServerBundle
+  Value: server.bundle
+- ID: "557d5f36-6f2d-4eb6-a8ce-25f30f7b9397"
+  Hint: ServerSideRenderingEngineEditOnly
+  Value: 1
+- ID: "6224a1ce-d964-4ee8-8e09-ad2f81e0a2b6"
+  Hint: ServerSideRenderingWorkerProcesses
+  Value: 2
+- ID: "72e83c8d-3578-4e50-b4c0-93a78a1729f2"
+  Hint: FilesystemPath
+  Value: /dist/$name
+- ID: "7975673a-aafd-4c5b-96a5-cbcaac500a44"
+  Hint: ServerSideRenderingFunctionName
+  Value: renderView
+- ID: "812dedeb-c5bd-471c-9f48-b1ce75d0d4a9"
+  Hint: AnalyzeAllowedControls
+  Value: 1
+- ID: "9016141c-ff51-40f2-9135-40f5161b9784"
+  Hint: ServerSideRenderingEngine
+  Value: nodejs
+- ID: "ad84cc6b-32ef-49d8-9326-916976cb2520"
+  Hint: Grid Mapping
+  Value: "%7bFE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3%7d%3d%257B2472CEE0-FBB4-474B-8D1C-D8517199CC08%257D"
+- ID: "b0711df7-724a-4c6c-8d4d-be846de6124c"
+  Hint: ProtectDeveloperItems
+  Value: 1
+- ID: "bde120a5-4cc2-4340-9b63-562a139bf197"
+  Hint: FolderTemplate
+  Value: "{A87A00B1-E6DB-45AB-8B54-636FEC3B5523}"
+- ID: "df376030-46e9-4c77-bc05-debefc86e3d5"
+  Hint: ImportDatabase
+  Value: master
+- ID: "e13c1a83-9d60-4530-b318-3a5effcc6338"
+  Hint: LayoutTemplate
+  Value: "{E4E11508-04A4-4B0B-A263-5201F811C9CD}"
+- ID: "e3259313-387a-41f0-b113-962f14b1aa2b"
+  Hint: LayoutServiceConfiguration
+  Value: "sxa-jss"
+- ID: "f5594251-f757-429e-a9bd-07f65f6875b9"
+  Hint: PlaceholderSettingsFolderTemplate
+  Value: "{C3B037A0-46E5-4B67-AC7A-A144B962A56F}"
+- ID: "f5821c4c-226e-4953-8213-c0243826f85f"
+  Hint: RenderingsFolderTemplate
+  Value: "{7EE0975B-0698-493E-B3A2-0B2EF33D0522}"
+- ID: "f7c6acfb-63f0-4aca-9e44-3133b2b94a5b"
+  Hint: DatasourceStrategy
+  Value: sxa
+- ID: "f87f0d81-c32c-4c1d-8caf-67856c3ab06e"
+  Hint: ImportUser
+  Value: |
+    sitecore\JssImport
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181120T092137Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "05f051cc-777c-4ef8-95a4-f8b8af8ec279"

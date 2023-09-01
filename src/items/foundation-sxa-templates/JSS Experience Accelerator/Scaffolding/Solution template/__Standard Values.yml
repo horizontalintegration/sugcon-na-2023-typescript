@@ -1,0 +1,24 @@
+﻿---
+ID: "ef925659-661a-40b9-8511-c86f6527621a"
+Parent: "1b2dfd3b-f2f2-4f40-a75c-f6c2490919c4"
+Template: "1b2dfd3b-f2f2-4f40-a75c-f6c2490919c4"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Scaffolding/Solution template/__Standard Values
+SharedFields:
+- ID: "0d21f818-1938-4cd8-b0a8-a44f73d69367"
+  Hint: Enabled
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220610T075216Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "233ce21a-6719-4cd1-b108-f383819933de"

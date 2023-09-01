@@ -1,0 +1,35 @@
+﻿---
+ID: "ec848505-d30c-4bdc-a0aa-7cc9d320085e"
+Parent: "b9bd3171-61e3-4824-9c00-7af4c4c8aac9"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Settings
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/gearwheels.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: |
+    {6D8FF35B-49FA-4896-B370-EB35D6B99F3F}
+    {422A8469-5A1B-4ADD-8CCA-F6B79DB6DE6E}
+    {15B2DFA2-6F63-4D58-ACCE-F3CD69C3B310}
+    {9D81C61A-0341-4312-816D-E5204385EA3C}
+    {423773C2-795C-4E52-B996-9E6A465B7C1F}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{DB4E113A-CAA6-4697-B5AD-B49A74CF43EF}"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Headless Settings
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181113T131742Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c32be906-8c12-40cf-aaf9-c720bb686309"

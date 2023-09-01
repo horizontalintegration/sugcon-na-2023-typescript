@@ -1,0 +1,26 @@
+﻿---
+ID: "347f77ac-98c0-45d2-bb0b-e51d139a613a"
+Parent: "25f01f50-5534-44f9-b1ba-bcbb60b2d13d"
+Template: "25f01f50-5534-44f9-b1ba-bcbb60b2d13d"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Presentation/Folders/Partial Design Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {25F01F50-5534-44F9-B1BA-BCBB60B2D13D}
+    {FD2059FD-6043-4DFE-8C04-E2437CE87634}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190121T132828Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b3508475-d84b-47d5-949a-5bf5cea1e71b"

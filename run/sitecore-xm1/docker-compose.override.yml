@@ -34,6 +34,7 @@ services:
 
   rendering:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-rendering:${VERSION:-latest}
+    mem_limit: 2048m
     build:
       context: ../../docker/build/rendering
       target: ${BUILD_CONFIGURATION}
@@ -113,6 +114,7 @@ services:
       SITECORE_LICENSE_LOCATION: c:\license\license.xml
   cm:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xm1-cm:${VERSION:-latest}
+    mem_limit: 2048m
     build:
       context: ../../docker/build/cm
       args:

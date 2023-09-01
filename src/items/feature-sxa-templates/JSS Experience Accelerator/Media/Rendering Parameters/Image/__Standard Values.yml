@@ -1,0 +1,24 @@
+﻿---
+ID: "a124693f-e2f4-444a-96cc-02304f54f0cb"
+Parent: "15185b0e-6418-4449-9f93-4ff03b7ee032"
+Template: "15185b0e-6418-4449-9f93-4ff03b7ee032"
+Path: /sitecore/templates/Feature/JSS Experience Accelerator/Media/Rendering Parameters/Image/__Standard Values
+SharedFields:
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{6C59AE29-D0A1-4B77-9305-0ABAB21D5FE5}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211012T120926Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JssImport
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2a25286b-ab74-4e1b-a79f-2a5d9db92760"

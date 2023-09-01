@@ -1,0 +1,24 @@
+﻿---
+ID: "e66ec406-ef54-40be-9a86-d32593a7818c"
+Parent: "c71d8566-35c8-49b7-a84d-9d176e9cbd05"
+Template: "c71d8566-35c8-49b7-a84d-9d176e9cbd05"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/SiteMetadata/Sitemap Settings/__Standard Values
+SharedFields:
+- ID: "7f070bc5-5cd4-474f-aa2f-ab2a0a128f00"
+  Hint: GenerateSitemapMediaItems
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211119T141425Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "267cef9a-c76c-4297-9486-e3b8368416da"

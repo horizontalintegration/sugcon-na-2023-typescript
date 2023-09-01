@@ -1,0 +1,24 @@
+﻿---
+ID: "bc2ad5a5-42b4-428c-99e4-a5b39150ddd3"
+Parent: "8357f958-9aaa-46db-8898-36448a96356f"
+Template: "8357f958-9aaa-46db-8898-36448a96356f"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Site Grouping/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{E46F3AF2-39FA-4866-A157-7017C4B2A40C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130207T131633Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "587ad031-1d6a-4429-9910-3e8eb8b21914"

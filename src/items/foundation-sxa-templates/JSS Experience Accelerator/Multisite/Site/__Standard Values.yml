@@ -1,0 +1,38 @@
+﻿---
+ID: "7d824646-2564-45a9-a87f-5572be9b70d3"
+Parent: "e46f3af2-39fa-4866-a157-7017c4b2a40c"
+Template: "e46f3af2-39fa-4866-a157-7017c4b2a40c"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/Site/__Standard Values
+SharedFields:
+- ID: "3c090b55-86f4-40e1-932e-47bf73a91491"
+  Hint: AllowDebug
+  Value: 1
+- ID: "79438ede-2dc8-4487-9df3-2805150e4eb0"
+  Hint: EnablePreview
+  Value: 1
+- ID: "a7803a5d-cd03-4eda-abed-1d9af4bf6660"
+  Hint: Database
+  Value: master
+- ID: "c2613027-60cf-4791-affb-74c9f5fa3da5"
+  Hint: CacheHtml
+  Value: 1
+- ID: "c29e1680-67ed-4d32-b45b-977fb002f838"
+  Hint: EnableWebEdit
+  Value: 1
+- ID: "d394f72d-670f-45d1-a590-ab8977ec20f2"
+  Hint: EnableDebugger
+  Value: 1
+- ID: "f19277fe-1b85-4b0a-8c26-5e74d766b3a3"
+  Hint: Language
+  Value: en
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181219T074153Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3b56552e-cd1e-42d1-a6a5-784a4d632572"

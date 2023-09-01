@@ -1,0 +1,19 @@
+{
+  "namespace": "Foundation.JssExperienceAccelerator",
+  "references": ["InitItems"],
+  "items": {
+    "includes": [
+      {
+        "name": "Foundation-Sxa-Templates",
+        "path": "/sitecore/templates/Foundation/JSS Experience Accelerator",
+        "allowedPushOperations": "createOnly"
+      }
+    ]
+  },
+  "leprechaun": {
+    "configuration": {
+      "@extends": "Sxa.Base",
+      "@name": "Foundation.JssExperienceAccelerator"
+    }
+  }
+}

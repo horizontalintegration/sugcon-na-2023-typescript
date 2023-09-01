@@ -1,0 +1,20 @@
+﻿---
+ID: "c09dd0b3-5952-4068-98ed-8e4f032f08e1"
+Parent: "ec848505-d30c-4bdc-a0aa-7cc9d320085e"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Foundation/JSS Experience Accelerator/Multisite/JSS Settings/App Settings
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181113T140020Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6fda7473-e346-4289-8169-d959f988052f"

@@ -1,0 +1,29 @@
+﻿---
+ID: "ef70d9d1-5ee6-4e2f-9bb8-37e995fa116c"
+Parent: "26b2cc8a-f893-471e-a651-2e01ca65b14b"
+Template: "4a51367f-bff4-4468-93c0-9227ae60c4a5"
+Path: "/sitecore/content/SUGCON/DemoSite/Home/Page 1/Page 1-2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230828T131026Z
+    - ID: "4da86130-8d6b-4d4f-8e61-3426ab49905d"
+      Hint: Title
+      Value: "Page 1-2"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Page 1-2"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "970a31b0-4b26-464c-bd59-18c362f80b22"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230828T131026Z
