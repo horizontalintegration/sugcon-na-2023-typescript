@@ -133,7 +133,8 @@ namespace Platform.Models.Generated.Feature.Sugcon.Listing.PageListing
 	[GeneratedCode("Leprechaun", "2.0.0.0")]
 	public interface IPageListingItem
 	{
-		MultilistField PagesField { get; }
+		TextField LevelsField { get; }
+		ReferenceField RootPageField { get; }
 	}
 	[GeneratedCode("Leprechaun", "2.0.0.0")]
 	public class PageListing : CustomItem, IPageListingItem
@@ -145,14 +146,20 @@ namespace Platform.Models.Generated.Feature.Sugcon.Listing.PageListing
 		public static string TemplateName => "Page Listing";
 		public static ID ItemTemplateId => new ID("{424A1312-E34E-44EA-AF8D-0910572EFDAC}");
 		
-		public MultilistField PagesField => new MultilistField(InnerItem.Fields[FieldConstants.Pages.Id]);
+		public TextField LevelsField => new TextField(InnerItem.Fields[FieldConstants.Levels.Id]);
+		public ReferenceField RootPageField => new ReferenceField(InnerItem.Fields[FieldConstants.RootPage.Id]);
 		public static implicit operator PageListing(Item item) => item != null ? new PageListing(item) : null;
 		public static implicit operator Item(PageListing customItem) => customItem?.InnerItem;
 		public struct FieldConstants
 		{
-			public struct Pages
+			public struct Levels
             {
-		        public const string FieldName = "pages";
+		        public const string FieldName = "levels";
+		        public static readonly ID Id = new ID("{CE387C4E-2018-4D19-BA73-D043825B0F74}");
+            }
+            public struct RootPage
+            {
+		        public const string FieldName = "rootPage";
 		        public static readonly ID Id = new ID("{E74C3459-D157-4210-AD64-978D04A5FA3F}");
             }
             
