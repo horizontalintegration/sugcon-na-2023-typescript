@@ -434,10 +434,21 @@ public List<TemplateCodeGenerationMetadata> GetBaseTemplates(IEnumerable<Templat
     return foundTemplates;
 }
 
+/// <summary>
+/// We are using a custom base template "_RenderWithChildren" to indicate that this template
+/// should include the children when being rendered.  When using this on your own project
+/// replace the GUID with your GUID.
+/// </summary>
 public bool IncludeChildren(TemplateCodeGenerationMetadata template)
 {
     return template.Id == System.Guid.Parse("{75848221-862F-48ED-83D1-AF13ED1C2CD7}");
 }
+/// <summary>
+/// We are using a custom base template "_Base Rendering Params" to indicate that this template
+/// is a rendering parameter template.  The OOTB Standard Rendering Parameters does not show up
+/// in the list of base templates, so we needed a custom one.
+/// When using this on your own project  replace the GUID with your GUID.
+/// </summary>
 public bool IsRenderingParam(TemplateCodeGenerationMetadata template)
 {
     return IsOrInheritsFromTemplate(template, "{0CD007DD-B31D-4E56-91D7-FBD7D55330B3}");

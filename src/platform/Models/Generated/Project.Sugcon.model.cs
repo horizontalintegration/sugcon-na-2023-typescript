@@ -334,45 +334,6 @@ namespace Platform.Models.Generated.Project.Sugcon
 namespace Platform.Models.Generated.Project.Sugcon
 {
 	[GeneratedCode("Leprechaun", "2.0.0.0")]
-	public interface IPageItem : global::Platform.Models.Generated.Foundation.JssExperienceAccelerator.Multisite.IBasePageItem
-	{
-		TextField ContentField { get; }
-		TextField TitleField { get; }
-	}
-	[GeneratedCode("Leprechaun", "2.0.0.0")]
-	public class Page : CustomItem, IPageItem
-	{
-		public Page(Item innerItem)
-			:base(innerItem)
-		{
-		}
-		public static string TemplateName => "Page";
-		public static ID ItemTemplateId => new ID("{4A51367F-BFF4-4468-93C0-9227AE60C4A5}");
-		
-		public TextField ContentField => new TextField(InnerItem.Fields[FieldConstants.Content.Id]);
-		public TextField TitleField => new TextField(InnerItem.Fields[FieldConstants.Title.Id]);
-		public static implicit operator Page(Item item) => item != null ? new Page(item) : null;
-		public static implicit operator Item(Page customItem) => customItem?.InnerItem;
-		public struct FieldConstants
-		{
-			public struct Content
-            {
-		        public const string FieldName = "Content";
-		        public static readonly ID Id = new ID("{1BD4F07A-DFA4-463D-B01B-F9C13FF596FD}");
-            }
-            public struct Title
-            {
-		        public const string FieldName = "Title";
-		        public static readonly ID Id = new ID("{4DA86130-8D6B-4D4F-8E61-3426AB49905D}");
-            }
-            
-		}
-	}
-}
-
-namespace Platform.Models.Generated.Project.Sugcon
-{
-	[GeneratedCode("Leprechaun", "2.0.0.0")]
 	public interface IPageDesignFolderItem : global::Platform.Models.Generated.Foundation.JssExperienceAccelerator.Presentation.Folders.IPageDesignFolderItem
 	{
 	}
@@ -466,6 +427,45 @@ namespace Platform.Models.Generated.Project.Sugcon
 		public struct FieldConstants
 		{
 			
+		}
+	}
+}
+
+namespace Platform.Models.Generated.Project.Sugcon
+{
+	[GeneratedCode("Leprechaun", "2.0.0.0")]
+	public interface ISugconPageItem : global::Platform.Models.Generated.Foundation.JssExperienceAccelerator.Multisite.IBasePageItem
+	{
+		TextField ContentField { get; }
+		TextField TitleField { get; }
+	}
+	[GeneratedCode("Leprechaun", "2.0.0.0")]
+	public class SugconPage : CustomItem, ISugconPageItem
+	{
+		public SugconPage(Item innerItem)
+			:base(innerItem)
+		{
+		}
+		public static string TemplateName => "Sugcon Page";
+		public static ID ItemTemplateId => new ID("{4A51367F-BFF4-4468-93C0-9227AE60C4A5}");
+		
+		public TextField ContentField => new TextField(InnerItem.Fields[FieldConstants.Content.Id]);
+		public TextField TitleField => new TextField(InnerItem.Fields[FieldConstants.Title.Id]);
+		public static implicit operator SugconPage(Item item) => item != null ? new SugconPage(item) : null;
+		public static implicit operator Item(SugconPage customItem) => customItem?.InnerItem;
+		public struct FieldConstants
+		{
+			public struct Content
+            {
+		        public const string FieldName = "Content";
+		        public static readonly ID Id = new ID("{1BD4F07A-DFA4-463D-B01B-F9C13FF596FD}");
+            }
+            public struct Title
+            {
+		        public const string FieldName = "Title";
+		        public static readonly ID Id = new ID("{4DA86130-8D6B-4D4F-8E61-3426AB49905D}");
+            }
+            
 		}
 	}
 }
