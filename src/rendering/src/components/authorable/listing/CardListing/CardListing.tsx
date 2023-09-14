@@ -17,6 +17,7 @@ export const Default = (props: CardListingProps): JSX.Element => {
       className={`component card-listing ${props.params?.styles?.trimEnd()}`}
       id={id ? id : undefined}
     >
+      <pre>Card Listing</pre>
       <div className="component-content">
         <h2>
           <Text field={props.fields?.headline} />

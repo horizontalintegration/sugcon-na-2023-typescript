@@ -4,6 +4,10 @@
   "items": {
     "includes": [
       {
+        "name": "Feature-Sugcon-Renderings",
+        "path": "/sitecore/layout/Renderings/Feature/SUGCON"
+      },
+      {
         "name": "Feature-Sugcon-Templates",
         "path": "/sitecore/templates/Feature/SUGCON"
       }

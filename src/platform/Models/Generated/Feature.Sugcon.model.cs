@@ -85,7 +85,7 @@ namespace Platform.Models.Generated.Feature.Sugcon.Listing.CardListing
 namespace Platform.Models.Generated.Feature.Sugcon.Listing.CardListing
 {
 	[GeneratedCode("Leprechaun", "2.0.0.0")]
-	public interface ICardListingParamsItem
+	public interface ICardListingParamsItem : global::Platform.Models.Generated.Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.IBaseRenderingParametersItem
 	{
 		TextField CardsPerRowField { get; }
 	}
@@ -156,7 +156,7 @@ namespace Platform.Models.Generated.Feature.Sugcon.General.CustomContentBlock
 namespace Platform.Models.Generated.Feature.Sugcon.General.CustomContentBlock
 {
 	[GeneratedCode("Leprechaun", "2.0.0.0")]
-	public interface ICustomContentBlockParamsItem
+	public interface ICustomContentBlockParamsItem : global::Platform.Models.Generated.Foundation.JssExperienceAccelerator.Presentation.RenderingParameters.IBaseRenderingParametersItem
 	{
 		DateField TestDateField { get; }
 		ImageField TestImageField { get; }

@@ -31,6 +31,7 @@ export const Default = (props: PageListingProps): JSX.Element => {
       className={`component page-listing ${props.params?.styles?.trimEnd()}`}
       id={id ? id : undefined}
     >
+      <pre>Page Listing</pre>
       <div className="component-content">
         <ul
           style={{

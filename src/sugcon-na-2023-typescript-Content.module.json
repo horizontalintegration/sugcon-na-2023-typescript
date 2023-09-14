@@ -5,13 +5,11 @@
         "includes": [
             {
                 "name": "content",
-                "path": "/sitecore/content/SUGCON",
-                "allowedPushOperations": "createOnly"
+                "path": "/sitecore/content/SUGCON"
             },
             {
                 "name": "media",
-                "path": "/sitecore/media library/Project/SUGCON",
-                "allowedPushOperations": "createOnly"
+                "path": "/sitecore/media library/Project/SUGCON"
             }
         ]
     }

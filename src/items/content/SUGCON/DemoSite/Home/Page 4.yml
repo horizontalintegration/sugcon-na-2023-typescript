@@ -22,7 +22,7 @@ Languages:
             <r
               uid="{61C4E9D2-225E-4711-85DC-A4C9FEF447AC}"
               s:ds="local:/Data/Card List"
-              s:id="{A2879E69-714F-4761-9BA0-9C5F5E0BEFDB}"
+              s:id="{993B9298-F292-43E4-92B8-17479490C17C}"
               s:par="cardsPerRow=2&amp;testDate=20230828T214100Z&amp;testImage=%3Cimage%20mediaid%3D%22%7B04DAD0FD-DB66-4070-881F-17264CA257E1%7D%22%20%2F%3E"
               s:ph="headless-main"
               s:ccb="Clear on publish" />
@@ -39,11 +39,11 @@ Languages:
       Value: Page 4
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b4e822fa-2cd0-488d-ae77-5376bbf5835f"
+      Value: "c5be6c00-6790-4e68-8305-b70728ca9b49"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230828T215445Z
+      Value: 20230914T191441Z

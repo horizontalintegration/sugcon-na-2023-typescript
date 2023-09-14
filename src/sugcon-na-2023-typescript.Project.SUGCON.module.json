@@ -6,15 +6,15 @@
   "items": {
     "includes": [
       {
-        "name": "layouts",
+        "name": "Project-Sugcon-Layouts",
         "path": "/sitecore/layout/Layouts/Project/SUGCON"
       },
       {
-        "name": "placeholders",
+        "name": "Project-Sugcon-Placeholders",
         "path": "/sitecore/layout/Placeholder Settings/Project/SUGCON"
       },
       {
-        "name": "renderings",
+        "name": "Project-Sugcon-Renderings",
         "path": "/sitecore/layout/Renderings/Project/SUGCON"
       },
       {
