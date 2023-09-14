@@ -113,6 +113,7 @@ export const getStaticProps: GetStaticComponentProps = async (rendering, layoutD
   });
 
   const props = rendering as Listing.PageListing.PageListing;
+
   const result = await graphQLClient.request<PageListingProps>(query, {
     rootItem: props.fields?.rootPage?.id,
     language: layoutData.sitecore.route?.itemLanguage,

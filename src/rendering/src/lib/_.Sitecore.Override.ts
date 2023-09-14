@@ -2,9 +2,16 @@
  * This file is actually not auto-generated, but is used to override Sitecore base interfaces
  */
 
-import { Field, Item } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, ImageField, Item } from '@sitecore-jss/sitecore-jss-nextjs';
 
-export type ItemExtFieldValue = Field | Item | Item[] | ItemExt | ItemExt[] | undefined;
+export type ItemExtFieldValue =
+  | ImageField
+  | Field
+  | Item
+  | Item[]
+  | ItemExt
+  | ItemExt[]
+  | undefined;
 
 export type ItemExtFields = {
   [name: string]: ItemExtFieldValue;

@@ -85,11 +85,9 @@ namespace Platform.Models.Generated.Feature.Sugcon.Listing.CardListing
 namespace Platform.Models.Generated.Feature.Sugcon.Listing.CardListing
 {
 	[GeneratedCode("Leprechaun", "2.0.0.0")]
-	public interface ICardListingParamsItem : global::Platform.Models.Generated.Foundation.Sugcon.Base.IBaseRenderingParamsItem
+	public interface ICardListingParamsItem
 	{
 		TextField CardsPerRowField { get; }
-		DateField TestDateField { get; }
-		ImageField TestImageField { get; }
 	}
 	[GeneratedCode("Leprechaun", "2.0.0.0")]
 	public class CardListingParams : CustomItem, ICardListingParamsItem
@@ -102,8 +100,6 @@ namespace Platform.Models.Generated.Feature.Sugcon.Listing.CardListing
 		public static ID ItemTemplateId => new ID("{2F4B70D0-231D-4B39-9B6B-F4D82F6EF4AE}");
 		
 		public TextField CardsPerRowField => new TextField(InnerItem.Fields[FieldConstants.CardsPerRow.Id]);
-		public DateField TestDateField => new DateField(InnerItem.Fields[FieldConstants.TestDate.Id]);
-		public ImageField TestImageField => new ImageField(InnerItem.Fields[FieldConstants.TestImage.Id]);
 		public static implicit operator CardListingParams(Item item) => item != null ? new CardListingParams(item) : null;
 		public static implicit operator Item(CardListingParams customItem) => customItem?.InnerItem;
 		public struct FieldConstants
@@ -113,7 +109,77 @@ namespace Platform.Models.Generated.Feature.Sugcon.Listing.CardListing
 		        public const string FieldName = "cardsPerRow";
 		        public static readonly ID Id = new ID("{E3688FD5-09AB-4913-963E-1D9D6EF7D86C}");
             }
-            public struct TestDate
+            
+		}
+	}
+}
+
+namespace Platform.Models.Generated.Feature.Sugcon.General.CustomContentBlock
+{
+	[GeneratedCode("Leprechaun", "2.0.0.0")]
+	public interface ICustomContentBlockItem
+	{
+		TextField ContentField { get; }
+		LinkField CtaField { get; }
+	}
+	[GeneratedCode("Leprechaun", "2.0.0.0")]
+	public class CustomContentBlock : CustomItem, ICustomContentBlockItem
+	{
+		public CustomContentBlock(Item innerItem)
+			:base(innerItem)
+		{
+		}
+		public static string TemplateName => "Custom Content Block";
+		public static ID ItemTemplateId => new ID("{2B9CADF2-A466-44AF-909F-D49D10C57BF5}");
+		
+		public TextField ContentField => new TextField(InnerItem.Fields[FieldConstants.Content.Id]);
+		public LinkField CtaField => new LinkField(InnerItem.Fields[FieldConstants.Cta.Id]);
+		public static implicit operator CustomContentBlock(Item item) => item != null ? new CustomContentBlock(item) : null;
+		public static implicit operator Item(CustomContentBlock customItem) => customItem?.InnerItem;
+		public struct FieldConstants
+		{
+			public struct Content
+            {
+		        public const string FieldName = "content";
+		        public static readonly ID Id = new ID("{071C1B0A-C007-4DB9-8C80-59142A7B98EC}");
+            }
+            public struct Cta
+            {
+		        public const string FieldName = "cta";
+		        public static readonly ID Id = new ID("{5F226AFD-DF82-425B-9F57-8C3DB9B6F488}");
+            }
+            
+		}
+	}
+}
+
+namespace Platform.Models.Generated.Feature.Sugcon.General.CustomContentBlock
+{
+	[GeneratedCode("Leprechaun", "2.0.0.0")]
+	public interface ICustomContentBlockParamsItem
+	{
+		DateField TestDateField { get; }
+		ImageField TestImageField { get; }
+		LinkField TestLinkField { get; }
+	}
+	[GeneratedCode("Leprechaun", "2.0.0.0")]
+	public class CustomContentBlockParams : CustomItem, ICustomContentBlockParamsItem
+	{
+		public CustomContentBlockParams(Item innerItem)
+			:base(innerItem)
+		{
+		}
+		public static string TemplateName => "Custom Content Block Params";
+		public static ID ItemTemplateId => new ID("{3228313E-325F-4ADF-AFD3-B16C5C3DA60D}");
+		
+		public DateField TestDateField => new DateField(InnerItem.Fields[FieldConstants.TestDate.Id]);
+		public ImageField TestImageField => new ImageField(InnerItem.Fields[FieldConstants.TestImage.Id]);
+		public LinkField TestLinkField => new LinkField(InnerItem.Fields[FieldConstants.TestLink.Id]);
+		public static implicit operator CustomContentBlockParams(Item item) => item != null ? new CustomContentBlockParams(item) : null;
+		public static implicit operator Item(CustomContentBlockParams customItem) => customItem?.InnerItem;
+		public struct FieldConstants
+		{
+			public struct TestDate
             {
 		        public const string FieldName = "testDate";
 		        public static readonly ID Id = new ID("{2A1145FF-4E62-4569-89C4-3AB23029BD17}");
@@ -122,6 +188,11 @@ namespace Platform.Models.Generated.Feature.Sugcon.Listing.CardListing
             {
 		        public const string FieldName = "testImage";
 		        public static readonly ID Id = new ID("{AFE4EC52-A73B-4B07-BA75-D52E3D9EE891}");
+            }
+            public struct TestLink
+            {
+		        public const string FieldName = "testLink";
+		        public static readonly ID Id = new ID("{1EB6AFE8-B764-4D5C-979A-27C1D5B4583C}");
             }
             
 		}

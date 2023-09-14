@@ -1,6 +1,9 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Platform.Models.Generated.Foundation.Sugcon.Utility;
+using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.LayoutService.Helpers;
 using Sitecore.LayoutService.Serialization;
@@ -30,6 +33,21 @@ namespace Platform.Serialization
 
             return baseResult;
         }
+
+        public string SerializeField(Field field, SerializationOptions options)
+        {
+            using (StringWriter stringWriter = new StringWriter())
+            {
+                using (JsonTextWriter writer = new JsonTextWriter(stringWriter))
+                {
+                    writer.WriteStartObject();
+                    this.SerializeField(field, writer, options, 0);
+                    writer.WriteEndObject();
+                }
+                return stringWriter.ToString();
+            }
+        }
+
         public JObject GetItemJson(Item item, SerializationOptions options)
         {
             var fields = JObject.Parse(SerializeItem(item, options));

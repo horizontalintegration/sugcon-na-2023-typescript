@@ -1,24 +1,20 @@
 ﻿---
-ID: "0cd007dd-b31d-4e56-91d7-fbd7d55330b3"
-Parent: "be6c8818-063e-4944-8afc-f07acb342651"
+ID: "2b9cadf2-a466-44af-909f-d49d10c57bf5"
+Parent: "2e94fad2-67a9-4ced-a1a7-eaed669ee5a3"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/SUGCON/Base/_Base Rendering Params
+Path: /sitecore/templates/Feature/SUGCON/General/Custom Content Block/Custom Content Block
 SharedFields:
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
-  Value: "{8CA06D6A-B353-44E8-BC31-B528C7306971}"
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
 Languages:
 - Language: en
-  Fields:
-  - ID: "9541e67d-ce8c-4225-803d-33f7f29f09ef"
-    Hint: __Short description
-    Value: This is needed because Standard Rendering Parameters is excluded from base templates, so we need a base template to indicate these are rendering parameters
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20230828T220123Z
+      Value: 20230913T220329Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -29,11 +25,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f119d14d-9506-4cd7-9ac4-5d2b28a99331"
+      Value: "7161c4c8-fb09-49fc-9289-61eed5f323b3"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230828T220211Z
+      Value: 20230913T220330Z

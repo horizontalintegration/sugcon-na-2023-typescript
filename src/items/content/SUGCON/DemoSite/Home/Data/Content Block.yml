@@ -1,0 +1,41 @@
+﻿---
+ID: "31eb6b69-da65-4a5f-bcbb-f0fb14a669d9"
+Parent: "b9b05443-7824-40ff-a41f-c418f52415ab"
+Template: "2b9cadf2-a466-44af-909f-d49d10c57bf5"
+Path: /sitecore/content/SUGCON/DemoSite/Home/Data/Content Block
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "071c1b0a-c007-4db9-8c80-59142a7b98ec"
+      Hint: content
+      Value: <p>Rich Text</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230914T003859Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "5f226afd-df82-425b-9f57-8c3db9b6f488"
+      Hint: cta
+      Value: |
+        <link linktype="internal" querystring="" target="" id="{26B2CC8A-F893-471E-A651-2E01CA65B14B}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f1331995-161e-435f-8169-92c279a419c7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230914T010413Z

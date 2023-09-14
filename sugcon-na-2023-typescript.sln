@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{196B5D43-B228-4632-9BC3-EAAF79B4EDA5}"
 	ProjectSection(SolutionItems) = preProject
 		nuget.config = nuget.config
+		Packages.props = Packages.props
 		README.md = README.md
 		sitecore.json = sitecore.json
 	EndProjectSection
@@ -22,10 +23,6 @@ Global
 		{816F099C-E14B-4468-9E34-87F993C6484D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{816F099C-E14B-4468-9E34-87F993C6484D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{816F099C-E14B-4468-9E34-87F993C6484D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F4279AB-4049-42F0-AFD0-06062586BCF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F4279AB-4049-42F0-AFD0-06062586BCF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F4279AB-4049-42F0-AFD0-06062586BCF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F4279AB-4049-42F0-AFD0-06062586BCF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,15 +1,8 @@
 ﻿---
-ID: "2a1145ff-4e62-4569-89c4-3ab23029bd17"
-Parent: "99ea9359-7d0c-494b-b217-083e181587c1"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/SUGCON/Listing/Card Listing/Card Listing Params/Card List/testDate
-SharedFields:
-- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
-  Hint: Type
-  Value: Datetime
-- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
-  Hint: __Sortorder
-  Value: 200
+ID: "2e94fad2-67a9-4ced-a1a7-eaed669ee5a3"
+Parent: "7d64d922-1353-4322-bccc-5f167dc2ae03"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Feature/SUGCON/General/Custom Content Block
 Languages:
 - Language: en
   Versions:
@@ -17,7 +10,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20230828T214020Z
+      Value: 20230913T220318Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -28,11 +21,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a4b7db70-6b8a-4d86-a955-6385c219ea8a"
+      Value: "02c6c0f9-4d1e-41ed-a446-a7a5677b223f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230828T215427Z
+      Value: 20230913T220318Z

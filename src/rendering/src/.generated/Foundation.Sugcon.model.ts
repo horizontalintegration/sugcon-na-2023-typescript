@@ -14,23 +14,8 @@ import { Field, ImageField, FileField, LinkField } from '@sitecore-jss/sitecore-
 // @ts-ignore 
 import { ComponentProps } from '../lib/component-props';
 // @ts-ignore 
-import { Base as FoundationSugconBase } from "./Foundation.Sugcon.model"
-// @ts-ignore 
 import { Utility as FoundationSugconUtility } from "./Foundation.Sugcon.model"
 
-export namespace Base {
-
-    /**
-    * Class to wrap the rendering parameter /sitecore/templates/Foundation/SUGCON/Base/_Base Rendering Params
-    * This will automatically parse the string rendering parameters into the appropriate types (where possible)
-    */
-    export class BaseRenderingParamsClass  {
-            constructor(public params: Record<string, string>) {
-                
-            }
-        
-    }
-}
 export namespace Utility {
 
     /**
@@ -41,7 +26,7 @@ export namespace Utility {
             /**
             * Child items
             */
-            children : ItemExt[];
+            children? : ItemExt[];
         }
 
     }
@@ -54,7 +39,7 @@ export namespace Utility {
             /**
             * Child items
             */
-            children : ItemExt[];
+            children? : ItemExt[];
 
 
     }
@@ -71,15 +56,6 @@ export namespace Utility {
  * </auto-generated>
  */ 
 
-export namespace Base.Constants {
-
-    export const BaseRenderingParams = {
-        TemplateId: "0cd007dd-b31d-4e56-91d7-fbd7d55330b3",
-    
-        BaseTemplateIds: [
-        ]
-    }
-}
 export namespace Utility.Constants {
 
     export const RenderWithChildren = {

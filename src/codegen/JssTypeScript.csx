@@ -97,38 +97,23 @@ public string RenderTemplates()
             oldNamespace = template.Namespace;
         }
 
-        if (IsRenderingParam(template))
-        {
-            localCode.AppendLine($@"
-    /**
-    * Class to wrap the rendering parameter {template.Path}
-    * This will automatically parse the string rendering parameters into the appropriate types (where possible)
-    */
-    export class {template.CodeName}Class {RenderBaseClasses(template)} {{");
-            localCode.AppendLine($@"            constructor(public params: Record<string, string>) {{
-                {(template.BaseTemplates.Any() ? "super(params);" : "")}
-            }}");
-            localCode.AppendLine($@"        {RenderParamsFields(template)}");
-            localCode.AppendLine($@"    }}");
-        }
-        else
-        {
-            localCode.AppendLine($@"
+
+        localCode.AppendLine($@"
     /**
     * Represents the template {template.Path}
     */
     export type {template.CodeName} = {RenderBaseInterfaces(template)} {{");
-            localCode.AppendLine($@"        {RenderInterfaceFields(template)}");
-            localCode.AppendLine($@"    }}");
-            
-            localCode.AppendLine($@"
+        localCode.AppendLine($@"        {RenderInterfaceFields(template)}");
+        localCode.AppendLine($@"    }}");
+
+        localCode.AppendLine($@"
     /**
     * Represents the GraphQL template {template.Path}
     */
     export type {template.CodeName}Json = {RenderBaseInterfaces(template, "Json")} {{");
-            localCode.AppendLine($@"        {RenderInterfaceFields(template, true)}");
-            localCode.AppendLine($@"    }}");
-        }
+        localCode.AppendLine($@"        {RenderInterfaceFields(template, true)}");
+        localCode.AppendLine($@"    }}");
+
 
     }
     if (Templates.Any())
@@ -156,7 +141,7 @@ public string RenderBaseClasses(TemplateCodeGenerationMetadata template)
     var bases = new System.Collections.Generic.List<string>(template.BaseTemplates.Count);
 
     foreach (var baseTemplate in template.BaseTemplates)
-    {        
+    {
         bases.Add(GetAliasedFullCodeName(baseTemplate, "Class"));
     }
 
@@ -189,7 +174,7 @@ public string RenderInterfaceFields(TemplateCodeGenerationMetadata template, boo
             /**
             * Child items
             */
-            children : ItemExt[];");
+            children? : ItemExt[];");
     }
     if (useJsonValue)
     {
@@ -369,27 +354,28 @@ public string GetParseMethod(TemplateFieldCodeGenerationMetadata field)
 }
 
 public string GetNameSpaceAlias(TemplateCodeGenerationMetadata template)
-{    
+{
     var split = template.RootNamespace.Split('.');
     var layer = split[0];
     var module = split[1];
-        
+
     var currNamespace = GetShortNameSpaceRoot(template);
 
     return $@"{layer}{module}{currNamespace}";
 }
 
 public string GetShortNameSpaceRoot(TemplateCodeGenerationMetadata template)
-{    
+{
     var currNamespace = GetShortNameSpace(template).Split('.').First();
     return currNamespace;
 }
 
 public string GetShortNameSpace(TemplateCodeGenerationMetadata template)
-{    
+{
     var shortNameSpace = template.RelativeNamespace;
-    
-    if(string.IsNullOrWhiteSpace(shortNameSpace)) {
+
+    if (string.IsNullOrWhiteSpace(shortNameSpace))
+    {
         return template.Namespace;
     }
     return shortNameSpace;
@@ -442,14 +428,4 @@ public List<TemplateCodeGenerationMetadata> GetBaseTemplates(IEnumerable<Templat
 public bool IncludeChildren(TemplateCodeGenerationMetadata template)
 {
     return template.Id == System.Guid.Parse("{75848221-862F-48ED-83D1-AF13ED1C2CD7}");
-}
-/// <summary>
-/// We are using a custom base template "_Base Rendering Params" to indicate that this template
-/// is a rendering parameter template.  The OOTB Standard Rendering Parameters does not show up
-/// in the list of base templates, so we needed a custom one.
-/// When using this on your own project  replace the GUID with your GUID.
-/// </summary>
-public bool IsRenderingParam(TemplateCodeGenerationMetadata template)
-{
-    return IsOrInheritsFromTemplate(template, "{0CD007DD-B31D-4E56-91D7-FBD7D55330B3}");
 }

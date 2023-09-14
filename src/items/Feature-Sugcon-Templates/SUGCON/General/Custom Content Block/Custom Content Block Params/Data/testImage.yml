@@ -1,15 +1,15 @@
 ﻿---
-ID: "2f4b70d0-231d-4b39-9b6b-f4d82f6ef4ae"
-Parent: "794134c8-b18d-4314-ba42-81ddfe5485cb"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/SUGCON/Listing/Card Listing/Card Listing Params
+ID: "afe4ec52-a73b-4b07-ba75-d52e3d9ee891"
+Parent: "f1717ed6-cf85-40b0-931e-075564a4bd1d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/SUGCON/General/Custom Content Block/Custom Content Block Params/Data/testImage
 SharedFields:
-- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
-  Hint: __Base template
-  Value: "{4247AAD4-EBDE-4994-998F-E067A51B1FE4}"
-- ID: "f7d48a55-2158-4f02-9356-756654404f73"
-  Hint: __Standard values
-  Value: "{194F4CF2-6B92-4D8A-9C10-B0C80407DE11}"
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Image
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
 Languages:
 - Language: en
   Versions:
@@ -17,7 +17,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20230828T153600Z
+      Value: 20230828T215427Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -28,11 +28,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "03163402-95b9-4663-9e95-2686003b369e"
+      Value: "dfedd318-0041-4a14-ba10-3cf814d6c1f5"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230914T013538Z
+      Value: 20230828T215427Z

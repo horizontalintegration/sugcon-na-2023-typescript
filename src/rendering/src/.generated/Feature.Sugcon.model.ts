@@ -18,7 +18,7 @@ import { Listing as FeatureSugconListing } from "./Feature.Sugcon.model"
 // @ts-ignore 
 import { Utility as FoundationSugconUtility } from "./Foundation.Sugcon.model"
 // @ts-ignore 
-import { Base as FoundationSugconBase } from "./Foundation.Sugcon.model"
+import { General as FeatureSugconGeneral } from "./Feature.Sugcon.model"
 
 export namespace Listing.CardListing {
 
@@ -103,50 +103,124 @@ export namespace Listing.CardListing {
     }
 
     /**
-    * Class to wrap the rendering parameter /sitecore/templates/Feature/SUGCON/Listing/Card Listing/Card Listing Params
-    * This will automatically parse the string rendering parameters into the appropriate types (where possible)
+    * Represents the template /sitecore/templates/Feature/SUGCON/Listing/Card Listing/Card Listing Params
     */
-    export class CardListingParamsClass extends FoundationSugconBase.BaseRenderingParamsClass {
-            constructor(public params: Record<string, string>) {
-                super(params);
-            }
+    export type CardListingParams =  {
+        fields?: { 
+            /**
+            * Represents the Cards Per Row field (e3688fd5-09ab-4913-963e-1d9d6ef7d86c).
+            */
+            cardsPerRow?: Field<number>;
+        }
+
+    }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/SUGCON/Listing/Card Listing/Card Listing Params
+    */
+    export type CardListingParamsJson =  {
         
             /**
             * Represents the Cards Per Row field (e3688fd5-09ab-4913-963e-1d9d6ef7d86c).
             */
-            public get cardsPerRow() {
-                const value = this.params.cardsPerRow;
-                if (!value) {
-                    return null;
-                }
-                return parseInt(value);
-            }
+            cardsPerRow?: {
+                jsonValue: Field<number>
+            };
 
+
+    }
+}
+export namespace General.CustomContentBlock {
+
+    /**
+    * Represents the template /sitecore/templates/Feature/SUGCON/General/Custom Content Block/Custom Content Block
+    */
+    export type CustomContentBlock =  {
+        fields?: { 
+            /**
+            * Represents the content field (071c1b0a-c007-4db9-8c80-59142a7b98ec).
+            */
+            content?: Field<string>;
+
+            /**
+            * Represents the cta field (5f226afd-df82-425b-9f57-8c3db9b6f488).
+            */
+            cta?: LinkField;
+        }
+
+    }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/SUGCON/General/Custom Content Block/Custom Content Block
+    */
+    export type CustomContentBlockJson =  {
+        
+            /**
+            * Represents the content field (071c1b0a-c007-4db9-8c80-59142a7b98ec).
+            */
+            content?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the cta field (5f226afd-df82-425b-9f57-8c3db9b6f488).
+            */
+            cta?: {
+                jsonValue: LinkField
+            };
+
+
+    }
+
+    /**
+    * Represents the template /sitecore/templates/Feature/SUGCON/General/Custom Content Block/Custom Content Block Params
+    */
+    export type CustomContentBlockParams =  {
+        fields?: { 
             /**
             * Represents the testDate field (2a1145ff-4e62-4569-89c4-3ab23029bd17).
             */
-            public get testDate() {
-                const value = this.params.testDate;
-                if (!value) {
-                    return null;
-                }
-                return new Date(value.substring(0, 4) 
-    + '-' + value.substring(4, 6)
-    + '-' + value.substring(6, 11)
-    + ':' + value.substring(11, 13)
-    + ':' + value.substring(13, 16));
-            }
+            testDate?: Field<string>;
 
             /**
             * Represents the testImage field (afe4ec52-a73b-4b07-ba75-d52e3d9ee891).
             */
-            public get testImage() {
-                const value = this.params.testImage;
-                if (!value) {
-                    return null;
-                }
-                return value;
-            }
+            testImage?: ImageField;
+
+            /**
+            * Represents the testLink field (1eb6afe8-b764-4d5c-979a-27c1d5b4583c).
+            */
+            testLink?: LinkField;
+        }
+
+    }
+
+    /**
+    * Represents the GraphQL template /sitecore/templates/Feature/SUGCON/General/Custom Content Block/Custom Content Block Params
+    */
+    export type CustomContentBlockParamsJson =  {
+        
+            /**
+            * Represents the testDate field (2a1145ff-4e62-4569-89c4-3ab23029bd17).
+            */
+            testDate?: {
+                jsonValue: Field<string>
+            };
+
+            /**
+            * Represents the testImage field (afe4ec52-a73b-4b07-ba75-d52e3d9ee891).
+            */
+            testImage?: {
+                jsonValue: ImageField
+            };
+
+            /**
+            * Represents the testLink field (1eb6afe8-b764-4d5c-979a-27c1d5b4583c).
+            */
+            testLink?: {
+                jsonValue: LinkField
+            };
+
 
     }
 }
@@ -223,7 +297,21 @@ export namespace Listing.CardListing.Constants {
         TemplateId: "2f4b70d0-231d-4b39-9b6b-f4d82f6ef4ae",
     
         BaseTemplateIds: [
-            "0cd007dd-b31d-4e56-91d7-fbd7d55330b3", 
+        ]
+    }
+}
+export namespace General.CustomContentBlock.Constants {
+
+    export const CustomContentBlock = {
+        TemplateId: "2b9cadf2-a466-44af-909f-d49d10c57bf5",
+    
+        BaseTemplateIds: [
+        ]
+    }
+    export const CustomContentBlockParams = {
+        TemplateId: "3228313e-325f-4adf-afd3-b16c5c3da60d",
+    
+        BaseTemplateIds: [
         ]
     }
 }

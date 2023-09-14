@@ -63,6 +63,7 @@
     <PackageReference Include="Sitecore.LayoutService" />
     <PackageReference Include="Sitecore.Assemblies.Platform" />
     <PackageReference Include="Sitecore.Assemblies.SitecoreHeadlessServicesServer" />
+    <PackageReference Include="Sitecore.XA.Feature.LayoutServices.Integration" />
     <PackageReference Include="Sitecore.XA.JSS.Foundation.Presentation" />
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +81,7 @@
     <Compile Include="Models\Generated\Foundation.JssExperienceAccelerator.model.cs" />
     <Compile Include="Models\Generated\Foundation.Sugcon.model.cs" />
     <Compile Include="Models\Generated\Project.Sugcon.model.cs" />
+    <Compile Include="Pipelines\RenderJsonRendering\Initialize.cs" />
     <Compile Include="Serialization\CustomSxaItemSerializer.cs" />
   </ItemGroup>
   <ItemGroup />

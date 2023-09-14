@@ -3,13 +3,15 @@ import { Image, Link, Text } from '@sitecore-jss/sitecore-jss-nextjs';
 
 import { Listing } from 'src/.generated/Feature.Sugcon.model';
 import { ComponentProps } from 'lib/component-props';
+import { parseParams } from 'lib/utils/rendering-params';
 
 export type CardListingProps = ComponentProps & Listing.CardListing.CardListing;
 
 export const Default = (props: CardListingProps): JSX.Element => {
   const id = props.params?.RenderingIdentifier;
 
-  const params = props.params ? new Listing.CardListing.CardListingParamsClass(props.params) : null;
+  const params = parseParams<Listing.CardListing.CardListingParams>(props.params);
+
   return (
     <div
       className={`component card-listing ${props.params?.styles?.trimEnd()}`}
@@ -19,14 +21,15 @@ export const Default = (props: CardListingProps): JSX.Element => {
         <h2>
           <Text field={props.fields?.headline} />
         </h2>
-        <p>Test date param: {params?.testDate?.toLocaleDateString()}</p>
         <ul
           style={{
             display: 'grid',
-            gridTemplateColumns: `repeat(${params?.cardsPerRow ?? 1}, minmax(0, 1fr))`,
+            gridTemplateColumns: `repeat(${
+              params?.fields?.cardsPerRow?.value ?? 1
+            }, minmax(0, 1fr))`,
           }}
         >
-          {props.fields?.children.map((x) => {
+          {props.fields?.children?.map((x) => {
             const card = x as Listing.CardListing.CardItem;
             // Styling for illustrutive purposes only
             return (
