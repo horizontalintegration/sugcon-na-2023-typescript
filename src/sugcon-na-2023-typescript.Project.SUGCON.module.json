@@ -1,8 +1,6 @@
 {
   "namespace": "Project.Sugcon",
-  "references": [
-    "Feature.Sugcon"
-  ],
+  "references": ["Feature.Sugcon"],
   "items": {
     "includes": [
       {
@@ -22,12 +20,5 @@
         "path": "/sitecore/templates/Project/SUGCON"
       }
     ]
-  }
-  ,
-  "leprechaun": {
-    "configuration": {
-      "@extends": "Sugcon.Base",
-      "@name": "Project.Sugcon"
-    }
   }
 }

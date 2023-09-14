@@ -9,11 +9,5 @@
         "allowedPushOperations": "createOnly"
       }
     ]
-  },
-  "leprechaun": {
-    "configuration": {
-      "@extends": "Sxa.Base",
-      "@name": "Feature.JssExperienceAccelerator"
-    }
   }
 }

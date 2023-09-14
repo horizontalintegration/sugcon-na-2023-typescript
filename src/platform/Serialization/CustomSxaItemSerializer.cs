@@ -2,12 +2,11 @@
 using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Platform.Models.Generated.Foundation.Sugcon.Utility;
+using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.LayoutService.Helpers;
 using Sitecore.LayoutService.Serialization;
-using Sitecore.LayoutService.Serialization.ItemSerializers;
 using Sitecore.LayoutService.Serialization.Pipelines.GetFieldSerializer;
 using Sitecore.Links;
 using Sitecore.XA.Foundation.SitecoreExtensions.Extensions;
@@ -17,13 +16,15 @@ namespace Platform.Serialization
 {
     public class CustomSxaItemSerializer : SxaItemSerializer
     {
+        public static readonly ID RenderWithChildrenTemplateId = new ID("{75848221-862F-48ED-83D1-AF13ED1C2CD7}");
+
         public CustomSxaItemSerializer(IGetFieldSerializerPipeline getFieldSerializerPipeline) : base(getFieldSerializerPipeline)
         {
         }
         protected override string SerializeItem(Item item, SerializationOptions options)
         {
             var baseResult = base.SerializeItem(item, options);
-            if (item.InheritsFrom(RenderWithChildren.ItemTemplateId))
+            if (item.InheritsFrom(RenderWithChildrenTemplateId))
             {
                 var baseJObject = JObject.Parse(baseResult);
                 var childrenJObjects = item.Children.Select(x => GetItemJson(x, options));

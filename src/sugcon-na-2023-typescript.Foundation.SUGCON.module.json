@@ -8,11 +8,5 @@
         "path": "/sitecore/templates/Foundation/SUGCON"
       }
     ]
-  },
-  "leprechaun": {
-    "configuration": {
-      "@extends": "Sugcon.Base",
-      "@name": "Foundation.Sugcon"
-    }
   }
 }

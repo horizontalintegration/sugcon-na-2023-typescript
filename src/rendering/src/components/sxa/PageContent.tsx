@@ -2,20 +2,17 @@ import React from 'react';
 import {
   RichText as JssRichText,
   useSitecoreContext,
-  // RichTextField,
+  RichTextField,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import { ComponentProps } from 'lib/component-props';
-import { Project } from 'src/.generated/Project.Sugcon.model';
 
-// interface Fields {
-//   Content: RichTextField;
-// }
+interface Fields {
+  Content: RichTextField;
+}
 
-// type PageContentProps = {
-//   params: { [key: string]: string };
-//   fields: Fields;
-// };
-type PageContentProps = ComponentProps & Project.Sugcon.SugconPage;
+type PageContentProps = {
+  params: { [key: string]: string };
+  fields: Fields;
+};
 
 type ComponentContentProps = {
   id: string;
@@ -47,13 +44,11 @@ export const Default = (props: PageContentProps): JSX.Element => {
       </div>
     );
   }
-  // const field = (
-  //   props.fields && props.fields.Content
-  //     ? props.fields.Content
-  //     : sitecoreContext?.route?.fields?.Content
-  // ) as RichTextField;
-  const route = sitecoreContext.route as Project.Sugcon.SugconPage;
-  const field = props.fields?.Content ?? route?.fields?.Content;
+  const field = (
+    props.fields && props.fields.Content
+      ? props.fields.Content
+      : sitecoreContext?.route?.fields?.Content
+  ) as RichTextField;
 
   return (
     <ComponentContent styles={props.params.styles} id={id}>

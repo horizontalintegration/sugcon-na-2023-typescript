@@ -76,15 +76,12 @@
     <None Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Generated\Feature.JssExperienceAccelerator.model.cs" />
-    <Compile Include="Models\Generated\Feature.Sugcon.model.cs" />
-    <Compile Include="Models\Generated\Foundation.JssExperienceAccelerator.model.cs" />
-    <Compile Include="Models\Generated\Foundation.Sugcon.model.cs" />
-    <Compile Include="Models\Generated\Project.Sugcon.model.cs" />
     <Compile Include="Pipelines\RenderJsonRendering\Initialize.cs" />
     <Compile Include="Serialization\CustomSxaItemSerializer.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\Generated\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
