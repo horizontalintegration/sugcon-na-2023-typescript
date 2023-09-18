@@ -20,5 +20,11 @@
         "path": "/sitecore/templates/Project/SUGCON"
       }
     ]
+  },
+  "leprechaun": {
+    "configuration": {
+      "@extends": "Sugcon.Base",
+      "@name": "Project.Sugcon"
+    }
   }
 }

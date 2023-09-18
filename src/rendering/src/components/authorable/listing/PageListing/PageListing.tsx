@@ -1,19 +1,16 @@
 import jssConfig from 'temp/config';
 import React from 'react';
 import {
-  ComponentFields,
-  ComponentParams,
   ComponentRendering,
   GetStaticComponentProps,
   GraphQLRequestClient,
-  Item,
   RichText,
-  RichTextField,
   Text,
-  TextField,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 
 import Link from 'next/link';
+import { Listing } from 'src/.generated/Feature.Sugcon.model';
+import { Project } from 'src/.generated/Project.Sugcon.model';
 
 // These can be moved to a reusable helper file
 export type GqlItemExt = {
@@ -28,22 +25,15 @@ export type GqlChildren<T> = {
   };
 };
 
-interface PageListingPage extends GqlItemExt, GqlChildren<PageListingPage> {
-  Title: {
-    jsonValue: TextField;
-  };
-  Content: {
-    jsonValue: RichTextField;
-  };
-}
+interface PageListingPage
+  extends GqlItemExt,
+    GqlChildren<PageListingPage>,
+    Project.Sugcon.SugconPageJson {}
 
 export type PageListingProps = ComponentRendering & {
   item?: PageListingPage;
 };
-export type PageListingRendering = ComponentRendering & {
-  fields?: ComponentFields;
-  params?: ComponentParams;
-};
+
 export const Default = (props: PageListingProps): JSX.Element => {
   const id = props.params?.RenderingIdentifier;
 
@@ -135,7 +125,8 @@ export const getStaticProps: GetStaticComponentProps = async (rendering, layoutD
     apiKey: jssConfig.sitecoreApiKey,
   });
 
-  const rootPage = rendering.fields?.rootPage as Item;
+  const pageListing = rendering as Listing.PageListing.PageListing;
+  const rootPage = pageListing.fields?.rootPage;
 
   const result = await graphQLClient.request<PageListingProps>(query, {
     rootItem: rootPage?.id,

@@ -12,5 +12,11 @@
         "path": "/sitecore/templates/Feature/SUGCON"
       }
     ]
+  },
+  "leprechaun": {
+    "configuration": {
+      "@extends": "Sugcon.Base",
+      "@name": "Feature.Sugcon"
+    }
   }
 }

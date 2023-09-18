@@ -1,19 +1,12 @@
 import React from 'react';
-import {
-  ComponentFields,
-  ComponentParams,
-  Field,
-  Link,
-  LinkField,
-  RichText,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+import { Link, RichText } from '@sitecore-jss/sitecore-jss-nextjs';
+import { General } from 'src/.generated/Feature.Sugcon.model';
 
 import { ComponentProps } from 'lib/component-props';
 
-export type CustomContentBlockProps = ComponentProps & {
-  fields?: ComponentFields;
-  params?: ComponentParams;
-};
+export type CustomContentBlockProps = ComponentProps &
+  General.CustomContentBlock.CustomContentBlock;
+
 export const Default = (props: CustomContentBlockProps): JSX.Element => {
   const id = props.params?.RenderingIdentifier;
 
@@ -27,12 +20,12 @@ export const Default = (props: CustomContentBlockProps): JSX.Element => {
       <pre>Custom Content Block</pre>
       <div className="component-content">
         <div>
-          <RichText field={props.fields?.content as Field<string>} />
+          <RichText field={props.fields?.content} />
         </div>
 
         {props.fields?.cta ? (
           <div>
-            <Link field={props.fields?.cta as LinkField} />
+            <Link field={props.fields?.cta} />
           </div>
         ) : null}
       </div>
