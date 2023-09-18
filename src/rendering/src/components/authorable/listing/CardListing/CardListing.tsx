@@ -4,6 +4,7 @@ import {
   ComponentParams,
   Image,
   ImageField,
+  Item,
   Link,
   LinkField,
   Text,
@@ -11,11 +12,10 @@ import {
 } from '@sitecore-jss/sitecore-jss-nextjs';
 
 import { ComponentProps } from 'lib/component-props';
-import { ItemExt } from 'lib/_.Sitecore.Override';
 
 export type CardListingProps = ComponentProps & {
   fields?: ComponentFields & {
-    children: ItemExt[];
+    children: Item[];
   };
   params?: ComponentParams;
 };

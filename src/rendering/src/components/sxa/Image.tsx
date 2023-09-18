@@ -2,27 +2,23 @@ import React from 'react';
 import {
   Image as JssImage,
   Link as JssLink,
-  // ImageField,
-  // Field,
-  // LinkField,
+  ImageField,
+  Field,
+  LinkField,
   Text,
   useSitecoreContext,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import { ComponentProps } from 'lib/component-props';
-import { Media } from 'src/.generated/Feature.JssExperienceAccelerator.model';
 
-// interface Fields {
-//   Image: ImageField;
-//   ImageCaption: Field<string>;
-//   TargetUrl: LinkField;
-// }
+interface Fields {
+  Image: ImageField;
+  ImageCaption: Field<string>;
+  TargetUrl: LinkField;
+}
 
-// type ImageProps = {
-//   params: { [key: string]: string };
-//   fields: Fields;
-// };
-
-type ImageProps = ComponentProps & Media.Image;
+type ImageProps = {
+  params: { [key: string]: string };
+  fields: Fields;
+};
 
 const ImageDefault = (props: ImageProps): JSX.Element => (
   <div className={`component image ${props.params.styles}`.trimEnd()}>
