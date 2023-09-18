@@ -8,9 +8,7 @@
  */
 
 // @ts-ignore 
-import { ItemExt } from '../lib/_.Sitecore.Override'
-// @ts-ignore 
-import { Field, ImageField, FileField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, ImageField, FileField, LinkField, Item } from '@sitecore-jss/sitecore-jss-nextjs';
 // @ts-ignore 
 import { ComponentProps } from '../lib/component-props';
 // @ts-ignore 
@@ -36,7 +34,7 @@ export namespace Scaffolding.Actions.Site {
             /**
             * Represents the Location field (52c91c75-6698-4701-a8a2-242ace59a8d6).
             */
-            Location?: ItemExt[];
+            Location?: Item[];
         }
 
     }
@@ -50,7 +48,7 @@ export namespace Scaffolding.Actions.Site {
             * Represents the Location field (52c91c75-6698-4701-a8a2-242ace59a8d6).
             */
             Location?: {
-                jsonValue: ItemExt[]
+                jsonValue: Item[]
             };
 
 
@@ -66,7 +64,7 @@ export namespace Scaffolding.Actions.Tenant {
             /**
             * Represents the Location field (49ed6c70-37bd-4a23-af04-209806605b7f).
             */
-            Location?: ItemExt[];
+            Location?: Item[];
         }
 
     }
@@ -80,7 +78,7 @@ export namespace Scaffolding.Actions.Tenant {
             * Represents the Location field (49ed6c70-37bd-4a23-af04-209806605b7f).
             */
             Location?: {
-                jsonValue: ItemExt[]
+                jsonValue: Item[]
             };
 
 
@@ -150,7 +148,7 @@ export namespace Scaffolding.Actions.Site {
             /**
             * Represents the Template field (0916832d-459e-463c-852b-c538476a422d).
             */
-            Template?: ItemExt[];
+            Template?: Item[];
         }
 
     }
@@ -164,7 +162,7 @@ export namespace Scaffolding.Actions.Site {
             * Represents the Template field (0916832d-459e-463c-852b-c538476a422d).
             */
             Template?: {
-                jsonValue: ItemExt[]
+                jsonValue: Item[]
             };
 
 
@@ -180,7 +178,7 @@ export namespace Scaffolding.Actions.Tenant {
             /**
             * Represents the Template field (67b6641e-309d-4c1e-8e97-63965c7e2c5f).
             */
-            Template?: ItemExt[];
+            Template?: Item[];
         }
 
     }
@@ -194,7 +192,7 @@ export namespace Scaffolding.Actions.Tenant {
             * Represents the Template field (67b6641e-309d-4c1e-8e97-63965c7e2c5f).
             */
             Template?: {
-                jsonValue: ItemExt[]
+                jsonValue: Item[]
             };
 
 
@@ -405,12 +403,12 @@ export namespace Multisite {
             /**
             * Represents the App data sources path field (5764d2d4-724d-4313-a81b-9246c911faff).
             */
-            AppDatasourcesPath?: ItemExt;
+            AppDatasourcesPath?: Item;
 
             /**
             * Represents the App template field (32ce6bbe-4217-46e5-9335-42793884cbe3).
             */
-            AppTemplate?: ItemExt;
+            AppTemplate?: Item;
 
             /**
             * Represents the Datasource strategy field (f7c6acfb-63f0-4aca-9e44-3133b2b94a5b).
@@ -425,7 +423,7 @@ export namespace Multisite {
             /**
             * Represents the Default workflow field (3af0e329-6d5e-4d8f-9f82-f48265658a3e).
             */
-            DefaultWorkflow?: ItemExt;
+            DefaultWorkflow?: Item;
 
             /**
             * Represents the Deployment secret field (797d2f63-d5c4-4c4c-b21f-d3e250e2ab12).
@@ -435,12 +433,12 @@ export namespace Multisite {
             /**
             * Represents the Dictionary domain field (0129da3f-8c86-4591-ae32-6ec923413923).
             */
-            DictionaryDomain?: ItemExt;
+            DictionaryDomain?: Item;
 
             /**
             * Represents the Dictionary path field (a7bbad73-b933-49ff-95c8-1c269cb35e7c).
             */
-            DictionaryPath?: ItemExt;
+            DictionaryPath?: Item;
 
             /**
             * Represents the Filesystem path field (72e83c8d-3578-4e50-b4c0-93a78a1729f2).
@@ -450,7 +448,7 @@ export namespace Multisite {
             /**
             * Represents the Folder template field (bde120a5-4cc2-4340-9b63-562a139bf197).
             */
-            FolderTemplate?: ItemExt;
+            FolderTemplate?: Item;
 
             /**
             * Represents the GraphQL endpoint field (30e0a829-637e-478c-a136-66adb568398d).
@@ -465,7 +463,7 @@ export namespace Multisite {
             /**
             * Represents the Import device field (1f14aa04-2868-481f-9247-30dc5c65672c).
             */
-            ImportDevice?: ItemExt;
+            ImportDevice?: Item;
 
             /**
             * Represents the Import language field (04e6b1f3-ae47-4d95-a154-2271075869a9).
@@ -480,12 +478,12 @@ export namespace Multisite {
             /**
             * Represents the Layout folder template field (466902a9-6b16-41b1-9d33-7c55094a2713).
             */
-            LayoutFolderTemplate?: ItemExt;
+            LayoutFolderTemplate?: Item;
 
             /**
             * Represents the Layout path field (c8d002f9-9518-4c5e-9baa-6617e13f0797).
             */
-            LayoutPath?: ItemExt;
+            LayoutPath?: Item;
 
             /**
             * Represents the Layout service configuration field (e3259313-387a-41f0-b113-962f14b1aa2b).
@@ -495,12 +493,12 @@ export namespace Multisite {
             /**
             * Represents the Layout template field (e13c1a83-9d60-4530-b318-3a5effcc6338).
             */
-            LayoutTemplate?: ItemExt;
+            LayoutTemplate?: Item;
 
             /**
             * Represents the Media Library folder template field (1cc82067-2b48-442a-a352-453d56a49d93).
             */
-            MediaLibraryFolderTemplate?: ItemExt;
+            MediaLibraryFolderTemplate?: Item;
 
             /**
             * Represents the App Name field (3e4f559f-8e59-4405-b50d-619811371f6c).
@@ -515,12 +513,12 @@ export namespace Multisite {
             /**
             * Represents the Placeholder settings folder template field (f5594251-f757-429e-a9bd-07f65f6875b9).
             */
-            PlaceholderSettingsFolderTemplate?: ItemExt;
+            PlaceholderSettingsFolderTemplate?: Item;
 
             /**
             * Represents the Placeholders path field (5ca117eb-8782-4a4f-9f2f-30de31fc2e34).
             */
-            PlaceholdersPath?: ItemExt;
+            PlaceholdersPath?: Item;
 
             /**
             * Represents the Protect developer items field (b0711df7-724a-4c6c-8d4d-be846de6124c).
@@ -530,17 +528,17 @@ export namespace Multisite {
             /**
             * Represents the Renderings folder template field (f5821c4c-226e-4953-8213-c0243826f85f).
             */
-            RenderingsFolderTemplate?: ItemExt;
+            RenderingsFolderTemplate?: Item;
 
             /**
             * Represents the Renderings path field (f29428d5-1285-48b8-a884-44057965829a).
             */
-            RenderingsPath?: ItemExt;
+            RenderingsPath?: Item;
 
             /**
             * Represents the Route base template field (396af2f6-fe48-4fd4-a7e2-3da13ef977eb).
             */
-            RouteBaseTemplate?: ItemExt;
+            RouteBaseTemplate?: Item;
 
             /**
             * Represents the Route data sources path field (414f61dd-02c2-47d1-ba83-dcfbc3071e52).
@@ -590,7 +588,7 @@ export namespace Multisite {
             /**
             * Represents the Template folder template field (218760c0-8001-4c2d-a8b0-61c128276f96).
             */
-            TemplateFolderTemplate?: ItemExt;
+            TemplateFolderTemplate?: Item;
 
             /**
             * Represents the Use language specific layout field (1864e99d-c29a-40bf-96e0-b3e7896a013b).
@@ -616,14 +614,14 @@ export namespace Multisite {
             * Represents the App data sources path field (5764d2d4-724d-4313-a81b-9246c911faff).
             */
             AppDatasourcesPath?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
             * Represents the App template field (32ce6bbe-4217-46e5-9335-42793884cbe3).
             */
             AppTemplate?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
@@ -644,7 +642,7 @@ export namespace Multisite {
             * Represents the Default workflow field (3af0e329-6d5e-4d8f-9f82-f48265658a3e).
             */
             DefaultWorkflow?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
@@ -658,14 +656,14 @@ export namespace Multisite {
             * Represents the Dictionary domain field (0129da3f-8c86-4591-ae32-6ec923413923).
             */
             DictionaryDomain?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
             * Represents the Dictionary path field (a7bbad73-b933-49ff-95c8-1c269cb35e7c).
             */
             DictionaryPath?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
@@ -679,7 +677,7 @@ export namespace Multisite {
             * Represents the Folder template field (bde120a5-4cc2-4340-9b63-562a139bf197).
             */
             FolderTemplate?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
@@ -700,7 +698,7 @@ export namespace Multisite {
             * Represents the Import device field (1f14aa04-2868-481f-9247-30dc5c65672c).
             */
             ImportDevice?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
@@ -721,14 +719,14 @@ export namespace Multisite {
             * Represents the Layout folder template field (466902a9-6b16-41b1-9d33-7c55094a2713).
             */
             LayoutFolderTemplate?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
             * Represents the Layout path field (c8d002f9-9518-4c5e-9baa-6617e13f0797).
             */
             LayoutPath?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
@@ -742,14 +740,14 @@ export namespace Multisite {
             * Represents the Layout template field (e13c1a83-9d60-4530-b318-3a5effcc6338).
             */
             LayoutTemplate?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
             * Represents the Media Library folder template field (1cc82067-2b48-442a-a352-453d56a49d93).
             */
             MediaLibraryFolderTemplate?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
@@ -770,14 +768,14 @@ export namespace Multisite {
             * Represents the Placeholder settings folder template field (f5594251-f757-429e-a9bd-07f65f6875b9).
             */
             PlaceholderSettingsFolderTemplate?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
             * Represents the Placeholders path field (5ca117eb-8782-4a4f-9f2f-30de31fc2e34).
             */
             PlaceholdersPath?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
@@ -791,21 +789,21 @@ export namespace Multisite {
             * Represents the Renderings folder template field (f5821c4c-226e-4953-8213-c0243826f85f).
             */
             RenderingsFolderTemplate?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
             * Represents the Renderings path field (f29428d5-1285-48b8-a884-44057965829a).
             */
             RenderingsPath?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
             * Represents the Route base template field (396af2f6-fe48-4fd4-a7e2-3da13ef977eb).
             */
             RouteBaseTemplate?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
@@ -875,7 +873,7 @@ export namespace Multisite {
             * Represents the Template folder template field (218760c0-8001-4c2d-a8b0-61c128276f96).
             */
             TemplateFolderTemplate?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
@@ -1406,12 +1404,12 @@ export namespace Scaffolding {
             /**
             * Represents the Site Modules field (c262443b-653d-461d-96c8-7cfaa0ef2b2d).
             */
-            "Site Modules"?: ItemExt[];
+            "Site Modules"?: Item[];
 
             /**
             * Represents the Tenant Modules field (41ac536a-923a-43f9-ac87-f3993f638125).
             */
-            "Tenant Modules"?: ItemExt[];
+            "Tenant Modules"?: Item[];
         }
 
     }
@@ -1439,14 +1437,14 @@ export namespace Scaffolding {
             * Represents the Site Modules field (c262443b-653d-461d-96c8-7cfaa0ef2b2d).
             */
             "Site Modules"?: {
-                jsonValue: ItemExt[]
+                jsonValue: Item[]
             };
 
             /**
             * Represents the Tenant Modules field (41ac536a-923a-43f9-ac87-f3993f638125).
             */
             "Tenant Modules"?: {
-                jsonValue: ItemExt[]
+                jsonValue: Item[]
             };
 
 
@@ -1480,12 +1478,12 @@ export namespace Multisite.Base {
             /**
             * Represents the PlaceholderSettingsFolder field (102b58da-2a86-4953-b3cd-c9f91256b657).
             */
-            PlaceholderSettingsFolder?: ItemExt;
+            PlaceholderSettingsFolder?: Item;
 
             /**
             * Represents the Renderings location field (853b245f-53e4-4ebe-bab5-299f9de314b6).
             */
-            RenderingsFolder?: ItemExt;
+            RenderingsFolder?: Item;
         }
 
     }
@@ -1499,14 +1497,14 @@ export namespace Multisite.Base {
             * Represents the PlaceholderSettingsFolder field (102b58da-2a86-4953-b3cd-c9f91256b657).
             */
             PlaceholderSettingsFolder?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
             /**
             * Represents the Renderings location field (853b245f-53e4-4ebe-bab5-299f9de314b6).
             */
             RenderingsFolder?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
 

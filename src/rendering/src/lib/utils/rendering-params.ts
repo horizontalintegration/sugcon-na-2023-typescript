@@ -1,5 +1,4 @@
-import { ComponentParams } from '@sitecore-jss/sitecore-jss-nextjs';
-import { ItemExtFields } from 'lib/_.Sitecore.Override';
+import { ComponentParams, Item } from '@sitecore-jss/sitecore-jss-nextjs';
 
 /**
  * Parses the rendering parameters into the specified type `T`.
@@ -7,13 +6,13 @@ import { ItemExtFields } from 'lib/_.Sitecore.Override';
  * @param componentParams
  * @returns The parsed parameter object
  */
-export const parseParams = <T extends { fields?: ItemExtFields }>(
+export const parseParams = <T extends { fields?: Item['fields'] }>(
   componentParams: ComponentParams
 ): T | null => {
   if (!componentParams) {
     return null;
   }
-  const res = { fields: {} as ItemExtFields } as T;
+  const res = { fields: {} as Item['fields'] } as T;
   for (const key in componentParams) {
     if (Object.prototype.hasOwnProperty.call(componentParams, key)) {
       // Only parameters on our templates are serialized as objects

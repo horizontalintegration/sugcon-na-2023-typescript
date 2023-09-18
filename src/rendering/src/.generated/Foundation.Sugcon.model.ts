@@ -8,9 +8,7 @@
  */
 
 // @ts-ignore 
-import { ItemExt } from '../lib/_.Sitecore.Override'
-// @ts-ignore 
-import { Field, ImageField, FileField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, ImageField, FileField, LinkField, Item } from '@sitecore-jss/sitecore-jss-nextjs';
 // @ts-ignore 
 import { ComponentProps } from '../lib/component-props';
 // @ts-ignore 
@@ -26,7 +24,7 @@ export namespace Utility {
             /**
             * Child items
             */
-            children? : ItemExt[];
+            children? : Item[];
         }
 
     }
@@ -39,7 +37,7 @@ export namespace Utility {
             /**
             * Child items
             */
-            children? : ItemExt[];
+            children? : Item[];
 
 
     }

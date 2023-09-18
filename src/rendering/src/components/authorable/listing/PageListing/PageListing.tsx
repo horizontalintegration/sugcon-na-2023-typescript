@@ -10,8 +10,21 @@ import {
 
 import { Listing } from 'src/.generated/Feature.Sugcon.model';
 import { Project } from 'src/.generated/Project.Sugcon.model';
-import { GqlChildren, GqlItemExt } from 'lib/_.Sitecore.Override';
+
 import Link from 'next/link';
+
+// These can be moved to a reusable helper file
+export type GqlItemExt = {
+  id?: string;
+  url?: { path?: string };
+  templateId?: string;
+};
+
+export type GqlChildren<T> = {
+  children: {
+    results: T[];
+  };
+};
 
 interface PageListingPage
   extends GqlItemExt,
@@ -94,6 +107,7 @@ const query = /* GraphQL */ `
     url {
       path
     }
+    templateId
     Title: title {
       jsonValue
     }

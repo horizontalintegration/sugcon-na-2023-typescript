@@ -52,10 +52,10 @@ public string RenderImportStatements()
 
     var foundModules = new System.Collections.Generic.HashSet<string>();
 
+    // localCode.AppendLine($@"// @ts-ignore ");
+    // localCode.AppendLine(@"import { ItemExt } from '../lib/_.Sitecore.Override'");
     localCode.AppendLine($@"// @ts-ignore ");
-    localCode.AppendLine(@"import { ItemExt } from '../lib/_.Sitecore.Override'");
-    localCode.AppendLine($@"// @ts-ignore ");
-    localCode.AppendLine($@"import {{ Field, ImageField, FileField, LinkField }} from '@sitecore-jss/sitecore-jss-nextjs';");
+    localCode.AppendLine($@"import {{ Field, ImageField, FileField, LinkField, Item }} from '@sitecore-jss/sitecore-jss-nextjs';");
     localCode.AppendLine($@"// @ts-ignore ");
     localCode.AppendLine($@"import {{ ComponentProps }} from '../lib/component-props';");
 
@@ -174,7 +174,7 @@ public string RenderInterfaceFields(TemplateCodeGenerationMetadata template, boo
             /**
             * Child items
             */
-            children? : ItemExt[];");
+            children? : Item[];");
     }
     if (useJsonValue)
     {
@@ -229,7 +229,7 @@ public string GetFieldCodeName(TemplateFieldCodeGenerationMetadata field, string
 public string GetNullable(TemplateFieldCodeGenerationMetadata field)
 {
     // Item reference fields will return null if it is blank, but all other types will not be null    
-    if (GetFieldType(field) == "ItemExt" || FORCE_FIELD_NULL_CHECK)
+    if (GetFieldType(field) == "Item" || FORCE_FIELD_NULL_CHECK)
     {
         return "?";
     }
@@ -262,14 +262,14 @@ public string GetFieldType(TemplateFieldCodeGenerationMetadata field)
         case "treelist descriptive":
         case "checklist":
         case "multilist":
-            return "ItemExt[]";
+            return "Item[]";
         case "grouped droplink":
         case "droplink":
         case "lookup":
         case "droptree":
         case "reference":
         case "tree":
-            return "ItemExt";
+            return "Item";
 
         case "file":
             return "FileField";

@@ -8,15 +8,15 @@
  */
 
 // @ts-ignore 
-import { ItemExt } from '../lib/_.Sitecore.Override'
-// @ts-ignore 
-import { Field, ImageField, FileField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, ImageField, FileField, LinkField, Item } from '@sitecore-jss/sitecore-jss-nextjs';
 // @ts-ignore 
 import { ComponentProps } from '../lib/component-props';
 // @ts-ignore 
 import { Listing as FeatureSugconListing } from "./Feature.Sugcon.model"
 // @ts-ignore 
 import { Utility as FoundationSugconUtility } from "./Foundation.Sugcon.model"
+// @ts-ignore 
+import { Presentation as FoundationJssExperienceAcceleratorPresentation } from "./Foundation.JssExperienceAccelerator.model"
 // @ts-ignore 
 import { General as FeatureSugconGeneral } from "./Feature.Sugcon.model"
 
@@ -105,7 +105,7 @@ export namespace Listing.CardListing {
     /**
     * Represents the template /sitecore/templates/Feature/SUGCON/Listing/Card Listing/Card Listing Params
     */
-    export type CardListingParams =  {
+    export type CardListingParams = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: { 
             /**
             * Represents the Cards Per Row field (e3688fd5-09ab-4913-963e-1d9d6ef7d86c).
@@ -118,7 +118,7 @@ export namespace Listing.CardListing {
     /**
     * Represents the GraphQL template /sitecore/templates/Feature/SUGCON/Listing/Card Listing/Card Listing Params
     */
-    export type CardListingParamsJson =  {
+    export type CardListingParamsJson = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParametersJson &  {
         
             /**
             * Represents the Cards Per Row field (e3688fd5-09ab-4913-963e-1d9d6ef7d86c).
@@ -138,12 +138,12 @@ export namespace General.CustomContentBlock {
     export type CustomContentBlock =  {
         fields?: { 
             /**
-            * Represents the content field (071c1b0a-c007-4db9-8c80-59142a7b98ec).
+            * Represents the Content field (071c1b0a-c007-4db9-8c80-59142a7b98ec).
             */
             content?: Field<string>;
 
             /**
-            * Represents the cta field (5f226afd-df82-425b-9f57-8c3db9b6f488).
+            * Represents the CTA field (5f226afd-df82-425b-9f57-8c3db9b6f488).
             */
             cta?: LinkField;
         }
@@ -156,14 +156,14 @@ export namespace General.CustomContentBlock {
     export type CustomContentBlockJson =  {
         
             /**
-            * Represents the content field (071c1b0a-c007-4db9-8c80-59142a7b98ec).
+            * Represents the Content field (071c1b0a-c007-4db9-8c80-59142a7b98ec).
             */
             content?: {
                 jsonValue: Field<string>
             };
 
             /**
-            * Represents the cta field (5f226afd-df82-425b-9f57-8c3db9b6f488).
+            * Represents the CTA field (5f226afd-df82-425b-9f57-8c3db9b6f488).
             */
             cta?: {
                 jsonValue: LinkField
@@ -175,7 +175,7 @@ export namespace General.CustomContentBlock {
     /**
     * Represents the template /sitecore/templates/Feature/SUGCON/General/Custom Content Block/Custom Content Block Params
     */
-    export type CustomContentBlockParams =  {
+    export type CustomContentBlockParams = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParameters &  {
         fields?: { 
             /**
             * Represents the testDate field (2a1145ff-4e62-4569-89c4-3ab23029bd17).
@@ -198,7 +198,7 @@ export namespace General.CustomContentBlock {
     /**
     * Represents the GraphQL template /sitecore/templates/Feature/SUGCON/General/Custom Content Block/Custom Content Block Params
     */
-    export type CustomContentBlockParamsJson =  {
+    export type CustomContentBlockParamsJson = FoundationJssExperienceAcceleratorPresentation.RenderingParameters.BaseRenderingParametersJson &  {
         
             /**
             * Represents the testDate field (2a1145ff-4e62-4569-89c4-3ab23029bd17).
@@ -239,7 +239,7 @@ export namespace Listing.PageListing {
             /**
             * Represents the Root Page field (e74c3459-d157-4210-ad64-978d04a5fa3f).
             */
-            rootPage?: ItemExt;
+            rootPage?: Item;
         }
 
     }
@@ -260,7 +260,7 @@ export namespace Listing.PageListing {
             * Represents the Root Page field (e74c3459-d157-4210-ad64-978d04a5fa3f).
             */
             rootPage?: {
-                jsonValue: ItemExt
+                jsonValue: Item
             };
 
 
@@ -297,6 +297,7 @@ export namespace Listing.CardListing.Constants {
         TemplateId: "2f4b70d0-231d-4b39-9b6b-f4d82f6ef4ae",
     
         BaseTemplateIds: [
+            "4247aad4-ebde-4994-998f-e067a51b1fe4", 
         ]
     }
 }
@@ -312,6 +313,7 @@ export namespace General.CustomContentBlock.Constants {
         TemplateId: "3228313e-325f-4adf-afd3-b16c5c3da60d",
     
         BaseTemplateIds: [
+            "4247aad4-ebde-4994-998f-e067a51b1fe4", 
         ]
     }
 }
