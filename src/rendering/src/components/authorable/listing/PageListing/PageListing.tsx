@@ -6,14 +6,27 @@ import {
   ComponentRendering,
   GetStaticComponentProps,
   GraphQLRequestClient,
+  Item,
   RichText,
   RichTextField,
   Text,
   TextField,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 
-import { GqlChildren, GqlItemExt, ItemExt } from 'lib/_.Sitecore.Override';
 import Link from 'next/link';
+
+// These can be moved to a reusable helper file
+export type GqlItemExt = {
+  id?: string;
+  url?: { path?: string };
+  templateId?: string;
+};
+
+export type GqlChildren<T> = {
+  children: {
+    results: T[];
+  };
+};
 
 interface PageListingPage extends GqlItemExt, GqlChildren<PageListingPage> {
   Title: {
@@ -102,6 +115,7 @@ const query = /* GraphQL */ `
     url {
       path
     }
+    templateId
     Title: title {
       jsonValue
     }
@@ -121,7 +135,7 @@ export const getStaticProps: GetStaticComponentProps = async (rendering, layoutD
     apiKey: jssConfig.sitecoreApiKey,
   });
 
-  const rootPage = rendering.fields?.rootPage as ItemExt;
+  const rootPage = rendering.fields?.rootPage as Item;
 
   const result = await graphQLClient.request<PageListingProps>(query, {
     rootItem: rootPage?.id,
