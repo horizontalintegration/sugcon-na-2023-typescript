@@ -25,11 +25,9 @@
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
   </PropertyGroup>
   <Target Name="DotNetToolRestore" BeforeTargets="PreBuildEvent">
-    <!--<Exec WorkingDirectory="$(MSBuildProjectDirectory)/.." Command="dotnet tool restore" />-->
-    <Exec Condition="'$(BuildingInsideVisualStudio)' == 'true'" WorkingDirectory="$(SolutionDir)/src" Command="dotnet tool restore" />
+    <Exec Condition="'$(BuildingInsideVisualStudio)' == 'true'" WorkingDirectory="$(SolutionDir)" Command="dotnet tool restore" />
   </Target>
   <Target Name="LeprechaunSitecore" AfterTargets="DotNetToolRestore">
-    <!--<Exec Command="dotnet leprechaun /c $(MSBuildProjectDirectory)/../leprechaun-dotnet.config" />-->
-    <Exec Condition="'$(BuildingInsideVisualStudio)' == 'true'" Command="dotnet leprechaun /c $(SolutionDir)/src/leprechaun-dotnet.config" />
+    <Exec Condition="'$(BuildingInsideVisualStudio)' == 'true'" Command="dotnet leprechaun /c $(SolutionDir)/leprechaun-dotnet.config" />
   </Target>
 </Project>
