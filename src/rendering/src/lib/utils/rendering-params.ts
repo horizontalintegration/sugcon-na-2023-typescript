@@ -1,12 +1,15 @@
-import { ComponentParams, Item } from '@sitecore-jss/sitecore-jss-nextjs';
+import { ComponentParams, Field, ImageField, Item } from '@sitecore-jss/sitecore-jss-nextjs';
 
+type Fields = {
+  [name: string]: Field | ImageField | Item | Item[] | undefined;
+};
 /**
  * Parses the rendering parameters into the specified type `T`.
  * Note: This requires the corresponsing Sitecore code to serialize the rendering parameters.
  * @param componentParams
  * @returns The parsed parameter object
  */
-export const parseParams = <T extends { fields?: Item['fields'] }>(
+export const parseParams = <T extends { fields?: Fields }>(
   componentParams: ComponentParams
 ): T | null => {
   if (!componentParams) {
