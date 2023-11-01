@@ -215,7 +215,8 @@ public string RenderParamsFields(TemplateCodeGenerationMetadata template)
 
 public string GetAliasedFullCodeName(TemplateCodeGenerationMetadata template, string suffix = "")
 {
-    var nameSpace = template.RelativeNamespace.Replace(GetShortNameSpaceRoot(template), GetNameSpaceAlias(template));
+    var originalNameSpace = string.IsNullOrWhiteSpace(template.RelativeNamespace) ? template.Namespace : template.RelativeNamespace;
+    var nameSpace = originalNameSpace.Replace(GetShortNameSpaceRoot(template), GetNameSpaceAlias(template));
     return $@"{nameSpace}.{template.CodeName}{suffix}";
 }
 
